@@ -27,12 +27,12 @@ public class LoginLC extends BasePageLC {
         clickOnElement(By.xpath("//*[@title='Property import']"));
 
         uploadFile(By.xpath("//*[@id='propertyimportform-file_import']"), "C:\\Users\\belevitnev\\Desktop\\testTest\\files\\property.csv");
-        goSleep(5);
+        goSleep(3);
 
         clickOnElement(By.xpath("//*[@id=\"w0\"]/div[2]/button"));
-        goSleep(3);
+        goSleep(2);
         clickOnElement(By.xpath("/html/body/div/p/a[1]"));
-        goSleep(3);
+        goSleep(2);
 //        clickOnElement(By.xpath("//*[@id='w0']/ul/li[4]/a"));
 
     }
