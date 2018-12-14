@@ -26,7 +26,7 @@ public class LoginLC extends BasePageLC {
         loginPageLogicor.clickLoginButton();
         clickOnElement(By.xpath("//*[@title='Property import']"));
 
-        uploadFile(By.xpath("//*[@id='propertyimportform-file_import']"), "C:\\Users\\belevitnev\\Desktop\\testTest\\files\\property.csv");
+        uploadFile(By.xpath("//*[@id='propertyimportform-file_import']"), "C:\\Users\\Itsmy\\Desktop\\logikor\\logicor\\files\\property.csv");
         goSleep(3);
 
         clickOnElement(By.xpath("//*[@id=\"w0\"]/div[2]/button"));
@@ -63,7 +63,9 @@ public class LoginLC extends BasePageLC {
 //                System.out.println(data[i][k]);
 
         }
+        deleteAllItemsLogikor("//*[@id='w0']/table/tbody/tr/td/div", "//*[@id='w0']/table/tbody/tr[1]/td[7]/a/span");
     }
+
 
 
 //    public void putDataToArray() {
@@ -109,7 +111,7 @@ public class LoginLC extends BasePageLC {
 //            }
 //
 //
-////        deleteAllItemsLogikor("//*[@id='w0']/table/tbody/tr/td/div", "//*[@id='w0']/table/tbody/tr[1]/td[7]/a/span");
+
 //
 //
 //        }
