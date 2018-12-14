@@ -1,0 +1,1 @@
+{"uuid":"f6afe080-378e-4669-aea6-099a2d1b958f","name":"Logicor","children":["f577ad75-7db3-4572-8c35-c05d44bd946f"],"befores":[],"afters":[{"name":"tearDown","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1544796891658,"stop":1544796893310}],"links":[],"start":1544796864400,"stop":1544796893310}

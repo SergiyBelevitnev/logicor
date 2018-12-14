@@ -1,0 +1,1 @@
+{"uuid":"ee083594-13a2-4dd6-980a-e50640279c69","name":"LoginLC","children":["feb9aa82-762f-4e7b-b015-9a642343d7b4"],"befores":[{"name":"beforeClass","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1544797534766,"stop":1544797535274}],"afters":[],"links":[],"start":1544797534666,"stop":1544797584741}

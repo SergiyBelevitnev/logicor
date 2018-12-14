@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="LoginLC">
+    <test name="LoginLC">
+
+        <parameter name="browser" value="chrome"/>
+
+        <classes>
+            <class name="LoginLC">
+
+
+
+            </class>
+
+        </classes>
+    </test>
+</suite>
