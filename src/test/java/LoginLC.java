@@ -22,11 +22,11 @@ public class LoginLC extends BasePageLC {
         LaunchBrowser("chrome");
         openURL("http://ec2-3-8-87-222.eu-west-2.compute.amazonaws.com");
         loginPageLogicor = new LoginPageLogicor(getDriver());
-        loginPageLogicor.login("qa@logicor.eu","vcVC9eVvX3Ebk");
+        loginPageLogicor.login("qa@logicor.eu", "vcVC9eVvX3Ebk");
 
         clickOnElement(By.xpath("//*[@title='Property import']"));
 
-        uploadFile(By.xpath("//*[@id='propertyimportform-file_import']"), "C:\\Users\\Itsmy\\Desktop\\logikor\\logicor\\files\\property.csv");
+        uploadFile(By.xpath("//*[@id='propertyimportform-file_import']"), "C:\\Users\\belevitnev\\Desktop\\Logicor\\files\\property.csv");
         goSleep(3);
 
         clickOnElement(By.xpath("//*[@id=\"w0\"]/div[2]/button"));
@@ -54,10 +54,8 @@ public class LoginLC extends BasePageLC {
 
         }
 
-//        workWithCollection(itemsList);
-
         WorkWithCollection workWithCollection1 = new WorkWithCollection(itemsList);
-        System.out.println("--------------------------- "  +workWithCollection1.getCountFrance());
+        System.out.println("--------------------------- " + workWithCollection1.getCountFrance());
         System.out.println(workWithCollection1.getCountItaly());
         System.out.println(workWithCollection1.getCountUK());
         System.out.println(workWithCollection1.getCountPoland());
@@ -66,9 +64,10 @@ public class LoginLC extends BasePageLC {
 
 
 
-
         deleteAllItemsLogikor("//*[@id='w0']/table/tbody/tr/td/div", "//*[@id='w0']/table/tbody/tr[1]/td[7]/a/span");
     }
+}
+
 
 
 //    public void putDataToArray() {
@@ -106,6 +105,3 @@ public class LoginLC extends BasePageLC {
 //                    System.out.println(data[i][k]);
 //                }
 //            }
-//        }
-//    }
-}
