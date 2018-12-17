@@ -25,7 +25,7 @@ public class LoginLC extends BasePageLC {
 
         clickOnElement(By.xpath("//*[@title='Property import']"));
 
-        uploadFile(By.xpath("//*[@id='propertyimportform-file_import']"), "C:\\Users\\belevitnev\\Desktop\\Logicor\\files\\property.csv");
+        uploadFile(By.xpath("//*[@id='propertyimportform-file_import']"), System.getProperty("user.dir")+"\\src\\main\\resources\\files\\property.csv");
         goSleep(3);
 
         clickOnElement(By.xpath("//*[@id=\"w0\"]/div[2]/button"));

@@ -407,7 +407,7 @@ public class BasePageLC extends BaseTest {
 
     public void setText(By element, String text) {
         findElement(element).click();
-        goSleep(5);
+        goSleep(1);
 //        findElement(element).
 //        getDriver().switchTo().frame("//*[@class='table table-condensed table-hover']/tbody/tr[\" + i + \"]/td[3]");
         findElement(element).clear();
