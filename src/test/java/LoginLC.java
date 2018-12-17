@@ -2,9 +2,8 @@ import base.BasePageLC;
 
 import base.Items;
 import base.Reporter;
-import base.WorkWithCollection;
+import base.WorkWithCollectionAdminProp;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 import pageobjects.LoginPageLogicor;
 
@@ -54,13 +53,13 @@ public class LoginLC extends BasePageLC {
 
         }
 
-        WorkWithCollection workWithCollection1 = new WorkWithCollection(itemsList);
-        System.out.println("--------------------------- " + workWithCollection1.getCountFrance());
-        System.out.println(workWithCollection1.getCountItaly());
-        System.out.println(workWithCollection1.getCountUK());
-        System.out.println(workWithCollection1.getCountPoland());
-        System.out.println(workWithCollection1.getCountSpain());
-        System.out.println(workWithCollection1.getCountCzechRepublic());
+        WorkWithCollectionAdminProp workWithCollectionAdminProp1 = new WorkWithCollectionAdminProp(itemsList);
+        System.out.println("--------------------------- " + workWithCollectionAdminProp1.getCountFrance());
+        System.out.println(workWithCollectionAdminProp1.getCountItaly());
+        System.out.println(workWithCollectionAdminProp1.getCountUK());
+        System.out.println(workWithCollectionAdminProp1.getCountPoland());
+        System.out.println(workWithCollectionAdminProp1.getCountSpain());
+        System.out.println(workWithCollectionAdminProp1.getCountCzechRepublic());
 
 
 

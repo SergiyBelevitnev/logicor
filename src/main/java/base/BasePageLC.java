@@ -153,15 +153,13 @@ public class BasePageLC extends BaseTest {
         return false;
     }
 
-    public boolean isCneckboxChecked(By element){
-        if (findElement(element).getAttribute("class").contains("glyphicon glyphicon-check"))
-        {
+    public boolean isCneckboxChecked(By element) {
+        if (findElement(element).getAttribute("class").contains("glyphicon glyphicon-check")) {
             return true;
 
         }
         return false;
     }
-
 
 
     public boolean isCheckedByClass(By element, String attributeName, String textToContain) {
@@ -171,7 +169,7 @@ public class BasePageLC extends BaseTest {
         return false;
     }
 
-    public  void addTableElementsToCollection(List itemsList) {
+    public void addTableElementsToCollection(List itemsList) {
         List rows = getDriver().findElements(By.xpath("//*[@id='w0']/table/tbody/tr/td[1]"));
         for (int i = 1; i < rows.size() + 1; i++) {
 
@@ -189,7 +187,7 @@ public class BasePageLC extends BaseTest {
         }
     }
 
-    public void workWithCollection(List<Items> itemlist){
+    public void workWithCollection(List<Items> itemlist) {
         int countFrance = 0;
         int countPoland = 0;
         int countSpain = 0;
@@ -197,26 +195,31 @@ public class BasePageLC extends BaseTest {
         int countItaly = 0;
         for (int i = 1; i < itemlist.size(); i++) {
             String s = itemlist.get(i).getCountry();
-            switch (s){
-                case "France": countFrance++;
-                break;
-                case "Poland": countPoland++;
-                break;
-                case "Spain": countSpain++;
-                break;
-                case "UK": countUK++;
-                break;
-                case "Italy": countItaly++;
-                break;
+            switch (s) {
+                case "France":
+                    countFrance++;
+                    break;
+                case "Poland":
+                    countPoland++;
+                    break;
+                case "Spain":
+                    countSpain++;
+                    break;
+                case "UK":
+                    countUK++;
+                    break;
+                case "Italy":
+                    countItaly++;
+                    break;
 
             }
 
         }
-        System.out.println("ldkrhjlrsjgt;s;tkw;tkw;jktwj    "+countFrance);
-        System.out.println("gjdkljg;dsrkgt;ler   "+ countPoland);
-        System.out.println("gjdkljg;dsrkgt;ler   "+ countSpain);
-        System.out.println("gjdkljg;dsrkgt;ler   "+ countUK);
-        System.out.println("gjdkljg;dsrkgt;ler   "+ countItaly);
+        System.out.println("ldkrhjlrsjgt;s;tkw;tkw;jktwj    " + countFrance);
+        System.out.println("gjdkljg;dsrkgt;ler   " + countPoland);
+        System.out.println("gjdkljg;dsrkgt;ler   " + countSpain);
+        System.out.println("gjdkljg;dsrkgt;ler   " + countUK);
+        System.out.println("gjdkljg;dsrkgt;ler   " + countItaly);
 
     }
 
@@ -353,7 +356,7 @@ public class BasePageLC extends BaseTest {
                 clickOnElement(By.xpath(xpathOfBin));
                 dirtyWait(300);
                 BaseTest.getDriver().switchTo().alert().accept();
-               dirtyWait(300);
+                dirtyWait(300);
 
                 Reporter.log("Deleting the item");
                 WebElement element = arg0.findElement(By.xpath(xpathOfResult));
@@ -387,7 +390,6 @@ public class BasePageLC extends BaseTest {
     }
 
 
-
     public static void openURL(String URL) {
         getDriver().get(URL);
     }
@@ -399,20 +401,24 @@ public class BasePageLC extends BaseTest {
     }
 
 
-
     public void clickButton(String xPathExpression) {
         getDriver().findElement(By.xpath(xPathExpression)).click();
     }
 
     public void setText(By element, String text) {
+        findElement(element).click();
+        goSleep(5);
+//        findElement(element).
+//        getDriver().switchTo().frame("//*[@class='table table-condensed table-hover']/tbody/tr[\" + i + \"]/td[3]");
         findElement(element).clear();
         findElement(element).sendKeys(text);
         findElement(element).submit();
     }
+
     public boolean isElementPresent(By element) {
 
         try {
-            FluentWait<WebDriver> wait = new FluentWait<>(driver)
+            FluentWait<WebDriver> wait = new FluentWait<>(getDriver())
                     .withTimeout(Duration.ofSeconds(1));
             wait.until(visibilityOf(findElement(element)));
             return true;
@@ -421,5 +427,7 @@ public class BasePageLC extends BaseTest {
         }
 
     }
+
+
 }
 
