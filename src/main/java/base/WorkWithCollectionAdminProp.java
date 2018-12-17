@@ -2,7 +2,7 @@ package base;
 
 import java.util.List;
 
-public class WorkWithCollection {
+public class WorkWithCollectionAdminProp {
 
     int countFrance=0;
     int countPoland=0;
@@ -16,7 +16,7 @@ public class WorkWithCollection {
     int countPortugal=0;
     int countCzechRepublic = 0;
 
-    public WorkWithCollection(List<Items> itemlist) {
+    public WorkWithCollectionAdminProp(List<Items> itemlist) {
         this.countFrance = countFrance;
         this.countPoland = countPoland;
         this.countSpain = countSpain;
