@@ -171,6 +171,55 @@ public class BasePageLC extends BaseTest {
         return false;
     }
 
+    public  void addTableElementsToCollection(List itemsList) {
+        List rows = getDriver().findElements(By.xpath("//*[@id='w0']/table/tbody/tr/td[1]"));
+        for (int i = 1; i < rows.size() + 1; i++) {
+
+            String s1 = getElementText(By.xpath("//*[@id='w0']/table/tbody/tr[" + i + "]/td[1]"));
+            String s2 = getElementText(By.xpath("//*[@id='w0']/table/tbody/tr[" + i + "]/td[2]"));
+            String s3 = getElementText(By.xpath("//*[@id='w0']/table/tbody/tr[" + i + "]/td[3]"));
+            String s4 = getElementText(By.xpath("//*[@id='w0']/table/tbody/tr[" + i + "]/td[4]"));
+            Boolean bool = isCneckboxChecked(By.xpath("//*[@id='w0']/table/tbody/tr[" + i + "]/td[6]/a/span"));
+
+            Items items = new Items(s1, s2, s3, s4, bool);
+
+            itemsList.add(items);
+            System.out.println(items.toString());
+            System.out.println(itemsList.size() + "ITEMS__________KDKEKE___________________________");
+        }
+    }
+
+    public void workWithCollection(List<Items> itemlist){
+        int countFrance = 0;
+        int countPoland = 0;
+        int countSpain = 0;
+        int countUK = 0;
+        int countItaly = 0;
+        for (int i = 1; i < itemlist.size(); i++) {
+            String s = itemlist.get(i).getCountry();
+            switch (s){
+                case "France": countFrance++;
+                break;
+                case "Poland": countPoland++;
+                break;
+                case "Spain": countSpain++;
+                break;
+                case "UK": countUK++;
+                break;
+                case "Italy": countItaly++;
+                break;
+
+            }
+
+        }
+        System.out.println("ldkrhjlrsjgt;s;tkw;tkw;jktwj    "+countFrance);
+        System.out.println("gjdkljg;dsrkgt;ler   "+ countPoland);
+        System.out.println("gjdkljg;dsrkgt;ler   "+ countSpain);
+        System.out.println("gjdkljg;dsrkgt;ler   "+ countUK);
+        System.out.println("gjdkljg;dsrkgt;ler   "+ countItaly);
+
+    }
+
     public void clickOnElementWithWait(String message, By element, int timeWaitSeconds) {
 
         Reporter.log(message);
