@@ -84,7 +84,9 @@ public class BaseTest {
 
 
     @AfterMethod(alwaysRun = true)
+
     public void closeWindow(ITestResult result) {
+
         if (result.getStatus() == ITestResult.FAILURE) {
             test.get().fail(result.getThrowable());
             Reporter.logFail("Test FAILED");
