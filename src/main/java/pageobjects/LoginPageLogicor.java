@@ -21,16 +21,24 @@ public class LoginPageLogicor {
     @FindBy(xpath = "//*[@id='form-user-login']//button")
     private WebElement loginButton;
 
-    public void inputLogin(String username) {
+    private void inputLogin(String username) {
         loginField.sendKeys(username);
     }
 
-    public void inputPassword(String password) {
+    private void inputPassword(String password) {
         passwordField.sendKeys(password);
     }
 
-    public void clickLoginButton() {
+    private void clickLoginButton() {
         loginButton.click();
+    }
+
+    public void login(String username, String password) {
+        inputLogin(username);
+        inputPassword(password);
+        clickLoginButton();
+
+
     }
 
 }
