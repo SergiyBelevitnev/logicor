@@ -1,7 +1,6 @@
 package pageobjects;
 
 import base.BasePageLC;
-import base.Items;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -32,11 +31,149 @@ public class ElementTranslationPage extends BasePageLC {
     @FindBy(xpath = "/html/body/div[2]/form/div[1]/div[2]/a[1]")
     private WebElement cancelButton;
 
-    @FindBy(xpath = "/html/body/div[2]/form/div[1]/div[2]/button")
+    @FindBy(xpath = "//*[@class=\"btn btn-primary btn-sm\"]")
     private WebElement saveButton;
+///Cells
+    @FindBy(xpath = "//*[@id=\"propertytranslationform-asset_name\"]")
+    private WebElement assetNameCell;
 
-    @FindBy(xpath = "/html/body/div[2]/form/div[1]/div[2]/a[2]")
-    private WebElement publishButton;
+
+    @FindBy(xpath = "//*[@id=\"propertytranslationform-asset_town\"]")
+    private WebElement townCell;
+
+
+    @FindBy(xpath = "//*[@id=\"propertytranslationform-asset_description\"]")
+    private WebElement assetDescriptionCell;
+
+
+    @FindBy(xpath = "//*[@id=\"propertytranslationform-building_year_from\"]")
+    private WebElement yearAvaCell;
+
+
+    @FindBy(xpath = "//*[@id=\"propertytranslationform-building_height_max\"]")
+    private WebElement heightCell;
+
+
+    @FindBy(xpath = "//*[@id=\"propertytranslationform-building_car_parking_total\"]")
+    private WebElement carParkingCell;
+
+
+    @FindBy(xpath = "//*[@id=\"propertytranslationform-building_loading_dock_total\"]")
+    private WebElement loadingDocksCell;
+
+
+    @FindBy(xpath = "//*[@id=\"propertytranslationform-demise_total_vacant_sqf\"]")
+    private WebElement vacantSpaceFeetCell;
+
+
+    @FindBy(xpath = "//*[@id=\"propertytranslationform-demise_total_vacant_sqm\"]")
+    private WebElement vacantSpaceMetresCell;
+
+
+    @FindBy(xpath = "//*[@id=\"propertytranslationform-wh_total_vacant_sqf\"]")
+    private WebElement totalSpaceFeetCell;
+
+
+    @FindBy(xpath = "//*[@id=\"propertytranslationform-wh_total_vacant_sqm\"]")
+    private WebElement totalSpaceMetresCell;
+
+
+    @FindBy(xpath = "//*[@id=\"propertytranslationform-office_total_vacant_sqf\"]")
+    private WebElement officeTotalFeetCell;
+
+
+    @FindBy(xpath = "//*[@id=\"propertytranslationform-office_total_vacant_sqm\"]")
+    private WebElement officeTotalMetresCell;
+
+
+    @FindBy(xpath = "//*[@id=\"propertytranslationform-location_country\"]")
+    private WebElement countryCell;
+
+
+    @FindBy(xpath = "//*[@id=\"propertytranslationform-location_longitude\"]")
+    private WebElement longtitudeCell;
+
+
+    @FindBy(xpath = "//*[@id=\"propertytranslationform-location_latitude\"]")
+    private WebElement lattitudeCell;
+
+
+   public void setAssetNameCell(String assetName){
+       setTextCell(assetNameCell,assetName);
+   }
+
+    public void setTownCell(String town){
+        setTextCell(townCell,town);
+    }
+
+    public void setAssetDescriptionCell(String assetDescription){
+        setTextCell(assetDescriptionCell,assetDescription);
+    }
+
+    public void setYearAvaCell(Integer yearAva){
+        setTextCell(yearAvaCell,yearAva.toString());
+    }
+
+    public void setHeightCell(Double height){
+        setTextCell(heightCell,height.toString());
+    }
+
+    public void setCarParkingCell(Integer carParking){
+        setTextCell(carParkingCell,carParking.toString());
+    }
+
+    public void setLoadingDocksCell(Integer loadingDocks){
+        setTextCell(loadingDocksCell,loadingDocks.toString());
+    }
+
+
+    public void setVacantSpaceFeetCell(Double vacantSpaceFeet){
+        setTextCell(vacantSpaceFeetCell,vacantSpaceFeet.toString());
+    }
+
+
+    public void setVacantSpaceMetresCell(Double vacantSpaceMetres){
+        setTextCell(vacantSpaceMetresCell,vacantSpaceMetres.toString());
+    }
+
+
+    public void setTotalSpaceFeetCell(Double totalSpaceFeet){
+        setTextCell(totalSpaceFeetCell,totalSpaceFeet.toString());
+    }
+
+
+    public void setTotalSpaceMetresCell(Double totalSpaceMetres){
+        setTextCell(totalSpaceMetresCell, totalSpaceMetres.toString());
+    }
+
+
+    public void setOfficeTotalFeetCell(Double officeTotalFeet){
+        setTextCell(officeTotalFeetCell,officeTotalFeet.toString());
+    }
+
+
+    public void setOfficeTotalMetresCell(Double officeTotalMetres){
+        setTextCell(officeTotalMetresCell,officeTotalMetres.toString());
+    }
+
+
+    public void setCountryCell(String assetName){
+        setTextCell(countryCell,assetName);
+    }
+
+
+    public void setLongtitudeCell(String assetName){
+        setTextCell(longtitudeCell,assetName);
+    }
+
+
+    public void setLattitudeCell(String assetName){
+        setTextCell(lattitudeCell,assetName);
+    }
+
+    public  void saveProperty(){
+       saveButton.click();
+    }
 
 
     public void handleTableElements() {
