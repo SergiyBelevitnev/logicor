@@ -46,7 +46,7 @@ public class ElementTranslationPage extends BasePageLC {
         for (int i = 1; i < rows.size()+1; i++) {
 
             String s1 = getElementText(By.xpath("//*[@class='table table-condensed table-hover']/tbody/tr[" + i + "]/th[1]"));
-            setText(By.xpath("//*[@class='table table-condensed table-hover']/tbody/tr[" + i + "]/td[3]"), "11111111111111");
+            setText(By.xpath("//*[@class='table table-condensed table-hover']/tbody/tr[" + i + "]/td[3]"+"/*[1]"), "11111111111111");
 
             String s3 = getElementText(By.xpath("//*[@class='table table-condensed table-hover']/tbody/tr[" + i + "]/td[3]"));
             System.out.println(s1+"-----------------"+s3);
