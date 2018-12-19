@@ -76,7 +76,8 @@ public class ElementTranslationTest extends BasePageLC {
         openURL("http://ec2-35-178-97-148.eu-west-2.compute.amazonaws.com/en/uk/find-a-warehouse/warehouse-detail?id=1760");
         propertyDetailPageUi = new PropertyDetailPageUi(getDriver());
         scrollToBottom();
-//        System.out.println(propertyDetailPageUi.getOfficeTotalVacant());
+        System.out.println(propertyDetailPageUi.getTitleField());
+        System.out.println(propertyDetailPageUi.getAssetDescrField());
 
         System.out.println(propertyDetailPageUi.getVacantSpaceField());
         goSleep(5);
@@ -95,6 +96,8 @@ public class ElementTranslationTest extends BasePageLC {
                         +"SQFT"+"\n"
                         +Long.toString(Math.round(Math.floor(propertyData.getTotalVacantSquareMetres())))+"SQM"
                 ,propertyDetailPageUi.getVacantSpaceField());
+
+//        Assert.assertEquals
 
 
 
