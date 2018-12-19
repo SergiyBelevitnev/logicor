@@ -34,9 +34,22 @@ public class PropertyDetailPageUi {
         private WebElement carParkingSpacesField;
 
 
+    @FindBy(xpath = "//*[@class=\"hero hero__sub-page hero__sub-page-blue\"]/*[1]/*[2]")
+    private WebElement titleField;
+
+    @FindBy(xpath = "//*[@id=\"block-system-main\"]/div[2]/div/div/div[3]/text()")
+    private WebElement assetDescriptionField;
+
+    public String getAssetDescrField(){
+        return BasePageLC.getElementTextElement(assetDescriptionField);
+    }
+
+
+    public String getTitleField(){
+        return BasePageLC.getElementTextElement(titleField);
+    }
 
     public String getOfficeTotalVacant(){
-
         return BasePageLC.getElementTextElement(officeTotalVacantField);
     }
 
