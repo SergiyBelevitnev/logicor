@@ -1,19 +1,20 @@
 import base.BasePageLC;
 import base.PropertyData;
+import base.Reporter;
+import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import pageobjects.ElementTranslationPage;
-import pageobjects.LoginPageLogicor;
-import pageobjects.PropertyDetailPageUi;
+import pageobjects.*;
 
 @Test
 
 public class ElementTranslationTest extends BasePageLC {
 
     public static ElementTranslationPage elTrPage;
-    public static LoginPageLogicor loginPageLogicor;
     public static PropertyDetailPageUi propertyDetailPageUi;
+    public static AddImagePage addImagePage;
+    public static MainPageLogicor mainPageLogicor;
 
     private static PropertyData propertyData;
 
@@ -22,9 +23,12 @@ public class ElementTranslationTest extends BasePageLC {
         if (propertyData == null){
 
             propertyData=new PropertyData.Builder(
-                    "Warehouse",
-                    "Dublim",
-                    "ldtgldsjgjdthijeptjpetjpiejpigh  rgodjjgjohgjgi",
+                    "BestWarehouseinWorld",
+                    "Dublin",
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, " +
+                            "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." +
+                            " Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi " +
+                            " ut aliquip ex ea commodo consequat.",
                     1999,
                     80.00,
                     50,
@@ -35,24 +39,28 @@ public class ElementTranslationTest extends BasePageLC {
                     44444.00,
                     55555.00,
                     66666.00,
-                    "madagaslar",
-                    "jgfkgb--------------ljs",
-                    "jg---__________________fkljs").build();
+                    "France",
+                    "2.43654646",
+                    "545.6545646").build();
         }
         return new Object[][]{{propertyData}};
     }
     @Test(dataProvider = "propertyData")
     public void elementTranslationPageTest(PropertyData propertyData){
-        LaunchBrowser("chrome");
-        openURL("http://ec2-3-8-87-222.eu-west-2.compute.amazonaws.com");
-        getDriver().manage().window().maximize();
-        loginPageLogicor = new LoginPageLogicor(getDriver());
-        loginPageLogicor.login("qa@logicor.eu", "vcVC9eVvX3Ebk");
-        openURL("http://ec2-3-8-87-222.eu-west-2.compute.amazonaws.com/admin/property/translate?id=1760&code=en");
         elTrPage = new ElementTranslationPage(getDriver());
-        goSleep(5);
-        elTrPage.setAssetNameCell(propertyData.getAssetName());
 
+
+
+        goSleep(2);
+
+        elTrPage.countrySort();
+        String editElementCountry= elTrPage.getCountryName();
+        System.out.println(editElementCountry);
+
+        elTrPage.clickPublishButton();
+
+
+        elTrPage.setAssetNameCell(propertyData.getAssetName());
         elTrPage.setTownCell(propertyData.getTown());
         elTrPage.setAssetDescriptionCell(propertyData.getAssetDescription());
         elTrPage.setYearAvaCell(propertyData.getYearAvailableFrom());
@@ -66,26 +74,59 @@ public class ElementTranslationTest extends BasePageLC {
         elTrPage.setOfficeTotalFeetCell(propertyData.getOfficeTotalVacantSquareFeet());
         elTrPage.setOfficeTotalMetresCell(propertyData.getOfficeTotalVacantSquareMetres());
         elTrPage.setCountryCell(propertyData.getCountry());
-        elTrPage.setLongtitudeCell(propertyData.getLongitude());
-        elTrPage.setLattitudeCell(propertyData.getLatitude());
+        elTrPage.setLongitudeCell(propertyData.getLongitude());
+        elTrPage.setLatitudeCell(propertyData.getLatitude());
 
         elTrPage.saveProperty();
 
+        elTrPage.clickAddImageButton();
+        addImagePage = new AddImagePage(getDriver());
+        addImagePage.addFirstImage();
+        addImagePage.addFirstImage();
+
+        goSleep(2);
+
+        Integer imageCountAdmin = addImagePage.imageCountAdmin();
+
+        elTrPage.clickFloorPanButton();
+        addImagePage.addFirstImage();
+        goSleep(2);
+
+        Integer imageFloorPanAdmin = addImagePage.imageFloorPanAdmin();
+
+        addImagePage.goBackButton();
 
 
-        openURL("http://ec2-35-178-97-148.eu-west-2.compute.amazonaws.com/en/uk/find-a-warehouse/warehouse-detail?id=1760");
-        propertyDetailPageUi = new PropertyDetailPageUi(getDriver());
-        scrollToBottom();
-        System.out.println(propertyDetailPageUi.getTitleField());
-        System.out.println(propertyDetailPageUi.getAssetDescrField());
+        openURL("http://ec2-35-178-97-148.eu-west-2.compute.amazonaws.com");
 
-        System.out.println(propertyDetailPageUi.getVacantSpaceField());
+
+        goSleep(4);
+
+        mainPageLogicor = new MainPageLogicor(getDriver());
+
+        mainPageLogicor.chooseLargeProperties();
+        mainPageLogicor.selectCountry(editElementCountry);
+
+        mainPageLogicor.clickSearchButton();
+        mainPageLogicor.chooseListView();
         goSleep(5);
+
+        clickOnElement(By.xpath("//*[@class=\"warehouse-finder-listing\"]//*[@class=\"info-box-inner__heading\"][.='"+propertyData.getAssetName()+"']"));
+
+        scrollToBottom();
+
+
+        propertyDetailPageUi = new PropertyDetailPageUi(getDriver());
+
+//        String foo = "\n"+"\n"+"MAKE AN ENQUIRY\n"+"FIRST NAME *\n"+"LAST NAME *\n"+"EMAIL *\n"+"PHONE NUMBER\n"+"MESSAGE *\n"+"AGREE\n"+"I accept the Privacy Notice and Terms of Use";
+//        System.out.println(propertyDetailPageUi.getVacantSpaceField());
+        goSleep(5);
+
         Assert.assertEquals(propertyDetailPageUi.getYear(),propertyData.getYearAvailableFrom().toString());
+
         Assert.assertEquals(propertyDetailPageUi.getLoadingDocks(),propertyData.getLoadingDocksTotal().toString()+ " docks");
+
         Assert.assertEquals(propertyDetailPageUi.getParkingSpacesField(),propertyData.getCarPparkingSpacesTotal().toString()+ " car parking spaces");
-
-
 
         Assert.assertEquals(Long.toString(Math.round(Math.floor(propertyData.getOfficeTotalVacantSquareFeet())))
                         +"SQFT"+"\n"
@@ -96,25 +137,17 @@ public class ElementTranslationTest extends BasePageLC {
                         +"SQFT"+"\n"
                         +Long.toString(Math.round(Math.floor(propertyData.getTotalVacantSquareMetres())))+"SQM"
                 ,propertyDetailPageUi.getVacantSpaceField());
-
-//        Assert.assertEquals
-
-
+        Reporter.log("Verification property success!");
+        Assert.assertEquals(propertyData.getAssetName().toUpperCase(),propertyDetailPageUi.getTitleField());
 
 
+//        System.out.println("admin"+imageCountAdmin);
+//        System.out.println("UI"+propertyDetailPageUi.imageCountUi());
+        Assert.assertEquals(imageCountAdmin,propertyDetailPageUi.imageCountUi());
 
-
-
-
-
-
-
+        Assert.assertEquals(imageFloorPanAdmin,propertyDetailPageUi.floorCountUi());
+        Reporter.log("Verification media elements!");
 
         goSleep(8);
-
-
-
-
-
     }
 }

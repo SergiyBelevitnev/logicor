@@ -75,11 +75,14 @@ public class BaseTest {
         ExtentManager.getInstance(suiteName).flush();
 
         Reporter.log("Tests PERFORMED");
+
     }
 
     public static ThreadLocal<ExtentTest> getTest() {
         return test;
     }
+
+
 
 
 

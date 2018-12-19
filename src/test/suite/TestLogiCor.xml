@@ -1,0 +1,30 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="LoginLC">
+    <test name="User Test">
+
+        <parameter name="browser" value="chrome"/>
+
+        <classes>
+            <class name="LoginLC">
+                <methods>
+                <exclude
+                        name="setDataToCollection">
+                </exclude>
+                    <exclude name="deleteAllItemsAdmin"> </exclude>
+
+                </methods>
+
+            </class>
+            <class name="ElementTranslationTest">
+            </class>
+            <class name="DeletingItems">
+            </class>
+
+
+
+
+
+
+        </classes>
+    </test>
+</suite>

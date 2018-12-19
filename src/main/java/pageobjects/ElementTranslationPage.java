@@ -1,6 +1,7 @@
 package pageobjects;
 
 import base.BasePageLC;
+import base.Reporter;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -16,23 +17,32 @@ public class ElementTranslationPage extends BasePageLC {
         PageFactory.initElements(driver, this);
         this.driver = driver;
     }
-    @FindBy(xpath = "/html/body/div[2]/p/a[3]")
+    @FindBy(xpath = "//*[@id=\"w0\"]/table/tbody/tr[2]/td[5]/a[1]")
+    private WebElement propertiesEnButton;
+
+    @FindBy(xpath = "//*[@class=\"btn btn-info btn-xs\"][1]")
     private WebElement translateButton;
 
-    @FindBy(xpath = "/html/body/div[2]/p/a[4]")
+    @FindBy(xpath = "//*[@class=\"btn btn-info btn-xs\"][2]")
     private WebElement addImagesButton;
 
-    @FindBy(xpath = "/html/body/div[2]/p/a[5]")
+    @FindBy(xpath = "//*[@class=\"btn btn-info btn-xs\"][3]")
     private WebElement addFloorPanButton;
 
-    @FindBy(xpath = "/html/body/div[2]/p/a[6]")
+    @FindBy(xpath = "//*[@class=\"btn btn-info btn-xs\"][4]")
     private WebElement addBrochurePdfButton;
 
-    @FindBy(xpath = "/html/body/div[2]/form/div[1]/div[2]/a[1]")
+    @FindBy(xpath = "//*[@class=\"col-md-4 text-right\"]/*[1]")
     private WebElement cancelButton;
 
-    @FindBy(xpath = "//*[@class=\"btn btn-primary btn-sm\"]")
+    @FindBy(xpath = "//*[@class=\"col-md-4 text-right\"]/*[2]")
     private WebElement saveButton;
+
+    @FindBy(xpath = "//*[@id=\"w0\"]/table/tbody/tr[2]/td[5]/a[1]")
+    private WebElement publishButton;
+
+
+
 ///Cells
     @FindBy(xpath = "//*[@id=\"propertytranslationform-asset_name\"]")
     private WebElement assetNameCell;
@@ -88,7 +98,10 @@ public class ElementTranslationPage extends BasePageLC {
 
     @FindBy(xpath = "//*[@id=\"propertytranslationform-location_country\"]")
     private WebElement countryCell;
+//*[@id="w0"]/table/thead/tr/th[4]/a
 
+    @FindBy(xpath = "//*[@id=\"w0\"]/table/thead/tr/th[4]/a")
+    private WebElement countrySort;
 
     @FindBy(xpath = "//*[@id=\"propertytranslationform-location_longitude\"]")
     private WebElement longtitudeCell;
@@ -98,81 +111,154 @@ public class ElementTranslationPage extends BasePageLC {
     private WebElement lattitudeCell;
 
 
+    public void clickAddImageButton(){
+        Reporter.log("Openning add image page");
+        addImagesButton.click();
+    }
+
+    public void clickEnTranslateButton(){
+        Reporter.log("Openning translation page");
+        translateButton.click();
+    }
+
+    public void clickFloorPanButton(){
+        Reporter.log("Openning 'add floorpan/ page");
+        addFloorPanButton.click();
+    }
+
+    public void clickAddBrochureButton(){
+        addBrochurePdfButton.click();
+    }
+
+    public void clickCancelButton(){
+        cancelButton.click();
+    }
+
+    public void clickPublishButton(){
+
+        Reporter.log("Openning 'translation property' page");
+
+
+        goSleep(3);
+        publishButton.click();
+    }
+
+    public void countrySort(){
+        goSleep(3);
+        countrySort.click();
+        goSleep(3);
+        countrySort.click();
+        goSleep(3);
+    }
    public void setAssetNameCell(String assetName){
+       Reporter.log("Setting asset name");
        setTextCell(assetNameCell,assetName);
    }
 
     public void setTownCell(String town){
+        Reporter.log("Setting town");
         setTextCell(townCell,town);
     }
 
     public void setAssetDescriptionCell(String assetDescription){
+        Reporter.log("Setting asset description");
+
         setTextCell(assetDescriptionCell,assetDescription);
     }
 
     public void setYearAvaCell(Integer yearAva){
+        Reporter.log("Setting year");
+
         setTextCell(yearAvaCell,yearAva.toString());
     }
 
     public void setHeightCell(Double height){
+        Reporter.log("Setting height");
         setTextCell(heightCell,height.toString());
     }
 
     public void setCarParkingCell(Integer carParking){
+        Reporter.log("Setting car parking spaces");
         setTextCell(carParkingCell,carParking.toString());
     }
 
     public void setLoadingDocksCell(Integer loadingDocks){
+        Reporter.log("Setting loading docks");
+
         setTextCell(loadingDocksCell,loadingDocks.toString());
     }
 
 
     public void setVacantSpaceFeetCell(Double vacantSpaceFeet){
+        Reporter.log("Setting vacant space(feet)");
         setTextCell(vacantSpaceFeetCell,vacantSpaceFeet.toString());
     }
 
 
     public void setVacantSpaceMetresCell(Double vacantSpaceMetres){
+        Reporter.log("Setting vacant space(metres)");
         setTextCell(vacantSpaceMetresCell,vacantSpaceMetres.toString());
     }
 
 
     public void setTotalSpaceFeetCell(Double totalSpaceFeet){
+        Reporter.log("Setting total space(feet)");
         setTextCell(totalSpaceFeetCell,totalSpaceFeet.toString());
     }
 
 
     public void setTotalSpaceMetresCell(Double totalSpaceMetres){
+        Reporter.log("Setting total space(metres)");
         setTextCell(totalSpaceMetresCell, totalSpaceMetres.toString());
     }
 
 
     public void setOfficeTotalFeetCell(Double officeTotalFeet){
+        Reporter.log("Setting office total space(feet)");
         setTextCell(officeTotalFeetCell,officeTotalFeet.toString());
     }
 
 
     public void setOfficeTotalMetresCell(Double officeTotalMetres){
+        Reporter.log("Setting office total space(metres)");
         setTextCell(officeTotalMetresCell,officeTotalMetres.toString());
     }
 
 
     public void setCountryCell(String assetName){
+        Reporter.log("Setting country");
+
         setTextCell(countryCell,assetName);
     }
 
 
-    public void setLongtitudeCell(String assetName){
+    public void setLongitudeCell(String assetName){
+
+        Reporter.log("Setting longitude");
         setTextCell(longtitudeCell,assetName);
     }
 
 
-    public void setLattitudeCell(String assetName){
+    public void setLatitudeCell(String assetName){
+        Reporter.log("Setting latitude");
         setTextCell(lattitudeCell,assetName);
     }
 
     public  void saveProperty(){
-       saveButton.click();
+        Reporter.log("Saving property");
+        saveButton.click();
+    }
+
+    private String getCountryName2(){
+        return getElementText(By.xpath("//*[@id='w0']/table/tbody/tr[2]/td[4]"));
+
+
+    }
+    public String getCountryName(){
+        if (getCountryName2().equals("UK")){
+            return "United Kingdom";
+        }
+        else return getCountryName2();
     }
 
 

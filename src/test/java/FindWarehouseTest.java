@@ -19,10 +19,6 @@ public class FindWarehouseTest extends BasePageLC {
 
         mainPageLogicor = new MainPageLogicor(getDriver());
 
-
-        Boolean bool2 = isElementPresent(By.xpath("//*[@id='warehouse-finder']//button"));
-        System.out.println(bool2);
-
         mainPageLogicor.chooseLargeProperties();
         mainPageLogicor.selectCountry("France");
 
