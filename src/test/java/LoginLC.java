@@ -4,31 +4,37 @@ import base.Items;
 import base.Reporter;
 import base.WorkWithCollectionAdminProp;
 import org.openqa.selenium.By;
+import org.testng.Assert;
 import org.testng.annotations.Test;
+import pageobjects.ImportPropertiesPage;
 import pageobjects.LoginPageLogicor;
+import pageobjects.MainPageLogicor;
 
 import java.util.ArrayList;
 import java.util.List;
 
 
-@Test
+
 public class LoginLC extends BasePageLC {
 
+    public static MainPageLogicor mainPageLogicor;
     public static LoginPageLogicor loginPageLogicor;
+    public static ImportPropertiesPage importPropertiesPage;
 
-
+    @Test
     public void loginLC() {
         LaunchBrowser("chrome");
         openURL("http://ec2-3-8-87-222.eu-west-2.compute.amazonaws.com");
+//        getDriver().manage().window().maximize();
         loginPageLogicor = new LoginPageLogicor(getDriver());
+        importPropertiesPage = new ImportPropertiesPage(getDriver());
         loginPageLogicor.login("qa@logicor.eu", "vcVC9eVvX3Ebk");
+        loginPageLogicor.clickImportButton();
+        importPropertiesPage.uploadFile(System.getProperty("user.dir")+"\\src\\main\\resources\\files\\property.csv");
 
-        clickOnElement(By.xpath("//*[@title='Property import']"));
 
-        uploadFile(By.xpath("//*[@id='propertyimportform-file_import']"), System.getProperty("user.dir")+"\\src\\main\\resources\\files\\property.csv");
-        goSleep(3);
 
-        clickOnElement(By.xpath("//*[@id=\"w0\"]/div[2]/button"));
+
         goSleep(2);
         clickOnElement(By.xpath("/html/body/div/p/a[1]"));
         goSleep(2);
@@ -36,35 +42,51 @@ public class LoginLC extends BasePageLC {
 
     }
 
-    public void putDataToCollection() {
 
-
+    @Test
+    public void setDataToCollection(){
         List<Items> itemsList = new ArrayList<Items>();
         addTableElementsToCollection(itemsList);
 
-
         if (isElementPresent(By.xpath("//*[@id='w0']/ul/li[4]/span"))) {
             Reporter.log("All items added");
-
         } else {
             clickOnElement(By.xpath("//*[@id='w0']/ul/li[4]/a"));
-            goSleep(5);
+            goSleep(2);
             addTableElementsToCollection(itemsList);
-
         }
-
         WorkWithCollectionAdminProp workWithCollectionAdminProp1 = new WorkWithCollectionAdminProp(itemsList);
-        System.out.println("--------------------------- " + workWithCollectionAdminProp1.getCountFrance());
-        System.out.println(workWithCollectionAdminProp1.getCountItaly());
-        System.out.println(workWithCollectionAdminProp1.getCountUK());
-        System.out.println(workWithCollectionAdminProp1.getCountPoland());
-        System.out.println(workWithCollectionAdminProp1.getCountSpain());
-        System.out.println(workWithCollectionAdminProp1.getCountCzechRepublic());
+
+        openURL("http://ec2-35-178-97-148.eu-west-2.compute.amazonaws.com");
+        mainPageLogicor = new MainPageLogicor(getDriver());
+        mainPageLogicor.chooseSmallProperties();
+        mainPageLogicor.selectCountry("France");
+
+        mainPageLogicor.clickSearchButton();
+        mainPageLogicor.chooseListView();
+//        scrollToBottom();
+        Reporter.log("Verification amount of small properties in France is: " + mainPageLogicor.countAssetsMain().toString());
+        Assert.assertEquals(workWithCollectionAdminProp1.getCountSmallFrance(), mainPageLogicor.countAssetsMain());
+
+
+        openURL("http://ec2-35-178-97-148.eu-west-2.compute.amazonaws.com");
+        mainPageLogicor.chooseLargeProperties();
+        mainPageLogicor.selectCountry("Spain");
+
+        mainPageLogicor.clickSearchButton();
+        mainPageLogicor.chooseListView();
+        Reporter.log("Verification amount of large properties in Spain is: " + mainPageLogicor.countAssetsMain().toString());
+        Assert.assertEquals(workWithCollectionAdminProp1.getCountSpain(), mainPageLogicor.countAssetsMain());
 
 
 
-        deleteAllItemsLogikor("//*[@id='w0']/table/tbody/tr/td/div", "//*[@id='w0']/table/tbody/tr[1]/td[7]/a/span");
+
+
     }
+
+
+
+
 }
 
 

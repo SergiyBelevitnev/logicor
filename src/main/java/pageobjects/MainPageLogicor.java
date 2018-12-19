@@ -1,5 +1,7 @@
 package pageobjects;
 
+import base.BasePageLC;
+import base.Reporter;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -7,7 +9,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
-public class MainPageLogicor {
+import java.util.List;
+
+public class MainPageLogicor extends BasePageLC {
     public MainPageLogicor(WebDriver driver){
         PageFactory.initElements(driver, this);
         this.driver = driver;
@@ -35,12 +39,22 @@ public class MainPageLogicor {
     @FindBy(xpath = "//*[@class='warehouse-finder-tabs-inner-row'/a[3]")
     private WebElement radioSplitView;
 
+    @FindBy (xpath = "//*[@class=\"warehouse-finder-listing-country\"]/*")
+    private List<WebElement> assetList ;
+
+    public  Integer countAssetsMain(){
+        goSleep(2);
+        return assetList.size();
+    }
+
 
     public void chooseSmallProperties() {
+        Reporter.log("Choosing small properties");
         smallRadioButton.click();
     }
 
     public void chooseLargeProperties() {
+        Reporter.log("Choosing large properties");
         largeRadioButton.click();
     }
 
@@ -49,7 +63,12 @@ public class MainPageLogicor {
     }
 
     public void chooseListView() {
+
+        Reporter.log("Choosing list view");
+        goSleep(3);
         radioListView.click();
+        goSleep(3);
+//        moveToElement("//*[@class='warehouse-finder-listing-country']/*");
     }
 
     public void chooseSplitView() {
@@ -57,6 +76,7 @@ public class MainPageLogicor {
     }
 
     public void selectCountry(String country) {
+        Reporter.log("Choosing country");
         Select drpCountry = new Select(dropdownSelectCountry);
         drpCountry.selectByVisibleText(country);
     }
@@ -65,7 +85,14 @@ public class MainPageLogicor {
 //        passwordField.sendKeys(password);
 //    }
 //
+    public void foundWarehouse(String s) {
+        Reporter.log("Searching warehouse");
+
+    }
+
+
     public void clickSearchButton() {
+        Reporter.log("Searching warehouse");
         viewVacanciesButton.click();
     }
 

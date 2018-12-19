@@ -27,10 +27,7 @@ public class BasePageLC extends BaseTest {
         return BaseTest.getDriver().findElement(element);
     }
 
-    public void uploadFile(By elem, String filePath) {
-        WebElement element = findElement(elem);
-        element.sendKeys(filePath);
-    }
+
 
 
     public List<WebElement> findElements(By element) {
@@ -44,7 +41,7 @@ public class BasePageLC extends BaseTest {
 
     public String getElementText(By element) {
 
-        Reporter.log("Getting element text - " + findElement(element).getText());
+//        Reporter.log("Getting element text - " + findElement(element).getText());
         return findElement(element).getText();
     }
 
@@ -180,18 +177,56 @@ public class BasePageLC extends BaseTest {
     public void addTableElementsToCollection(List itemsList) {
         List rows = getDriver().findElements(By.xpath("//*[@id='w0']/table/tbody/tr/td[1]"));
         for (int i = 1; i < rows.size() + 1; i++) {
+            if (itemsList.size() < 41) {
 
-            String s1 = getElementText(By.xpath("//*[@id='w0']/table/tbody/tr[" + i + "]/td[1]"));
-            String s2 = getElementText(By.xpath("//*[@id='w0']/table/tbody/tr[" + i + "]/td[2]"));
-            String s3 = getElementText(By.xpath("//*[@id='w0']/table/tbody/tr[" + i + "]/td[3]"));
-            String s4 = getElementText(By.xpath("//*[@id='w0']/table/tbody/tr[" + i + "]/td[4]"));
-            Boolean bool = isCneckboxChecked(By.xpath("//*[@id='w0']/table/tbody/tr[" + i + "]/td[6]/a/span"));
 
-            Items items = new Items(s1, s2, s3, s4, bool);
+                String s1 = getElementText(By.xpath("//*[@id='w0']/table/tbody/tr[" + i + "]/td[1]"));
+                String s2 = getElementText(By.xpath("//*[@id='w0']/table/tbody/tr[" + i + "]/td[2]"));
+                String s3 = getElementText(By.xpath("//*[@id='w0']/table/tbody/tr[" + i + "]/td[3]"));
+                String s4 = getElementText(By.xpath("//*[@id='w0']/table/tbody/tr[" + i + "]/td[4]"));
+                Boolean bool = isCneckboxChecked(By.xpath("//*[@id='w0']/table/tbody/tr[" + i + "]/td[6]/a/span"));
+                findElement(By.xpath("//*[@id=\"w0\"]/table/tbody/tr[" + i + "]/td[5]/a[1]")).click();
 
-            itemsList.add(items);
-            System.out.println(items.toString());
-            System.out.println(itemsList.size() + "ITEMS__________KDKEKE___________________________");
+                String s6 = getElementText(By.xpath("//*[@class='table table-condensed table-hover']//*[19]//*[2]"));
+                //*[@id="w0"]/table/tbody/tr[]/td[5]/a[1]
+//            System.out.println(s6);
+                goSleep(1);
+                Double x = Double.valueOf(s6);
+                findElement(By.xpath("//*[@class=\"h2\"]/*[1]")).click();
+
+
+                Items items = new Items(s1, s2, s3, s4, x, bool);
+
+                itemsList.add(items);
+                Reporter.log(items.toString());
+
+            } else {
+
+                findElement(By.xpath("//*[@id=\"w0\"]/ul/li[3]/a")).click();
+                goSleep(2);
+
+
+                String s1 = getElementText(By.xpath("//*[@id='w0']/table/tbody/tr[" + i + "]/td[1]"));
+                String s2 = getElementText(By.xpath("//*[@id='w0']/table/tbody/tr[" + i + "]/td[2]"));
+                String s3 = getElementText(By.xpath("//*[@id='w0']/table/tbody/tr[" + i + "]/td[3]"));
+                String s4 = getElementText(By.xpath("//*[@id='w0']/table/tbody/tr[" + i + "]/td[4]"));
+                Boolean bool = isCneckboxChecked(By.xpath("//*[@id='w0']/table/tbody/tr[" + i + "]/td[6]/a/span"));
+                findElement(By.xpath("//*[@id=\"w0\"]/table/tbody/tr[" + i + "]/td[5]/a[1]")).click();
+
+                String s6 = getElementText(By.xpath("//*[@class='table table-condensed table-hover']//*[19]//*[2]"));
+                //*[@id="w0"]/table/tbody/tr[]/td[5]/a[1]
+//            System.out.println(s6);
+                Double x = Double.valueOf(s6);
+                findElement(By.xpath("//*[@class=\"h2\"]/*[1]")).click();
+
+
+                Items items = new Items(s1, s2, s3, s4, x, bool);
+
+                itemsList.add(items);
+                Reporter.log(items.toString());
+
+            }
+            Reporter.log(itemsList.size() + " items added to collection");
         }
     }
 
@@ -393,13 +428,19 @@ public class BasePageLC extends BaseTest {
         WebElement element = driver.findElement(By.xpath(xpath));
         action.moveToElement(element);
         action.perform();
-        this.goSleep(2000);
+        this.goSleep(2);
 
     }
 
 
     public static void openURL(String URL) {
         getDriver().get(URL);
+    }
+
+    public void deleteAllItemsAdmin() {
+
+        openURL("http://ec2-3-8-87-222.eu-west-2.compute.amazonaws.com/admin/property/index");
+        deleteAllItemsLogikor("//*[@id='w0']/table/tbody/tr/td/div", "//*[@id='w0']/table/tbody/tr[1]/td[7]/a/span");
     }
 
     public void enterTextInTextField(String xPathExpression, String text) {

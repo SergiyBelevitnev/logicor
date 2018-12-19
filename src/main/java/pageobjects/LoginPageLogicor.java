@@ -1,5 +1,7 @@
 package pageobjects;
 
+import base.Reporter;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -21,6 +23,17 @@ public class LoginPageLogicor {
     @FindBy(xpath = "//*[@id='form-user-login']//button")
     private WebElement loginButton;
 
+    @FindBy(xpath = "//*[@title='Property import']")
+    private WebElement importButton;
+
+
+
+    public void clickImportButton() {
+        importButton.click();
+    }
+
+
+
     private void inputLogin(String username) {
         loginField.sendKeys(username);
     }
@@ -34,6 +47,8 @@ public class LoginPageLogicor {
     }
 
     public void login(String username, String password) {
+        Reporter.log("Login to admin page");
+
         inputLogin(username);
         inputPassword(password);
         clickLoginButton();

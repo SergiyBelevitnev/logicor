@@ -5,14 +5,20 @@ public class Items {
     String assetName;
     String town;
     String country;
+    Double space;
     Boolean isdisplayed;
 
-    public Items(String assetReference, String assetName, String town, String country, Boolean isdisplayed) {
+    public Items(String assetReference, String assetName, String town, String country,Double space, Boolean isdisplayed) {
         this.assetReference = assetReference;
         this.assetName = assetName;
         this.town = town;
         this.country = country;
         this.isdisplayed = isdisplayed;
+        this.space=space;
+    }
+
+    public Double getSpace() {
+        return space;
     }
 
     public String getAssetReference() {
@@ -62,6 +68,7 @@ public class Items {
                 ", assetName='" + assetName + '\'' +
                 ", town='" + town + '\'' +
                 ", country='" + country + '\'' +
+                ", space=" + space +
                 ", isdisplayed=" + isdisplayed +
                 '}';
     }
