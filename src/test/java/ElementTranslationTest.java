@@ -1,7 +1,9 @@
 import base.BasePageLC;
+import base.BaseTest;
 import base.PropertyData;
 import base.Reporter;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -9,7 +11,7 @@ import pageobjects.*;
 
 @Test
 
-public class ElementTranslationTest extends BasePageLC {
+public class ElementTranslationTest extends BaseTest {
 
     public static ElementTranslationPage elTrPage;
     public static PropertyDetailPageUi propertyDetailPageUi;
@@ -51,7 +53,7 @@ public class ElementTranslationTest extends BasePageLC {
 
 
 
-        goSleep(2);
+        BasePageLC.goSleep(2);
 
         elTrPage.countrySort();
         String editElementCountry= elTrPage.getCountryName();
@@ -84,23 +86,23 @@ public class ElementTranslationTest extends BasePageLC {
         addImagePage.addFirstImage();
         addImagePage.addFirstImage();
 
-        goSleep(2);
+        BasePageLC.goSleep(2);
 
         Integer imageCountAdmin = addImagePage.imageCountAdmin();
 
         elTrPage.clickFloorPanButton();
         addImagePage.addFirstImage();
-        goSleep(2);
+        BasePageLC.goSleep(2);
 
         Integer imageFloorPanAdmin = addImagePage.imageFloorPanAdmin();
 
         addImagePage.goBackButton();
 
 
-        openURL("http://ec2-35-178-97-148.eu-west-2.compute.amazonaws.com");
+        BasePageLC.openURL("http://ec2-35-178-97-148.eu-west-2.compute.amazonaws.com");
 
 
-        goSleep(4);
+        BasePageLC.goSleep(2);
 
         mainPageLogicor = new MainPageLogicor(getDriver());
 
@@ -109,18 +111,17 @@ public class ElementTranslationTest extends BasePageLC {
 
         mainPageLogicor.clickSearchButton();
         mainPageLogicor.chooseListView();
-        goSleep(5);
+        BasePageLC.goSleep(2);
 
-        clickOnElement(By.xpath("//*[@class=\"warehouse-finder-listing\"]//*[@class=\"info-box-inner__heading\"][.='"+propertyData.getAssetName()+"']"));
+        getDriver().findElement(By.xpath("//*[@class=\"warehouse-finder-listing\"]//*[@class=\"info-box-inner__heading\"][.='" + propertyData.getAssetName() + "']")).click();
 
-        scrollToBottom();
+        BasePageLC.scrollToBottom();
 
 
         propertyDetailPageUi = new PropertyDetailPageUi(getDriver());
 
-//        String foo = "\n"+"\n"+"MAKE AN ENQUIRY\n"+"FIRST NAME *\n"+"LAST NAME *\n"+"EMAIL *\n"+"PHONE NUMBER\n"+"MESSAGE *\n"+"AGREE\n"+"I accept the Privacy Notice and Terms of Use";
-//        System.out.println(propertyDetailPageUi.getVacantSpaceField());
-        goSleep(5);
+
+        BasePageLC.goSleep(2);
 
         Assert.assertEquals(propertyDetailPageUi.getYear(),propertyData.getYearAvailableFrom().toString());
 
@@ -148,6 +149,6 @@ public class ElementTranslationTest extends BasePageLC {
         Assert.assertEquals(imageFloorPanAdmin,propertyDetailPageUi.floorCountUi());
         Reporter.log("Verification media elements!");
 
-        goSleep(8);
+        BasePageLC.goSleep(2);
     }
 }
