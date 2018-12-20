@@ -7,6 +7,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class ImportPropertiesPage extends BasePageLC {
 
@@ -15,6 +17,10 @@ public class ImportPropertiesPage extends BasePageLC {
     public ImportPropertiesPage(WebDriver driver) {
         PageFactory.initElements(driver, this);
         this.driver = driver;
+    }
+
+    public void waitForPresenceOfElement(WebElement element) {
+        WebElement wait = (new WebDriverWait(driver,20)).until(ExpectedConditions.visibilityOf(element));
     }
 
     @FindBy(xpath = "//*[@id='propertyimportform-file_import']")
@@ -36,6 +42,7 @@ public class ImportPropertiesPage extends BasePageLC {
 
 
     public void openPropList(){
+        waitForPresenceOfElement(listPropertiesButton);
         listPropertiesButton.click();
 
     }
