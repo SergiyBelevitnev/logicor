@@ -24,7 +24,7 @@ public class BaseTest {
     private static ThreadLocal<ExtentTest> parentTest = new ThreadLocal();
 
 
-    @BeforeClass
+    @BeforeTest
     public synchronized void beforeClass(ITestContext ctx) {
         suiteName = ctx.getCurrentXmlTest().getSuite().getName();
         ExtentTest parent = ExtentManager.getInstance(suiteName).createTest(getClass().getName());
