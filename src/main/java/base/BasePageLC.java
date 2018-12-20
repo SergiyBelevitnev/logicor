@@ -283,7 +283,7 @@ public class BasePageLC extends BaseTest {
     }
 
 
-    public void scrollToBottom() {
+    public static void scrollToBottom() {
         JavascriptExecutor jse1 = (JavascriptExecutor) BaseTest.getDriver();
         jse1.executeScript("scroll(0, 1000)"); // if the element is at bottom.
     }
@@ -414,7 +414,7 @@ public class BasePageLC extends BaseTest {
     }
 
 
-    public void goSleep(int time) {
+    public static void goSleep(int time) {
         try {
             Thread.sleep(time * 1000);
         } catch (InterruptedException e) {

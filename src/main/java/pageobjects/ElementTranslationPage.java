@@ -7,6 +7,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 
@@ -143,12 +145,18 @@ public class ElementTranslationPage extends BasePageLC {
         publishButton.click();
     }
 
+    public void waitForPresenceOfElement(WebElement element) {
+        WebElement wait = (new WebDriverWait(driver,20)).until(ExpectedConditions.elementToBeClickable(element));
+    }
+
     public void countrySort(){
-        goSleep(3);
+        waitForPresenceOfElement(countrySort);
+        countrySort.click();
+
+        waitForPresenceOfElement(countrySort);
         countrySort.click();
         goSleep(3);
-        countrySort.click();
-        goSleep(3);
+
     }
    public void setAssetNameCell(String assetName){
        Reporter.log("Setting asset name");
@@ -250,6 +258,7 @@ public class ElementTranslationPage extends BasePageLC {
     }
 
     private String getCountryName2(){
+        waitForPresenceOfElement(findElement(By.xpath("//*[@id='w0']/table/tbody/tr[2]/td[4]")));
         return getElementText(By.xpath("//*[@id='w0']/table/tbody/tr[2]/td[4]"));
 
 

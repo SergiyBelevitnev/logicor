@@ -30,4 +30,19 @@ public class ImportPropertiesPage extends BasePageLC {
 
     @FindBy(xpath = "//*[@id='w0']/div[2]/button")
     private WebElement importButton;
+
+    @FindBy(xpath = "//*[@class=\"btn btn-success btn-xs\"][1]")
+    private WebElement listPropertiesButton;
+
+
+    public void openPropList(){
+        listPropertiesButton.click();
+
+    }
+
+    public void startImport(){
+        importButton.click();
+
+    }
+
 }

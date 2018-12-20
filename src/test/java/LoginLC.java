@@ -25,20 +25,15 @@ public class LoginLC extends BasePageLC {
     public void loginLC() {
         LaunchBrowser("chrome");
         openURL("http://ec2-3-8-87-222.eu-west-2.compute.amazonaws.com");
-//        getDriver().manage().window().maximize();
+        getDriver().manage().window().maximize();
         loginPageLogicor = new LoginPageLogicor(getDriver());
         importPropertiesPage = new ImportPropertiesPage(getDriver());
         loginPageLogicor.login("qa@logicor.eu", "vcVC9eVvX3Ebk");
         loginPageLogicor.clickImportButton();
         importPropertiesPage.uploadFile(System.getProperty("user.dir")+"\\src\\main\\resources\\files\\property.csv");
-
-
-
-
+        importPropertiesPage.startImport();
         goSleep(2);
-        clickOnElement(By.xpath("/html/body/div/p/a[1]"));
-        goSleep(2);
-//        clickOnElement(By.xpath("//*[@id='w0']/ul/li[4]/a"));
+        importPropertiesPage.openPropList();
 
     }
 
