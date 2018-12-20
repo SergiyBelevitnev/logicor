@@ -51,8 +51,6 @@ public class ElementTranslationTest extends BaseTest {
     public void elementTranslationPageTest(PropertyData propertyData){
         elTrPage = new ElementTranslationPage(getDriver());
 
-
-
         BasePageLC.goSleep(2);
 
         elTrPage.countrySort();
@@ -141,9 +139,6 @@ public class ElementTranslationTest extends BaseTest {
         Reporter.log("Verification property success!");
         Assert.assertEquals(propertyData.getAssetName().toUpperCase(),propertyDetailPageUi.getTitleField());
 
-
-//        System.out.println("admin"+imageCountAdmin);
-//        System.out.println("UI"+propertyDetailPageUi.imageCountUi());
         Assert.assertEquals(imageCountAdmin,propertyDetailPageUi.imageCountUi());
 
         Assert.assertEquals(imageFloorPanAdmin,propertyDetailPageUi.floorCountUi());
