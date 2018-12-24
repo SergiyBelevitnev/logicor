@@ -10,11 +10,11 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class ImportPropertiesPage extends BasePageLC {
+public class ImportPropertiesPageAdmin extends BasePageLC {
 
     public WebDriver driver;
 
-    public ImportPropertiesPage(WebDriver driver) {
+    public ImportPropertiesPageAdmin(WebDriver driver) {
         PageFactory.initElements(driver, this);
         this.driver = driver;
     }

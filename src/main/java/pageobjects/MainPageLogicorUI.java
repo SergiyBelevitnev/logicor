@@ -11,8 +11,8 @@ import org.openqa.selenium.support.ui.Select;
 
 import java.util.List;
 
-public class MainPageLogicor extends BasePageLC {
-    public MainPageLogicor(WebDriver driver){
+public class MainPageLogicorUI extends BasePageLC {
+    public MainPageLogicorUI(WebDriver driver){
         PageFactory.initElements(driver, this);
         this.driver = driver;
     }
@@ -33,6 +33,9 @@ public class MainPageLogicor extends BasePageLC {
     @FindBy(xpath = "//*[@class='warehouse-finder-tabs-inner-row'/a[1]")
     private WebElement radioMapView;
 
+    @FindBy(xpath = "//*[@class=\"warehouse-finder-listing-country\"]/*[1]")
+    private WebElement firstWarehouse;
+
     @FindBy(xpath = "//*[@id=\"block-system-main\"]/div[3]/div/div[2]/a[2]")
     private WebElement radioListView;
 
@@ -47,6 +50,10 @@ public class MainPageLogicor extends BasePageLC {
         return assetList.size();
     }
 
+    public void chooseFirstWarehouse(){
+        waitForPresenceOfElement(firstWarehouse);
+        firstWarehouse.click();
+    }
 
     public void chooseSmallProperties() {
         Reporter.log("Choosing small properties");
