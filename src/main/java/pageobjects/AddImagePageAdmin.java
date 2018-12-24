@@ -12,10 +12,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 
-public class AddImagePage extends BasePageLC {
+public class AddImagePageAdmin extends BasePageLC {
 
     public WebDriver driver;
-    public AddImagePage(WebDriver driver){
+    public AddImagePageAdmin(WebDriver driver){
         PageFactory.initElements(driver, this);
         this.driver = driver;
     }

@@ -12,10 +12,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 
-public class ElementTranslationPage extends BasePageLC {
+public class ElementTranslationPageAdmin extends BasePageLC {
 
     public WebDriver driver;
-    public ElementTranslationPage(WebDriver driver){
+    public ElementTranslationPageAdmin(WebDriver driver){
         PageFactory.initElements(driver, this);
         this.driver = driver;
     }

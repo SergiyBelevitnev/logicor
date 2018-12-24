@@ -7,8 +7,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LoginPageLogicor {
-    public LoginPageLogicor(WebDriver driver) {
+public class LoginPageLogicorAdmin {
+    public LoginPageLogicorAdmin(WebDriver driver) {
         PageFactory.initElements(driver, this);
         this.driver = driver;
     }
