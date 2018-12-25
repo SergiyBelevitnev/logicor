@@ -1,6 +1,6 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="TestLogiCor">
-    <test name="User Test">
+<suite name="ChangeAssetName">
+    <test name="ChangeAssetName">
 
         <parameter name="browser" value="chrome"/>
         <parameter name="environment" value="TEST"/>
@@ -8,15 +8,15 @@
         <classes>
             <class name="LoginLC">
                 <methods>
-                <exclude
-                        name="setDataToCollection">
-                </exclude>
+                    <exclude
+                            name="setDataToCollection">
+                    </exclude>
                     <exclude name="deleteAllItemsAdmin"> </exclude>
 
                 </methods>
 
             </class>
-            <class name="ElementTranslationTest">
+            <class name="PropertyTranslationTest">
             </class>
             <class name="DeletingItems">
             </class>

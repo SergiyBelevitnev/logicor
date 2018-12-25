@@ -6,6 +6,7 @@ import org.testng.annotations.Test;
 import pageobjects.MainPageLogicorUI;
 import pageobjects.MakeAnEquiryPage;
 
+import static base.BasePageLC.goSleep;
 import static base.BasePageLC.openURL;
 
 public class MakeAnEnquiryTest extends BaseTest {
@@ -46,23 +47,11 @@ public class MakeAnEnquiryTest extends BaseTest {
             mainPageLogicorUI.chooseListView();
             mainPageLogicorUI.chooseFirstWarehouse();
 
-
-
             makeAnEquiryPage = new MakeAnEquiryPage(getDriver());
 
             makeAnEquiryPage.makeAnEnquiry(enquiryData.getFirstName(),enquiryData.getLastName(),
                     enquiryData.getEmail(),enquiryData.getPhoneNumber(),enquiryData.getMessage());
-
+            goSleep(5);
         }
-
-
-
-
-
-
-
-
-
-
 
 }

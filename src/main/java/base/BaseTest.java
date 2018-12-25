@@ -2,6 +2,7 @@ package base;
 
 import com.aventstack.extentreports.ExtentTest;
 import com.google.common.base.Function;
+import com.google.common.base.Strings;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -11,7 +12,14 @@ import org.testng.ITestResult;
 import org.testng.annotations.*;
 import java.io.IOException;
 import java.lang.reflect.Method;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.time.Duration;
+import java.util.*;
+import java.util.stream.Collectors;
+
+import static java.util.stream.Collectors.mapping;
+import static java.util.stream.Collectors.toList;
 
 
 @org.testng.annotations.Listeners({base.Listeners.class})
@@ -22,6 +30,7 @@ public class BaseTest {
     private static ThreadLocal<ExtentTest> test = new ThreadLocal();
     private String suiteName;
     private static ThreadLocal<ExtentTest> parentTest = new ThreadLocal();
+    protected static String ENVIRONMENT;
 
 
     @BeforeTest
@@ -103,5 +112,47 @@ public class BaseTest {
         Reporter.log("Stopping tests");
     }
 
+    @Parameters({"environment"})
+    @BeforeTest
+    public void runOn(String environment) throws MalformedURLException {
+        //Config launching app
+
+        setEnvironmentForTests(environment);
+    }
+
+    private static void setEnvironmentForTests(String environmentForTests) {
+        ENVIRONMENT = environmentForTests;
+    }
+
+    public static String getEnvironment() {
+        return ENVIRONMENT;
+    }
+
+
+    public Map<String, List<String>> splitQuery(URL url) {
+        if (Strings.isNullOrEmpty(url.getQuery())) {
+            return Collections.emptyMap();
+        }
+        return Arrays.stream(url.getQuery().split("&"))
+                .map(this::splitQueryParameter)
+                .collect(Collectors.groupingBy(AbstractMap.SimpleImmutableEntry::getKey, LinkedHashMap::new, mapping(Map.Entry::getValue, toList())));
+    }
+
+    public AbstractMap.SimpleImmutableEntry<String, String> splitQueryParameter(String it) {
+        final int idx = it.indexOf("=");
+        final String key = idx > 0 ? it.substring(0, idx) : it;
+        final String value = idx > 0 && it.length() > idx + 1 ? it.substring(idx + 1) : null;
+        return new AbstractMap.SimpleImmutableEntry<>(key, value);
+    }
+
+
+
+    public  String idCurentItem(String currentUrl) {
+        StringBuffer buff = new StringBuffer(currentUrl);
+        int a = buff.indexOf("id=");
+        int b = buff.indexOf("&");
+        String idCurentIt = buff.substring(a+3,b);
+        return idCurentIt;
+    }
 
 }

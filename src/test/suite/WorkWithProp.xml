@@ -3,6 +3,7 @@
     <test name="User Test2">
 
         <parameter name="browser" value="chrome"/>
+        <parameter name="environment" value="TEST"/>
 
         <classes>
             <class name="LoginLC">

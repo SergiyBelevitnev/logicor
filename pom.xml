@@ -146,9 +146,9 @@
                 <!--<outputFile>Properties/config.properties</outputFile>-->
             </suiteXmlFiles>
 
-            <!--<systemPropertyVariables>-->
-            <!--<UrlUrl>${UrlUrl}</UrlUrl>-->
-            <!--</systemPropertyVariables>-->
+            <systemPropertyVariables>
+            <environment>${env}</environment>
+            </systemPropertyVariables>
 
         </configuration>
     </plugin>

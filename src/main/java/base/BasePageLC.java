@@ -20,6 +20,8 @@ public class BasePageLC extends BaseTest {
 
     private WebDriver driver = BaseTest.getDriver();
 
+
+
     public BasePageLC() {
         driver = BaseTest.getDriver();
     }
@@ -181,7 +183,7 @@ public class BasePageLC extends BaseTest {
 
         String s6 = getElementText(By.xpath("//*[@class='table table-condensed table-hover']//*[19]//*[2]"));
 
-//        goSleep(1);
+
         Double x = Double.valueOf(s6);
         findElement(By.xpath("//*[@class=\"h2\"]/*[1]")).click();
         Items items = new Items(s1, s2, s3, s4, x, bool);
@@ -201,25 +203,6 @@ public class BasePageLC extends BaseTest {
         for (int i = 1; i < rows.size() + 1; i++) {
             if (itemsList.size() < 41) {
 
-
-//                String s1 = getElementText(By.xpath("//*[@id='w0']/table/tbody/tr[" + i + "]/td[1]"));
-//                String s2 = getElementText(By.xpath("//*[@id='w0']/table/tbody/tr[" + i + "]/td[2]"));
-//                String s3 = getElementText(By.xpath("//*[@id='w0']/table/tbody/tr[" + i + "]/td[3]"));
-//                String s4 = getElementText(By.xpath("//*[@id='w0']/table/tbody/tr[" + i + "]/td[4]"));
-//                Boolean bool = isCneckboxChecked(By.xpath("//*[@id='w0']/table/tbody/tr[" + i + "]/td[6]/a/span"));
-//                findElement(By.xpath("//*[@id=\"w0\"]/table/tbody/tr[" + i + "]/td[5]/a[1]")).click();
-//
-//                String s6 = getElementText(By.xpath("//*[@class='table table-condensed table-hover']//*[19]//*[2]"));
-//                //*[@id="w0"]/table/tbody/tr[]/td[5]/a[1]
-////            System.out.println(s6);
-//                goSleep(1);
-//                Double x = Double.valueOf(s6);
-//                findElement(By.xpath("//*[@class=\"h2\"]/*[1]")).click();
-//
-//
-//                Items items = new Items(s1, s2, s3, s4, x, bool);
-
-//
                 itemsList.add(getDataFromItem(i));
                 Reporter.log(getDataFromItem(i).toString());
 
@@ -227,26 +210,6 @@ public class BasePageLC extends BaseTest {
 
                 findElement(By.xpath("//*[@id=\"w0\"]/ul/li[3]/a")).click();
                 goSleep(2);
-
-//
-//                String s1 = getElementText(By.xpath("//*[@id='w0']/table/tbody/tr[" + i + "]/td[1]"));
-//                String s2 = getElementText(By.xpath("//*[@id='w0']/table/tbody/tr[" + i + "]/td[2]"));
-//                String s3 = getElementText(By.xpath("//*[@id='w0']/table/tbody/tr[" + i + "]/td[3]"));
-//                String s4 = getElementText(By.xpath("//*[@id='w0']/table/tbody/tr[" + i + "]/td[4]"));
-//                Boolean bool = isCneckboxChecked(By.xpath("//*[@id='w0']/table/tbody/tr[" + i + "]/td[6]/a/span"));
-//                findElement(By.xpath("//*[@id=\"w0\"]/table/tbody/tr[" + i + "]/td[5]/a[1]")).click();
-//
-//                String s6 = getElementText(By.xpath("//*[@class='table table-condensed table-hover']//*[19]//*[2]"));
-//                //*[@id="w0"]/table/tbody/tr[]/td[5]/a[1]
-////            System.out.println(s6);
-//                Double x = Double.valueOf(s6);
-//                findElement(By.xpath("//*[@class=\"h2\"]/*[1]")).click();
-//
-//
-//                Items items = new Items(s1, s2, s3, s4, x, bool);
-//
-//                itemsList.add(items);
-//                Reporter.log(items.toString());
 
                 itemsList.add(getDataFromItem(i));
                 Reporter.log(getDataFromItem(i).toString());
@@ -256,41 +219,7 @@ public class BasePageLC extends BaseTest {
         }
     }
 
-    public void workWithCollection(List<Items> itemlist) {
-        int countFrance = 0;
-        int countPoland = 0;
-        int countSpain = 0;
-        int countUK = 0;
-        int countItaly = 0;
-        for (int i = 1; i < itemlist.size(); i++) {
-            String s = itemlist.get(i).getCountry();
-            switch (s) {
-                case "France":
-                    countFrance++;
-                    break;
-                case "Poland":
-                    countPoland++;
-                    break;
-                case "Spain":
-                    countSpain++;
-                    break;
-                case "UK":
-                    countUK++;
-                    break;
-                case "Italy":
-                    countItaly++;
-                    break;
 
-            }
-
-        }
-        System.out.println("ldkrhjlrsjgt;s;tkw;tkw;jktwj    " + countFrance);
-        System.out.println("gjdkljg;dsrkgt;ler   " + countPoland);
-        System.out.println("gjdkljg;dsrkgt;ler   " + countSpain);
-        System.out.println("gjdkljg;dsrkgt;ler   " + countUK);
-        System.out.println("gjdkljg;dsrkgt;ler   " + countItaly);
-
-    }
 
     public void clickOnElementWithWait(String message, By element, int timeWaitSeconds) {
 

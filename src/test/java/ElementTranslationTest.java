@@ -1,7 +1,4 @@
-import base.BasePageLC;
-import base.BaseTest;
-import base.PropertyData;
-import base.Reporter;
+import base.*;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
@@ -56,51 +53,9 @@ public class ElementTranslationTest extends BaseTest {
         String editElementCountry= elTrPage.getCountryName();
         System.out.println(editElementCountry);
 
-//        String dgf = propertyDataProvider()[0][0].toString();
-//        System.out.println(dgf);
+
 
         elTrPage.clickPublishButton();
-
-
-//        elTrPage
-//                .setAssetNameCell(propertyData.getAssetName())
-//                .setTownCell()
-//                .setAssetDescriptionCell()
-//                .setYearAvaCell()
-//                .setHeightCell()
-//                .setCarParkingCell()
-//                .setLoadingDocksCell()
-//                .setVacantSpaceFeetCell()
-//                .setVacantSpaceMetresCell()
-//                .setTotalSpaceFeetCell()
-//                .setTotalSpaceMetresCell()
-//                .setOfficeTotalFeetCell()
-//                .setOfficeTotalMetresCell()
-//                .setCountryCell()
-//                .setLongitudeCell()
-//                .setLatitudeCell();
-
-
-//        System.out.println(AssetName);
-//        System.out.println(Town);
-//        System.out.println(AssetDescription);
-//        System.out.println(YearAvailableFrom.toString());
-//        System.out.println(HeightMax);
-//        System.out.println(CarParkingSpacesTotal);
-//        System.out.println(LoadingDocksTotal);
-//        System.out.println(VacantSpaceSquareFeet);
-//        System.out.println(VacantSpaceSquareMetres);
-//        System.out.println(TotalSpaceVacantSqft);
-//        System.out.println(TotalVacantSquareMetres);
-//        System.out.println(OfficeTotalVacantSquareFeet);
-//        System.out.println(OfficeTotalVacantSquareMetres);
-//        System.out.println(Country);
-//        System.out.println(Longitude);
-//        System.out.println(Latitude);
-
-
-
-
 
 
         elTrPage.setAssetNameCell(propertyData.getAssetName());
@@ -140,7 +95,7 @@ public class ElementTranslationTest extends BaseTest {
         addImagePageAdmin.goBackButton();
 
 
-        BasePageLC.openURL("http://ec2-35-178-97-148.eu-west-2.compute.amazonaws.com");
+        BasePageLC.openURL(URL.CLIENT_TEST.toString());
 
 
         BasePageLC.goSleep(2);

@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
@@ -112,6 +113,26 @@ public class ElementTranslationPageAdmin extends BasePageLC {
     @FindBy(xpath = "//*[@id=\"propertytranslationform-location_latitude\"]")
     private WebElement lattitudeCell;
 
+    @FindBy(xpath = "//*[@id=\"switch-language\"]")
+    private WebElement languageSwitch;
+
+    @FindBy(xpath = "//*[@class=\"alert alert-success alert-dismissible\"]")
+    private WebElement alertSuccess;
+
+
+    @FindBy(xpath = "//*[@class=\"h2\"]//*[@class=\"btn btn-default btn-sm\"")
+    private WebElement backButton;
+
+    public void goBack(){
+        backButton.click();
+    }
+
+
+    public void selectLanguage(String language){
+        Select drpLanguage = new Select(languageSwitch);
+        drpLanguage.selectByVisibleText(language);
+    }
+
 
     public void clickAddImageButton(){
         Reporter.log("Openning add image page");
@@ -154,6 +175,7 @@ public class ElementTranslationPageAdmin extends BasePageLC {
         countrySort.click();
 
         waitForPresenceOfElement(countrySort);
+        goSleep(2);
         countrySort.click();
         goSleep(3);
 
@@ -255,6 +277,7 @@ public class ElementTranslationPageAdmin extends BasePageLC {
     public  void saveProperty(){
         Reporter.log("Saving property");
         saveButton.click();
+        waitForPresenceOfElement(alertSuccess);
     }
 
     private String getCountryName2(){
@@ -262,6 +285,11 @@ public class ElementTranslationPageAdmin extends BasePageLC {
         return getElementText(By.xpath("//*[@id='w0']/table/tbody/tr[2]/td[4]"));
 
 
+    }
+
+    public String getAssetName() {
+        waitForPresenceOfElement(findElement(By.xpath("//*[@id='w0']/table/tbody/tr[2]/td[2]")));
+        return getElementText(By.xpath("//*[@id='w0']/table/tbody/tr[2]/td[2]"));
     }
     public String getCountryName(){
         if (getCountryName2().equals("UK")){
