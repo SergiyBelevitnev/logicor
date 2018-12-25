@@ -48,6 +48,8 @@ public class PropertyDetailPageUi {
     @FindBy (xpath = "//*[@class=\"button button__blue button__download\"]")
     private List<WebElement> floorPans ;
 
+
+
     public  Integer floorCountUi(){
         return floorPans.size();
     }

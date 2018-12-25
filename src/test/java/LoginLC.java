@@ -1,8 +1,5 @@
-import base.BasePageLC;
+import base.*;
 
-import base.Items;
-import base.Reporter;
-import base.WorkWithCollectionAdminProp;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -24,7 +21,7 @@ public class LoginLC extends BasePageLC {
     @Test
     public void loginLC() {
         LaunchBrowser("chrome");
-        openURL("http://ec2-3-8-87-222.eu-west-2.compute.amazonaws.com");
+        openURL(URL.ADMIN_TEST.toString());
         getDriver().manage().window().maximize();
         loginPageLogicorAdmin = new LoginPageLogicorAdmin(getDriver());
         importPropertiesPageAdmin = new ImportPropertiesPageAdmin(getDriver());
@@ -52,7 +49,7 @@ public class LoginLC extends BasePageLC {
         }
         WorkWithCollectionAdminProp workWithCollectionAdminProp1 = new WorkWithCollectionAdminProp(itemsList);
 
-        openURL("http://ec2-35-178-97-148.eu-west-2.compute.amazonaws.com");
+        openURL(URL.CLIENT_TEST.toString());
 
 
         mainPageLogicorUI = new MainPageLogicorUI(getDriver());
@@ -72,6 +69,7 @@ public class LoginLC extends BasePageLC {
         mainPageLogicorUI.clickSearchButton();
         mainPageLogicorUI.chooseListView();
         Reporter.log("Verification amount of large properties in Spain is: " + mainPageLogicorUI.countAssetsMain().toString());
+
         Assert.assertEquals(workWithCollectionAdminProp1.getCountSpain(), mainPageLogicorUI.countAssetsMain());
 
 

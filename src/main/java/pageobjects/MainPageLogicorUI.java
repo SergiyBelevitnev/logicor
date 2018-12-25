@@ -45,6 +45,28 @@ public class MainPageLogicorUI extends BasePageLC {
     @FindBy (xpath = "//*[@class=\"warehouse-finder-listing-country\"]/*")
     private List<WebElement> assetList ;
 
+
+    @FindBy (xpath = "//*[@class=\"language-click\"]")
+    private WebElement languageMenu;
+
+    public void languageMenuClick(){
+        languageMenu.click();
+    }
+
+    public void chooseLanguage(String lang) {
+        waitForPresenceOfElement(findElement(By.xpath("//*[@class='language-menu']")));
+
+        switch (lang){
+            case "EN":{findElement(By.xpath("//*[@class='language-menu']//*[@title='English']")).click(); break;}
+            case "FR":{findElement(By.xpath("//*[@class='language-menu']//*[@title='French']")).click(); break;}
+            case "DE":{findElement(By.xpath("//*[@class='language-menu']//*[@title='German']")).click(); break;}
+            case "IT":{findElement(By.xpath("//*[@class='language-menu']//*[@title='Italian']")).click(); break;}
+            case "PL":{findElement(By.xpath("//*[@class='language-menu']//*[@title='Polish']")).click(); break;}
+            case "ES":{findElement(By.xpath("//*[@class='language-menu']//*[@title='Spanish']")).click(); break;}
+
+            }
+        }
+
     public  Integer countAssetsMain(){
         goSleep(2);
         return assetList.size();
@@ -74,7 +96,9 @@ public class MainPageLogicorUI extends BasePageLC {
         Reporter.log("Choosing list view");
         goSleep(3);
         radioListView.click();
-        goSleep(3);
+
+        waitForPresenceOfElement(firstWarehouse);
+        goSleep(2);
 //        moveToElement("//*[@class='warehouse-finder-listing-country']/*");
     }
 
