@@ -142,7 +142,7 @@
         <configuration>
             <suiteXmlFiles>
                 <!--suppress UnresolvedMavenProperty -->
-                <suiteXmlFile>src\test\suite\${testngFile}</suiteXmlFile>
+                <suiteXmlFile>src\test\suite\${suiteName}.xml</suiteXmlFile>
                 <!--<outputFile>Properties/config.properties</outputFile>-->
             </suiteXmlFiles>
 

@@ -49,6 +49,28 @@ public class MainPageLogicorUI extends BasePageLC {
     @FindBy (xpath = "//*[@class=\"language-click\"]")
     private WebElement languageMenu;
 
+    @FindBy (xpath = "//*[@class=\"search search-click\"]")
+    private WebElement searchButton;
+
+    @FindBy (xpath = "//*[@placeholder=\"Search\"]")
+    private WebElement searchField;
+
+
+
+    public void searchMaking(String string){
+        waitForPresenceOfElement(searchField);
+        searchField.sendKeys(string);
+        findElement(By.xpath("//*[@class=\"search-btn\"]")).click();
+
+
+    }
+
+    public void searchClick(){
+        searchButton.click();
+    }
+
+
+
     public void languageMenuClick(){
         languageMenu.click();
     }
@@ -86,6 +108,8 @@ public class MainPageLogicorUI extends BasePageLC {
         Reporter.log("Choosing large properties");
         largeRadioButton.click();
     }
+
+
 
     public void chooseMapView() {
         radioMapView.click();

@@ -1,6 +1,8 @@
 import base.*;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
+import org.openqa.selenium.Point;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pageobjects.ImportPropertiesPageAdmin;
@@ -22,7 +24,8 @@ public class LoginLC extends BasePageLC {
     public void loginLC() {
         LaunchBrowser("chrome");
         openURL(URL.ADMIN_TEST.toString());
-        getDriver().manage().window().maximize();
+        getDriver().manage().window().setPosition(new Point(0,0));
+        getDriver().manage().window().setSize(new Dimension(1924,838));
         loginPageLogicorAdmin = new LoginPageLogicorAdmin(getDriver());
         importPropertiesPageAdmin = new ImportPropertiesPageAdmin(getDriver());
         loginPageLogicorAdmin.login("qa@logicor.eu", "vcVC9eVvX3Ebk");
