@@ -2,6 +2,7 @@ package pageobjects;
 
 import base.BasePageLC;
 import base.Reporter;
+import com.sun.org.apache.regexp.internal.RE;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -31,7 +32,7 @@ public class MakeAnEquiryPage extends BasePageLC {
     @FindBy(xpath = "//*[@id=\"edit-submitted-message\"]")
     private WebElement messageTextField;
 
-    @FindBy(xpath = "//*[@class=\"webform-submit button-primary form-submit\"]")
+    @FindBy(xpath = "//*[@class=\"webform-submit button-primary form-submit ajax-processed\"]")
     private WebElement sendButton;
 
     @FindBy(xpath = "//*[@id=\"edit-submitted-agree-1\"]")
@@ -58,6 +59,7 @@ public class MakeAnEquiryPage extends BasePageLC {
     }
 
     private void clickSendButton() {
+        waitForPresenceOfElement(sendButton);
         sendButton.click();
     }
 

@@ -55,7 +55,23 @@ public class MainPageLogicorUI extends BasePageLC {
     @FindBy (xpath = "//*[@placeholder=\"Search\"]")
     private WebElement searchField;
 
+    @FindBy (xpath = "//*[@id=\"edit-name\"]")
+    private WebElement nameField;
 
+    @FindBy (xpath = "//*[@id=\"edit-pass\"]")
+    private WebElement passField;
+
+    @FindBy (xpath = "//*[@id=\"edit-submit\"]")
+    private WebElement submitButton;
+
+
+    public void loginDrupal(String name, String pass){
+        waitForPresenceOfElement(nameField);
+        setTextCell(nameField,name);
+        setTextCell(passField,pass);
+        submitButton.click();
+
+    }
 
     public void searchMaking(String string){
         waitForPresenceOfElement(searchField);
