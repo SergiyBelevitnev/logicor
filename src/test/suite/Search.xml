@@ -1,0 +1,20 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="MakingSearch">
+    <test name="MakingSearch">
+
+        <parameter name="browser" value="chrome"/>
+        <parameter name="environment" value="TEST"/>
+
+        <classes>
+            <class name="MakingSearch">
+
+
+            </class>
+
+
+
+
+
+        </classes>
+    </test>
+</suite>

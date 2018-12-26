@@ -46,6 +46,7 @@ public class BasePageLC extends BaseTest {
         WebElement wait = (new WebDriverWait(driver,20)).until(ExpectedConditions.visibilityOf(element));
     }
 
+
     public String getElementText(By element) {
 
 //        Reporter.log("Getting element text - " + findElement(element).getText());

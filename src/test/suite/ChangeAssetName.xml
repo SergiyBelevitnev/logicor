@@ -1,6 +1,6 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="ChangeAssetName">
-    <test name="ChangeAssetName">
+    <test name="Change_Asset_Name">
 
         <parameter name="browser" value="chrome"/>
         <parameter name="environment" value="TEST"/>
@@ -18,8 +18,8 @@
             </class>
             <class name="PropertyTranslationTest">
             </class>
-            <class name="DeletingItems">
-            </class>
+            <!--<class name="DeletingItems">-->
+            <!--</class>-->
 
 
 

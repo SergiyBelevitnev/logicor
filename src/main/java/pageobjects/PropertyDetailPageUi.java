@@ -50,6 +50,8 @@ public class PropertyDetailPageUi {
 
 
 
+
+
     public  Integer floorCountUi(){
         return floorPans.size();
     }

@@ -14,7 +14,7 @@ public enum URL {
 
         switch (getEnvironment()) {
             case "PROD": {
-                this.address = "http://ec2-" + address+".eu-west-2.compute.amazonaws.com";
+                this.address = "http://eb2-" + address+".eu-west-2.compute.amazonaws.com";
                 break;
             }
             case "PROD_2": {
