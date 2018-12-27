@@ -1,4 +1,6 @@
 import base.*;
+import data.PropertyData;
+import data.URL;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;

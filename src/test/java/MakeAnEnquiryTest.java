@@ -1,8 +1,8 @@
 import base.BaseTest;
-import base.EnquiryData;
+import data.EnquiryData;
 
 import base.Reporter;
-import base.URL;
+import data.URL;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -37,8 +37,6 @@ public class MakeAnEnquiryTest extends BaseTest {
         return new Object[][]{{enquiryData}};
     }
 
-
-
         @Test (dataProvider = "enquiryGetData")
         public void makeAnEquiryVoid(EnquiryData enquiryData){
             mainPageLogicorUI = new MainPageLogicorUI(getDriver());
@@ -50,15 +48,18 @@ public class MakeAnEnquiryTest extends BaseTest {
 
             drupalAdminPage.openMakeAnEnquiryReportPage();
             goSleep(5);
-            int x = drupalAdminPage.lastEnquiryIndex();
-            Reporter.log("Last number of enquiry is: "+String.valueOf(x));
+            boolean b = drupalAdminPage.noEnquiries();
+            Reporter.log(String.valueOf(b));
+            int x=0;
 
 
-//            openURL(URL.CLIENT_TEST.toString()+"/en/admin/content/webform");
-//
-//            drupalAdminPage.openMakeAnEnquiryReportPage();
+            if (b==false) {
+               x = drupalAdminPage.lastEnquiryIndex();
+                Reporter.log("Number of last enquiry is: " + String.valueOf(x));
+            }else {Reporter.log("Enquiries list is empty");}
 
             openURL(URL.CLIENT_TEST.toString());
+            Reporter.log("Opening main page");
 
             mainPageLogicorUI = new MainPageLogicorUI(getDriver());
             mainPageLogicorUI.chooseSmallProperties();
@@ -75,16 +76,13 @@ public class MakeAnEnquiryTest extends BaseTest {
             goSleep(5);
 
 
-//            openURL(URL.CLIENT_TEST.toString()+"/en/user/login");
-//            mainPageLogicorUI.loginDrupal("qa@logicor.eu","vc<V&C@9eVvX3Ebk");
-//            goSleep(5);
-
-
             openURL(URL.CLIENT_TEST.toString()+"/en/admin/content/webform");
 
             drupalAdminPage.openMakeAnEnquiryReportPage();
-            Assert.assertEquals(drupalAdminPage.lastEnquiryIndex(), x+1);
-            Reporter.log("Last number of enquiry is: "+String.valueOf(drupalAdminPage.lastEnquiryIndex()));
+            if (b==false) {
+                Assert.assertEquals(drupalAdminPage.lastEnquiryIndex(), x + 1);
+                Reporter.log("Number of last enquiry is: " + String.valueOf(drupalAdminPage.lastEnquiryIndex()));
+            } else {Reporter.log("Searching new enquiry");}
             drupalAdminPage.openLastEnquiry();
 
             goSleep(2);
@@ -107,6 +105,8 @@ public class MakeAnEnquiryTest extends BaseTest {
 
             goSleep(5);
 
+            drupalAdminPage.deleteEnquiry();
+            goSleep(5);
 
         }
 

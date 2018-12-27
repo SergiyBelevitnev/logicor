@@ -1,4 +1,4 @@
-package base;
+package data;
 
 public class EnquiryData  {
 

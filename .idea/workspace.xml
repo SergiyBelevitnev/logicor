@@ -1,19 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/test/java/PropertyTranslationTest.java" line="35" />
+    <bookmark url="file://$PROJECT_DIR$/src/test/java/PropertyTranslationTest.java" line="27" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1924dece-69e5-4ca5-83f9-1585e96134be" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/pageobjects/DrupalAdminPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/base/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/base/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/base/EnquiryData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/EnquiryData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/base/PropertyData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/PropertyData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/base/URL.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pageobjects/DrupalAdminPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageobjects/DrupalAdminPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pageobjects/MainPageLogicorUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageobjects/MainPageLogicorUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pageobjects/MakeAnEquiryPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageobjects/MakeAnEquiryPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DeletingItems.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DeletingItems.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ElementTranslationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ElementTranslationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/LoginLC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/LoginLC.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/MakeAnEnquiryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MakeAnEnquiryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/suite/MakeAnEquiry.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/suite/MakeAnEquiry.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/base/BasePageLC$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/base/BasePageLC$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/base/BasePageLC$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/base/BasePageLC$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/base/BasePageLC.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/base/BasePageLC.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/MakingSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MakingSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/PropertyTranslationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PropertyTranslationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/suite/MakeAnEquiry.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/suite/MakeAnEnquiry.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/base/BaseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/base/BaseTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/LoginLC.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/LoginLC.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="C:\Users\belevitnev\Desktop\Logicor\.idea\shelf/" />
@@ -68,14 +75,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="44" />
-          <entry key="java" value="9910" />
+          <entry key="java" value="10494" />
           <entry key="txt" value="8" />
           <entry key="xml" value="189" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="9910" />
+          <entry key="JAVA" value="10494" />
           <entry key="PLAIN_TEXT" value="52" />
           <entry key="XML" value="189" />
         </counts>
@@ -84,20 +91,20 @@
         <counts>
           <entry key="class" value="8" />
           <entry key="csv" value="1" />
-          <entry key="html" value="4" />
-          <entry key="java" value="263" />
+          <entry key="html" value="6" />
+          <entry key="java" value="278" />
           <entry key="properties" value="2" />
-          <entry key="xml" value="35" />
+          <entry key="xml" value="41" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="8" />
-          <entry key="HTML" value="4" />
-          <entry key="JAVA" value="263" />
+          <entry key="HTML" value="6" />
+          <entry key="JAVA" value="278" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="Properties" value="2" />
-          <entry key="XML" value="35" />
+          <entry key="XML" value="41" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
@@ -107,12 +114,13 @@
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="4" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.17" value="1" />
+          <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.3" value="1" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
     </session>
@@ -122,120 +130,94 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/base/BasePageLC.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="163">
-              <caret line="57" selection-start-line="57" selection-end-line="57" />
+            <state relative-caret-position="202">
+              <caret line="443" column="19" selection-start-line="443" selection-start-column="19" selection-end-line="443" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#779#780#0" expanded="true" />
                 <element signature="e#843#844#0" expanded="true" />
-                <element signature="e#12150#12151#0" expanded="true" />
-                <element signature="e#12186#12187#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/suite/MakeAnEquiry.xml">
+        <entry file="file://$PROJECT_DIR$/src/test/java/MakeAnEnquiryTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="20" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pageobjects/MakeAnEquiryPage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="70" column="24" lean-forward="true" selection-start-line="70" selection-start-column="24" selection-end-line="70" selection-end-column="24" />
+            <state relative-caret-position="492">
+              <caret line="108" column="23" selection-start-line="108" selection-start-column="23" selection-end-line="108" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/suite/WorkWithProp.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/suite/Search.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/suite/MakeAnEnquiry.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="462">
+              <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/MakeAnEnquiryTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="53" column="26" selection-start-line="53" selection-start-column="26" selection-end-line="53" selection-end-column="26" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <marker date="1545847809803" expanded="true" signature="2219:2347" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pageobjects/DrupalAdminPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1276">
-              <caret line="32" column="142" selection-start-line="32" selection-start-column="142" selection-end-line="32" selection-end-column="142" />
+            <state relative-caret-position="572">
+              <caret line="65" column="43" selection-start-line="65" selection-start-column="43" selection-end-line="65" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1671#1672#0" expanded="true" />
-                <element signature="e#1703#1704#0" expanded="true" />
-                <element signature="e#1742#1743#0" expanded="true" />
-                <element signature="e#1773#1774#0" expanded="true" />
-                <element signature="e#1809#1810#0" expanded="true" />
-                <element signature="e#1837#1838#0" expanded="true" />
-                <element signature="e#1879#1880#0" expanded="true" />
-                <element signature="e#1913#1914#0" expanded="true" />
-                <element signature="e#1951#1952#0" expanded="true" />
-                <element signature="e#1981#1982#0" expanded="true" />
+                <element signature="e#1856#1857#0" expanded="true" />
+                <element signature="e#1933#1934#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pageobjects/AddImagePageAdmin.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/base/BaseTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="24" column="34" lean-forward="true" selection-start-line="23" selection-start-column="3" selection-end-line="24" selection-end-column="34" />
+            <state relative-caret-position="426">
+              <caret line="144" column="5" lean-forward="true" selection-start-line="144" selection-start-column="5" selection-end-line="144" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#3730#3731#0" expanded="true" />
+                <element signature="e#3779#3780#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/base/URL.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/target/MakeAnEquiry-12.27.2018.html">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/MakingSearch.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="792">
-              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pageobjects/MainPageLogicorUI.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="63" column="29" selection-start-line="63" selection-start-column="29" selection-end-line="63" selection-end-column="29" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1818#1819#0" expanded="true" />
-                <element signature="e#1845#1846#0" expanded="true" />
-                <element signature="e#1714#1715#0" expanded="true" />
-                <element signature="e#1750#1751#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="33">
+              <caret line="1" column="16" lean-forward="true" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -243,8 +225,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/PropertyTranslationTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="96" column="87" selection-start-line="96" selection-start-column="21" selection-end-line="96" selection-end-column="87" />
+            <state relative-caret-position="341">
+              <caret line="33" column="48" selection-start-line="33" selection-start-column="48" selection-end-line="33" selection-end-column="48" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -268,6 +250,7 @@
       <find>switch</find>
       <find>gjdkljg</find>
       <find>wait</find>
+      <find>ise</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -302,26 +285,26 @@
         <option value="$PROJECT_DIR$/src/main/java/base/EnquiryData.java" />
         <option value="$PROJECT_DIR$/src/test/java/MakeAnEnguiryTest.java" />
         <option value="$PROJECT_DIR$/src/test/suite/TestLogiCor.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/DeletingItems.java" />
         <option value="$PROJECT_DIR$/src/test/suite/WorkWithProp.xml" />
         <option value="$PROJECT_DIR$/src/test/java/ElementTranslationTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/pageobjects/ElementTranslationPageAdmin.java" />
         <option value="$PROJECT_DIR$/src/test/java/TestJava.java" />
-        <option value="$PROJECT_DIR$/src/main/java/base/BaseTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/base/URL.java" />
         <option value="$PROJECT_DIR$/src/main/java/pageobjects/PropertyDetailPageUi.java" />
         <option value="$PROJECT_DIR$/src/test/suite/ChangeAssetName.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/LoginLC.java" />
         <option value="$PROJECT_DIR$/src/test/java/PropertyTranslationTest.java" />
-        <option value="$PROJECT_DIR$/src/test/suite/Search.xml" />
         <option value="$PROJECT_DIR$/src/main/java/base/BasePageLC.java" />
         <option value="$PROJECT_DIR$/src/test/java/MakingSearch.java" />
         <option value="$PROJECT_DIR$/src/test/suite/MakeAnEquiry.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/pageobjects/MainPageLogicorUI.java" />
         <option value="$PROJECT_DIR$/src/main/java/pageobjects/MakeAnEquiryPage.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pageobjects/DrupalAdminPage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pageobjects/MainPageLogicorUI.java" />
+        <option value="$PROJECT_DIR$/src/main/java/base/URL.java" />
+        <option value="$PROJECT_DIR$/src/test/java/DeletingItems.java" />
+        <option value="$PROJECT_DIR$/src/main/java/base/BaseTest.java" />
+        <option value="$PROJECT_DIR$/src/test/suite/Search.xml" />
         <option value="$PROJECT_DIR$/src/test/java/MakeAnEnquiryTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pageobjects/DrupalAdminPage.java" />
       </list>
     </option>
   </component>
@@ -388,22 +371,15 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Logicor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Logicor" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="pageobjects" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Logicor" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Logicor" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Logicor" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Logicor" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="files" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Logicor" type="b2602c69:ProjectViewProjectNode" />
@@ -430,14 +406,11 @@
               <item name="Logicor" type="462c0819:PsiDirectoryNode" />
               <item name="target" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Logicor" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope">
         <subPane subId="Scope 'Production'; set:Production; class com.intellij.psi.search.scope.ProjectProductionScope">
           <expand>
@@ -475,11 +448,10 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545848015221" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545912097146" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -502,10 +474,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.C:/Users/belevitnev/Desktop/Logicor/src/test/suite/MakeAnEquiry.xml">
+  <component name="RunManager" selected="TestNG.C:/Users/belevitnev/Desktop/Logicor/src/test/suite/MakeAnEnquiry.xml">
     <configuration name="C:/Users/belevitnev/Desktop/Logicor/src/test/suite/ChangeAssetName.xml" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Logicor" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/suite/ChangeAssetName.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="C:/Users/belevitnev/Desktop/Logicor/src/test/suite/MakeAnEnquiry.xml" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Logicor" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/suite/MakeAnEnquiry.xml" />
       <option name="TEST_OBJECT" value="SUITE" />
       <properties />
       <listeners />
@@ -533,16 +515,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="C:/Users/belevitnev/Desktop/Logicor/src/test/suite/WorkWithProp.xml" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Logicor" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/suite/WorkWithProp.xml" />
-      <option name="TEST_OBJECT" value="SUITE" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="MakingSearch" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Logicor" />
       <option name="PACKAGE_NAME" value="" />
@@ -554,19 +526,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="TestNG.C:/Users/belevitnev/Desktop/Logicor/src/test/suite/WorkWithProp.xml" />
-      <item itemvalue="TestNG.C:/Users/belevitnev/Desktop/Logicor/src/test/suite/ChangeAssetName.xml" />
       <item itemvalue="TestNG.MakingSearch" />
       <item itemvalue="TestNG.C:/Users/belevitnev/Desktop/Logicor/src/test/suite/Search.xml" />
       <item itemvalue="TestNG.C:/Users/belevitnev/Desktop/Logicor/src/test/suite/MakeAnEquiry.xml" />
+      <item itemvalue="TestNG.C:/Users/belevitnev/Desktop/Logicor/src/test/suite/MakeAnEnquiry.xml" />
+      <item itemvalue="TestNG.C:/Users/belevitnev/Desktop/Logicor/src/test/suite/ChangeAssetName.xml" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.C:/Users/belevitnev/Desktop/Logicor/src/test/suite/MakeAnEquiry.xml" />
-        <item itemvalue="TestNG.C:/Users/belevitnev/Desktop/Logicor/src/test/suite/Search.xml" />
-        <item itemvalue="TestNG.MakingSearch" />
-        <item itemvalue="TestNG.C:/Users/belevitnev/Desktop/Logicor/src/test/suite/WorkWithProp.xml" />
+        <item itemvalue="TestNG.C:/Users/belevitnev/Desktop/Logicor/src/test/suite/MakeAnEnquiry.xml" />
         <item itemvalue="TestNG.C:/Users/belevitnev/Desktop/Logicor/src/test/suite/ChangeAssetName.xml" />
+        <item itemvalue="TestNG.C:/Users/belevitnev/Desktop/Logicor/src/test/suite/Search.xml" />
+        <item itemvalue="TestNG.C:/Users/belevitnev/Desktop/Logicor/src/test/suite/MakeAnEquiry.xml" />
+        <item itemvalue="TestNG.MakingSearch" />
       </list>
     </recent_temporary>
   </component>
@@ -658,46 +630,53 @@
       <option name="project" value="LOCAL" />
       <updated>1545832946732</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="16">
+      <created>1545848057451</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1545848057451</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="C__Users_belevitnev_Desktop_Logicor_src_test_suite_MakeAnEquiry_xml - 2018.12.26 at 19h 20m 23s.xml">
-      <configuration name="C:/Users/belevitnev/Desktop/Logicor/src/test/suite/MakeAnEquiry.xml" configurationId="TestNG" />
+    <history-entry file="C__Users_belevitnev_Desktop_Logicor_src_test_suite_MakeAnEnquiry_xml - 2018.12.27 at 13h 25m 20s.xml">
+      <configuration name="C:/Users/belevitnev/Desktop/Logicor/src/test/suite/MakeAnEnquiry.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="C__Users_belevitnev_Desktop_Logicor_src_test_suite_MakeAnEquiry_xml - 2018.12.26 at 19h 25m 48s.xml">
-      <configuration name="C:/Users/belevitnev/Desktop/Logicor/src/test/suite/MakeAnEquiry.xml" configurationId="TestNG" />
+    <history-entry file="C__Users_belevitnev_Desktop_Logicor_src_test_suite_MakeAnEnquiry_xml - 2018.12.27 at 13h 27m 29s.xml">
+      <configuration name="C:/Users/belevitnev/Desktop/Logicor/src/test/suite/MakeAnEnquiry.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="C__Users_belevitnev_Desktop_Logicor_src_test_suite_MakeAnEquiry_xml - 2018.12.26 at 19h 37m 27s.xml">
-      <configuration name="C:/Users/belevitnev/Desktop/Logicor/src/test/suite/MakeAnEquiry.xml" configurationId="TestNG" />
+    <history-entry file="C__Users_belevitnev_Desktop_Logicor_src_test_suite_MakeAnEnquiry_xml - 2018.12.27 at 13h 29m 55s.xml">
+      <configuration name="C:/Users/belevitnev/Desktop/Logicor/src/test/suite/MakeAnEnquiry.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="C__Users_belevitnev_Desktop_Logicor_src_test_suite_MakeAnEquiry_xml - 2018.12.26 at 19h 40m 19s.xml">
-      <configuration name="C:/Users/belevitnev/Desktop/Logicor/src/test/suite/MakeAnEquiry.xml" configurationId="TestNG" />
+    <history-entry file="C__Users_belevitnev_Desktop_Logicor_src_test_suite_MakeAnEnquiry_xml - 2018.12.27 at 13h 38m 32s.xml">
+      <configuration name="C:/Users/belevitnev/Desktop/Logicor/src/test/suite/MakeAnEnquiry.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="C__Users_belevitnev_Desktop_Logicor_src_test_suite_MakeAnEquiry_xml - 2018.12.26 at 19h 44m 24s.xml">
-      <configuration name="C:/Users/belevitnev/Desktop/Logicor/src/test/suite/MakeAnEquiry.xml" configurationId="TestNG" />
+    <history-entry file="C__Users_belevitnev_Desktop_Logicor_src_test_suite_MakeAnEnquiry_xml - 2018.12.27 at 13h 39m 51s.xml">
+      <configuration name="C:/Users/belevitnev/Desktop/Logicor/src/test/suite/MakeAnEnquiry.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="C__Users_belevitnev_Desktop_Logicor_src_test_suite_MakeAnEquiry_xml - 2018.12.26 at 19h 46m 38s.xml">
-      <configuration name="C:/Users/belevitnev/Desktop/Logicor/src/test/suite/MakeAnEquiry.xml" configurationId="TestNG" />
+    <history-entry file="C__Users_belevitnev_Desktop_Logicor_src_test_suite_MakeAnEnquiry_xml - 2018.12.27 at 13h 41m 40s.xml">
+      <configuration name="C:/Users/belevitnev/Desktop/Logicor/src/test/suite/MakeAnEnquiry.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="C__Users_belevitnev_Desktop_Logicor_src_test_suite_MakeAnEquiry_xml - 2018.12.26 at 19h 54m 19s.xml">
-      <configuration name="C:/Users/belevitnev/Desktop/Logicor/src/test/suite/MakeAnEquiry.xml" configurationId="TestNG" />
+    <history-entry file="C__Users_belevitnev_Desktop_Logicor_src_test_suite_MakeAnEnquiry_xml - 2018.12.27 at 13h 45m 45s.xml">
+      <configuration name="C:/Users/belevitnev/Desktop/Logicor/src/test/suite/MakeAnEnquiry.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="C__Users_belevitnev_Desktop_Logicor_src_test_suite_MakeAnEquiry_xml - 2018.12.26 at 19h 55m 37s.xml">
-      <configuration name="C:/Users/belevitnev/Desktop/Logicor/src/test/suite/MakeAnEquiry.xml" configurationId="TestNG" />
+    <history-entry file="C__Users_belevitnev_Desktop_Logicor_src_test_suite_MakeAnEnquiry_xml - 2018.12.27 at 13h 47m 17s.xml">
+      <configuration name="C:/Users/belevitnev/Desktop/Logicor/src/test/suite/MakeAnEnquiry.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="C__Users_belevitnev_Desktop_Logicor_src_test_suite_MakeAnEquiry_xml - 2018.12.26 at 19h 59m 22s.xml">
-      <configuration name="C:/Users/belevitnev/Desktop/Logicor/src/test/suite/MakeAnEquiry.xml" configurationId="TestNG" />
+    <history-entry file="C__Users_belevitnev_Desktop_Logicor_src_test_suite_MakeAnEnquiry_xml - 2018.12.27 at 13h 57m 01s.xml">
+      <configuration name="C:/Users/belevitnev/Desktop/Logicor/src/test/suite/MakeAnEnquiry.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="C__Users_belevitnev_Desktop_Logicor_src_test_suite_MakeAnEquiry_xml - 2018.12.26 at 20h 01m 57s.xml">
-      <configuration name="C:/Users/belevitnev/Desktop/Logicor/src/test/suite/MakeAnEquiry.xml" configurationId="TestNG" />
+    <history-entry file="C__Users_belevitnev_Desktop_Logicor_src_test_suite_MakeAnEnquiry_xml - 2018.12.27 at 13h 58m 59s.xml">
+      <configuration name="C:/Users/belevitnev/Desktop/Logicor/src/test/suite/MakeAnEnquiry.xml" configurationId="TestNG" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19189766" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19402985" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -707,7 +686,7 @@
       <window_info id="DB Browser" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.38394794" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2559653" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -845,13 +824,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/base/Items.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/target/LoginLC-12.19.2018.html" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-support/3.141.5/selenium-support-3.141.5.jar!/org/openqa/selenium/support/ui/ExpectedConditions.class">
       <provider selected="true" editor-type-id="text-editor">
@@ -864,13 +836,6 @@
     <entry file="file://$PROJECT_DIR$/src/test/java/ItemDetailsTest.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/ClassTaras.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/PropertyDetailPageUiTest.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/base/ExtentManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/testng/testng/6.14.3/testng-6.14.3.jar!/org/testng/SuiteRunnerWorker.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="211">
@@ -878,66 +843,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/target/TestLogiCor-12.20.2018.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/base/PropertyData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2254">
-          <caret line="48" column="55" lean-forward="true" selection-start-line="48" selection-start-column="55" selection-end-line="48" selection-end-column="55" />
-          <folding>
-            <element signature="e#3993#3994#0" expanded="true" />
-            <element signature="e#4033#4034#0" expanded="true" />
-            <element signature="e#4330#4331#0" expanded="true" />
-            <element signature="e#4374#4375#0" expanded="true" />
-            <element signature="e#4424#4425#0" expanded="true" />
-            <element signature="e#4470#4471#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/base/EnquiryData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1353">
-          <caret line="41" column="34" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="34" />
-          <folding>
-            <element signature="e#1173#1174#0" expanded="true" />
-            <element signature="e#1208#1209#0" expanded="true" />
-            <element signature="e#1239#1240#0" expanded="true" />
-            <element signature="e#1271#1272#0" expanded="true" />
-            <element signature="e#1299#1300#0" expanded="true" />
-            <element signature="e#1337#1338#0" expanded="true" />
-            <element signature="e#1371#1372#0" expanded="true" />
-            <element signature="e#1405#1406#0" expanded="true" />
-            <element signature="e#1435#1436#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/MakeAnEquiry-12.24.2018.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/suite/WorkWithProp.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/suite/TestLogiCor.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="14" selection-end-line="30" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/base/EnumsClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="33">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/target/TestLogiCor-12.20.2018.html" />
+    <entry file="file://$PROJECT_DIR$/target/MakeAnEquiry-12.24.2018.html" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/base/EnumsClass.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/base/Reporter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
@@ -945,23 +853,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/base/WorkWithCollectionAdminProp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5441">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/TestJava.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestJava.java" />
     <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_191/src.zip!/java/lang/Enum.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -969,18 +861,6 @@
           <folding>
             <element signature="e#4005#4006#0" expanded="true" />
             <element signature="e#4032#4033#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/base/BaseTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3773">
-          <caret line="149" column="39" lean-forward="true" selection-start-line="149" selection-start-column="39" selection-end-line="149" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3730#3731#0" expanded="true" />
-            <element signature="e#3779#3780#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -995,16 +875,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pageobjects/ElementTranslationPageAdmin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-517">
-          <caret line="281" selection-start-line="281" selection-end-line="281" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pageobjects/LoginPageLogicorAdmin.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-305">
@@ -1012,23 +882,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/DeletingItems.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/suite/ChangeAssetName.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
@@ -1063,13 +916,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/suite/Search.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="2" column="30" lean-forward="true" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/LoginLC.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="99">
@@ -1077,23 +923,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/suite/MakeAnEquiry.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="20" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/base/URL.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pageobjects/AddImagePageAdmin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
+        <state relative-caret-position="-1089">
           <caret line="24" column="34" lean-forward="true" selection-start-line="23" selection-start-column="3" selection-end-line="24" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1101,10 +933,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/MakingSearch.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pageobjects/ElementTranslationPageAdmin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        <state relative-caret-position="33">
+          <caret line="281" selection-start-line="281" selection-end-line="281" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pageobjects/MakeAnEquiryPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1625">
+          <caret line="70" column="24" lean-forward="true" selection-start-line="70" selection-start-column="24" selection-end-line="70" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1113,8 +955,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pageobjects/MainPageLogicorUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="63" column="29" selection-start-line="63" selection-start-column="29" selection-end-line="63" selection-end-column="29" />
+        <state relative-caret-position="-322">
+          <caret line="73" lean-forward="true" selection-start-line="73" selection-end-line="73" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1818#1819#0" expanded="true" />
@@ -1125,67 +967,170 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/base/BasePageLC.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/DeletingItems.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="57" selection-start-line="57" selection-end-line="57" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#779#780#0" expanded="true" />
-            <element signature="e#843#844#0" expanded="true" />
-            <element signature="e#12150#12151#0" expanded="true" />
-            <element signature="e#12186#12187#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pageobjects/MakeAnEquiryPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="70" column="24" lean-forward="true" selection-start-line="70" selection-start-column="24" selection-end-line="70" selection-end-column="24" />
+        <state relative-caret-position="99">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pageobjects/DrupalAdminPage.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/data/EnquiryData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1276">
-          <caret line="32" column="142" selection-start-line="32" selection-start-column="142" selection-end-line="32" selection-end-column="142" />
+        <state relative-caret-position="66">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1671#1672#0" expanded="true" />
-            <element signature="e#1703#1704#0" expanded="true" />
-            <element signature="e#1742#1743#0" expanded="true" />
-            <element signature="e#1773#1774#0" expanded="true" />
-            <element signature="e#1809#1810#0" expanded="true" />
-            <element signature="e#1837#1838#0" expanded="true" />
-            <element signature="e#1879#1880#0" expanded="true" />
-            <element signature="e#1913#1914#0" expanded="true" />
-            <element signature="e#1951#1952#0" expanded="true" />
-            <element signature="e#1981#1982#0" expanded="true" />
+            <element signature="e#1133#1134#0" expanded="true" />
+            <element signature="e#1165#1166#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/base/Items.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/data/PropertyData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="33">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding>
+            <element signature="e#3993#3994#0" expanded="true" />
+            <element signature="e#4033#4034#0" expanded="true" />
+            <element signature="e#4330#4331#0" expanded="true" />
+            <element signature="e#4374#4375#0" expanded="true" />
+            <element signature="e#4424#4425#0" expanded="true" />
+            <element signature="e#4470#4471#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/data/URL.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-437">
+          <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/base/WorkWithCollectionAdminProp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1518">
+          <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/WorkWithProp-12.27.2018.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/base/ExtentManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-363">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/suite/ChangeAssetName.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/suite/TestLogiCor.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="12" column="26" lean-forward="true" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/suite/WorkWithProp.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/MakeAnEquiry-12.27.2018.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/suite/MakeAnEnquiry.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/suite/Search.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/MakingSearch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="33">
+          <caret line="1" column="16" lean-forward="true" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/PropertyTranslationTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="96" column="87" selection-start-line="96" selection-start-column="21" selection-end-line="96" selection-end-column="87" />
+        <state relative-caret-position="341">
+          <caret line="33" column="48" selection-start-line="33" selection-start-column="48" selection-end-line="33" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/base/BasePageLC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="443" column="19" selection-start-line="443" selection-start-column="19" selection-end-line="443" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#779#780#0" expanded="true" />
+            <element signature="e#843#844#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/MakeAnEnquiryTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="53" column="26" selection-start-line="53" selection-start-column="26" selection-end-line="53" selection-end-column="26" />
+        <state relative-caret-position="492">
+          <caret line="108" column="23" selection-start-line="108" selection-start-column="23" selection-end-line="108" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1545847809803" expanded="true" signature="2219:2347" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/base/BaseTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="426">
+          <caret line="144" column="5" lean-forward="true" selection-start-line="144" selection-start-column="5" selection-end-line="144" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3730#3731#0" expanded="true" />
+            <element signature="e#3779#3780#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pageobjects/DrupalAdminPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="65" column="43" selection-start-line="65" selection-start-column="43" selection-end-line="65" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1856#1857#0" expanded="true" />
+            <element signature="e#1933#1934#0" expanded="true" />
           </folding>
         </state>
       </provider>

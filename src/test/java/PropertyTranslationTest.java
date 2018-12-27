@@ -1,19 +1,11 @@
 import base.*;
-import org.apache.commons.collections4.KeyValue;
-import org.apache.commons.collections4.map.MultiValueMap;
-import org.openqa.selenium.By;
+import data.URL;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pageobjects.AddImagePageAdmin;
 import pageobjects.ElementTranslationPageAdmin;
 import pageobjects.MainPageLogicorUI;
 import pageobjects.PropertyDetailPageUi;
-
-import java.lang.reflect.Array;
-import java.time.temporal.TemporalAccessor;
-import java.util.AbstractMap;
-import java.util.AbstractMap.SimpleImmutableEntry;
-import java.util.Map;
 
 public class PropertyTranslationTest extends BaseTest {
 
