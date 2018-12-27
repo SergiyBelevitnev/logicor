@@ -406,14 +406,11 @@ public class BasePageLC extends BaseTest {
     }
 
     public void setTextCell(WebElement element, String text) {
-//        element.click();
-//        goSleep(1);
-//        findElement(element).
-//        getDriver().switchTo().frame("//*[@class='table table-condensed table-hover']/tbody/tr[\" + i + \"]/td[3]");
+
         element.clear();
         element.sendKeys(text);
-//        element.submit();
-    }
+
+}
 
     public void clickButton(String xPathExpression) {
         getDriver().findElement(By.xpath(xPathExpression)).click();
@@ -423,8 +420,7 @@ public class BasePageLC extends BaseTest {
         waitForElement(element);
         findElement(element).click();
         goSleep(1);
-//        findElement(element).
-//        getDriver().switchTo().frame("//*[@class='table table-condensed table-hover']/tbody/tr[\" + i + \"]/td[3]");
+
         findElement(element).clear();
         findElement(element).sendKeys(text);
         findElement(element).submit();

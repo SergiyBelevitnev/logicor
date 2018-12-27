@@ -62,7 +62,7 @@ public class LoginLC extends BasePageLC {
 
         mainPageLogicorUI.clickSearchButton();
         mainPageLogicorUI.chooseListView();
-//        scrollToBottom();
+
         Reporter.log("Verification amount of small properties in France is: " + mainPageLogicorUI.countAssetsMain().toString());
         Assert.assertEquals(workWithCollectionAdminProp1.getCountSmallFrance(), mainPageLogicorUI.countAssetsMain());
 

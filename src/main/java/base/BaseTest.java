@@ -66,8 +66,7 @@ public class BaseTest {
             WebDriverManager.chromedriver().setup();
             SingletonBrowserClass sbc1 = SingletonBrowserClass.getInstanceOfSingletonBrowserClass();
             driver = sbc1.getDriver2();
-//            driver = new ChromeDriver();
-//            driver.manage().window().maximize();
+
         } else if ("firefox".equalsIgnoreCase(browser)) {
             WebDriverManager.firefoxdriver().setup();
             driver = new FirefoxDriver();
@@ -116,13 +115,6 @@ public class BaseTest {
         Reporter.log("Stopping tests");
     }
 
-//    @Parameters({"environment"})
-//    @BeforeTest
-//    public void runOn(String environment) throws MalformedURLException {
-//        //Config launching app
-//
-//        setEnvironmentForTests(environment);
-//    }
 
     private static void setEnvironmentForTests(String environmentForTests) {
         ENVIRONMENT = environmentForTests;
