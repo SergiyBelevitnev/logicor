@@ -43,14 +43,7 @@ public class PropertyTranslationTest extends BaseTest {
 
         BasePageLC.goSleep(3);
         propertyDetailPageUi = new PropertyDetailPageUi(getDriver());
-//
-//        BasePageLC.openURL(URL.CLIENT_TEST.toString() + "/en/uk/find-a-warehouse/warehouse-detail?id=" + idItem);
-//        Reporter.log(URL.CLIENT_TEST.toString() + "/en/uk/find-a-warehouse/warehouse-detail?id=" + idItem);
 
-
-//        Assert.assertEquals("English asset name".toUpperCase(), propertyDetailPageUi.getTitleField());
-//        Reporter.log("Verification of english translation asset name success!");
-//        BasePageLC.goSleep(5);
         for (int i = 0; i < languages.length; i++) {
 
             switch (languages[i]) {
@@ -90,9 +83,6 @@ public class PropertyTranslationTest extends BaseTest {
 
     }
 }
-//        mainPageLogicorUI=new MainPageLogicorUI(getDriver());
-//        mainPageLogicorUI.languageMenuClick();
-//        mainPageLogicorUI.chooseLanguage("IT");
 
 
 

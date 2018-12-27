@@ -153,10 +153,7 @@ public class MainPageLogicorUI extends BasePageLC {
         drpCountry.selectByVisibleText(country);
     }
 
-//    private void inputPassword(String password) {
-//        passwordField.sendKeys(password);
-//    }
-//
+
     public void foundWarehouse(String s) {
         Reporter.log("Searching warehouse");
 
