@@ -2,6 +2,7 @@ package pageobjects;
 
 import base.BasePageLC;
 import base.Reporter;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -24,7 +25,7 @@ public class DrupalAdminPage extends BasePageLC {
     private WebElement makeAnEnquiryReportsButton;
 
 
-    @FindBy(xpath = "//*[@class=\"odd views-row-first\"]/td[1]/a")
+    @FindBy(xpath = "//*[@class=\"views-table sticky-enabled cols-5 tableheader-processed sticky-table\"]/tbody/tr[1]/td[1]/a")
     private WebElement lastEnquiry;
 
     @FindBy(xpath = "//*[@class=\"form-item webform-component webform-component-display webform-component--first-name webform-container-inline\"]")
@@ -41,6 +42,34 @@ public class DrupalAdminPage extends BasePageLC {
 
     @FindBy(xpath = "//*[@class=\"form-item webform-component webform-component-display webform-component--message\"]/*[2]")
     private WebElement message;
+
+    @FindBy(xpath = "//*[@class=\"views-empty\"]")
+    private WebElement noEnquiriesEl;
+
+    @FindBy(xpath = "//*[@id=\"branding\"]/div/a[3]")
+    private WebElement backToListEnquiries;
+
+    @FindBy(xpath = "//*[@class=\"views-table sticky-enabled cols-5 tableheader-processed sticky-table\"]/tbody/tr[1]/td[5]/a[3]")
+    private WebElement deleteEnquiry;
+
+    @FindBy(xpath = "//*[@id=\"edit-actions-submit\"]")
+    private WebElement deleteSubmit;
+
+
+    public void deleteEnquiry() {
+        waitForPresenceOfElement(backToListEnquiries);
+        backToListEnquiries.click();
+        waitForPresenceOfElement(deleteEnquiry);
+        deleteEnquiry.click();
+        waitForPresenceOfElement(deleteSubmit);
+        deleteSubmit.click();
+        Reporter.log("Deleting test enquiry");
+    }
+
+    public boolean noEnquiries(){
+        return isElementPresent(By.xpath("//*[@class='views-empty']"));
+    }
+
 
 
     public String getFirstName() {
@@ -64,7 +93,7 @@ public class DrupalAdminPage extends BasePageLC {
     }
 
     public int lastEnquiryIndex(){
-        Reporter.log("Getting last enquiry index");
+//        Reporter.log("Getting last enquiry index");
 
     return parseInt(getElementTextElement(lastEnquiry));}
 

@@ -66,6 +66,7 @@ public class MainPageLogicorUI extends BasePageLC {
 
 
     public void loginDrupal(String name, String pass){
+        Reporter.log("Login in admin console");
         waitForPresenceOfElement(nameField);
         setTextCell(nameField,name);
         setTextCell(passField,pass);

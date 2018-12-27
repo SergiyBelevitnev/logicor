@@ -1,5 +1,5 @@
 import base.BasePageLC;
-import base.URL;
+import data.URL;
 import org.testng.annotations.Test;
 
   @Test

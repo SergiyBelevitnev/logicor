@@ -32,12 +32,13 @@ public class BaseTest {
     private static ThreadLocal<ExtentTest> parentTest = new ThreadLocal();
     protected static String ENVIRONMENT;
 
-
+    @Parameters({"environment"})
     @BeforeTest
-    public synchronized void beforeClass(ITestContext ctx) {
+    public synchronized void beforeClass(ITestContext ctx,String environment) {
         suiteName = ctx.getCurrentXmlTest().getSuite().getName();
         ExtentTest parent = ExtentManager.getInstance(suiteName).createTest(getClass().getName());
         parentTest.set(parent);
+        setEnvironmentForTests(environment);
     }
 
     @BeforeMethod
@@ -45,7 +46,10 @@ public class BaseTest {
         ExtentTest child = parentTest.get().createNode(method.getName());
         test.set(child);
         base.Reporter.log("Method -" + method.getName() + " - is started.");
+
+
         base.Reporter.log("---------------------------------------------------------------------------------------------");
+
     }
 
     public static WebDriver getDriver() {
@@ -112,13 +116,13 @@ public class BaseTest {
         Reporter.log("Stopping tests");
     }
 
-    @Parameters({"environment"})
-    @BeforeTest
-    public void runOn(String environment) throws MalformedURLException {
-        //Config launching app
-
-        setEnvironmentForTests(environment);
-    }
+//    @Parameters({"environment"})
+//    @BeforeTest
+//    public void runOn(String environment) throws MalformedURLException {
+//        //Config launching app
+//
+//        setEnvironmentForTests(environment);
+//    }
 
     private static void setEnvironmentForTests(String environmentForTests) {
         ENVIRONMENT = environmentForTests;
@@ -129,21 +133,6 @@ public class BaseTest {
     }
 
 
-    public Map<String, List<String>> splitQuery(URL url) {
-        if (Strings.isNullOrEmpty(url.getQuery())) {
-            return Collections.emptyMap();
-        }
-        return Arrays.stream(url.getQuery().split("&"))
-                .map(this::splitQueryParameter)
-                .collect(Collectors.groupingBy(AbstractMap.SimpleImmutableEntry::getKey, LinkedHashMap::new, mapping(Map.Entry::getValue, toList())));
-    }
-
-    public AbstractMap.SimpleImmutableEntry<String, String> splitQueryParameter(String it) {
-        final int idx = it.indexOf("=");
-        final String key = idx > 0 ? it.substring(0, idx) : it;
-        final String value = idx > 0 && it.length() > idx + 1 ? it.substring(idx + 1) : null;
-        return new AbstractMap.SimpleImmutableEntry<>(key, value);
-    }
 
 
 
