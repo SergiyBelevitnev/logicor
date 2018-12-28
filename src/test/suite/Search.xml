@@ -4,17 +4,9 @@
 
         <parameter name="browser" value="chrome"/>
         <parameter name="environment" value="TEST"/>
-
         <classes>
             <class name="MakingSearch">
-
-
             </class>
-
-
-
-
-
         </classes>
     </test>
 </suite>

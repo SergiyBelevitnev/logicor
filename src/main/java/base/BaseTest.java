@@ -75,7 +75,6 @@ public class BaseTest {
         return test;
     }
 
-
     @AfterMethod(alwaysRun = true)
 
     public void closeWindow(ITestResult result) {

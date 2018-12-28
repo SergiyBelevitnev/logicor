@@ -9,10 +9,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import java.util.List;
 
-import static base.BasePageLC.goSleep;
 
 public class AddImagePageAdmin extends BasePageLC {
 
@@ -46,8 +44,6 @@ public class AddImagePageAdmin extends BasePageLC {
     private List<WebElement> floorPans;
 
     public Integer imageFloorPanAdmin() {
-
-
         goSleep(2);
         return floorPans.size();
     }

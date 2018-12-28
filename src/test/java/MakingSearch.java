@@ -10,15 +10,10 @@ public class MakingSearch extends BasePageLC {
     public void makingSearch(){
 
         LaunchBrowser("chrome");
-
-
         openURL(URL.CLIENT.toString());
-
         mainPageLogicorUI = new MainPageLogicorUI(getDriver());
         mainPageLogicorUI.searchClick();
         mainPageLogicorUI.searchMaking("Story");
         goSleep(10);
-
-
     }
 }

@@ -110,17 +110,12 @@ public class WorkWithCollectionAdminProp {
                     else {countSmallItaly++;}}
                     break;
                 case "Finland":if (itemlist.get(i).isdisplayed=true){
-
                     countFinland++;}
-
                     break;
                 case "Hungary":if (itemlist.get(i).isdisplayed=true){
-
                     countHungary++;}
-
                     break;
                 case "Romania":if (itemlist.get(i).isdisplayed=true){
-
                     countRomania++;
                    }
                     break;
@@ -130,14 +125,10 @@ public class WorkWithCollectionAdminProp {
                     else {countSmallGermany++;}}
                     break;
                 case "Portugal":if (itemlist.get(i).isdisplayed=true){
-
                     countPortugal++;}
-
-                    break;
+                   break;
                 case "Czech Republic":if (itemlist.get(i).isdisplayed=true){
-
                     countCzechRepublic++;}
-
                     break;
 
             }
@@ -154,7 +145,6 @@ public class WorkWithCollectionAdminProp {
         Reporter.log("Assets in Romania " + countRomania);
         Reporter.log("Assets in Portugal " + countPortugal);
         Reporter.log("Assets in Czech Republic " + countCzechRepublic);
-
         Reporter.log("Small assets in France " + countSmallFrance);
         Reporter.log("Small assets in Poland " + countSmallPoland);
         Reporter.log("Small assets in Spain " + countSmallSpain);

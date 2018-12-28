@@ -1,4 +1,5 @@
 import base.BaseTest;
+import data.CREDS;
 import data.EnquiryData;
 
 import base.Reporter;
@@ -42,16 +43,14 @@ public class MakeAnEnquiryTest extends BaseTest {
             mainPageLogicorUI = new MainPageLogicorUI(getDriver());
             drupalAdminPage = new DrupalAdminPage(getDriver());
             openURL(URL.CLIENT.toString()+"/en/user/login");
-            mainPageLogicorUI.loginDrupal("qa@logicor.eu","vc<V&C@9eVvX3Ebk");
+            mainPageLogicorUI.loginDrupal(CREDS.KEY.DRUPALNAME(),CREDS.KEY.DRUPALPASSWORD());
             drupalAdminPage = new DrupalAdminPage(getDriver());
             openURL(URL.CLIENT.toString()+"/en/admin/content/webform");
-
             drupalAdminPage.openMakeAnEnquiryReportPage();
             goSleep(5);
             boolean b = drupalAdminPage.noEnquiries();
             Reporter.log(String.valueOf(b));
             int x=0;
-
 
             if (b==false) {
                x = drupalAdminPage.lastEnquiryIndex();
@@ -64,17 +63,14 @@ public class MakeAnEnquiryTest extends BaseTest {
             mainPageLogicorUI = new MainPageLogicorUI(getDriver());
             mainPageLogicorUI.chooseSmallProperties();
             mainPageLogicorUI.selectCountry("France");
-
             mainPageLogicorUI.clickSearchButton();
             mainPageLogicorUI.chooseListView();
             mainPageLogicorUI.chooseFirstWarehouse();
 
             makeAnEquiryPage = new MakeAnEquiryPage(getDriver());
-
             makeAnEquiryPage.makeAnEnquiry(enquiryData.getFirstName(),enquiryData.getLastName(),
                     enquiryData.getEmail(),enquiryData.getPhoneNumber(),enquiryData.getMessage());
-            goSleep(5);
-
+            goSleep(2);
 
             openURL(URL.CLIENT.toString()+"/en/admin/content/webform");
 
@@ -84,7 +80,6 @@ public class MakeAnEnquiryTest extends BaseTest {
                 Reporter.log("Number of last enquiry is: " + String.valueOf(drupalAdminPage.lastEnquiryIndex()));
             } else {Reporter.log("Searching new enquiry");}
             drupalAdminPage.openLastEnquiry();
-
             goSleep(2);
 
 
@@ -99,16 +94,8 @@ public class MakeAnEnquiryTest extends BaseTest {
             Assert.assertEquals(drupalAdminPage.getPhoneNumber(),"Phone number"+"\n"+enquiryData.getPhoneNumber());
             Reporter.log("Verification of PhoneNumber success!");
 
-
-
-
-
             goSleep(5);
-
             drupalAdminPage.deleteEnquiry();
             goSleep(5);
-
         }
-
-
 }

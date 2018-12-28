@@ -23,7 +23,6 @@ public enum URL {
                 this.address = "http://ec2-" +address+ ".eu-west-2.compute.amazonaws.com";
                 break;
             }
-
         }
     }
 

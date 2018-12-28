@@ -9,21 +9,13 @@
             <class name="LoginLC">
                 <methods>
                     <exclude name="setDataToCollection"/>
-
                 </methods>
-
             </class>
 
             <class name="MakeAnEnquiryTest">
             </class>
-
             <!--<class name="DeletingItems">-->
             <!--</class>-->
-
-
-
-
-
 
         </classes>
     </test>

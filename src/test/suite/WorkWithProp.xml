@@ -4,20 +4,11 @@
 
         <parameter name="browser" value="chrome"/>
         <parameter name="environment" value="TEST"/>
-
         <classes>
             <class name="LoginLC">
-
             </class>
-
             <class name="DeletingItems">
             </class>
-
-
-
-
-
-
         </classes>
     </test>
 </suite>

@@ -48,17 +48,11 @@ public class ElementTranslationTest extends BaseTest {
     @Test(dataProvider = "propertyData")
     public void elementTranslationPageTest(PropertyData propertyData){
         elTrPage = new ElementTranslationPageAdmin(getDriver());
-
         BasePageLC.goSleep(2);
-
         elTrPage.countrySort();
         String editElementCountry= elTrPage.getCountryName();
-        System.out.println(editElementCountry);
-
-
 
         elTrPage.clickPublishButton();
-
 
         elTrPage.setAssetNameCell(propertyData.getAssetName());
         elTrPage.setTownCell(propertyData.getTown());
@@ -83,7 +77,6 @@ public class ElementTranslationTest extends BaseTest {
         addImagePageAdmin = new AddImagePageAdmin(getDriver());
         addImagePageAdmin.addFirstImage();
         addImagePageAdmin.addFirstImage();
-
         BasePageLC.goSleep(2);
 
         Integer imageCountAdmin = addImagePageAdmin.imageCountAdmin();
@@ -95,18 +88,13 @@ public class ElementTranslationTest extends BaseTest {
         Integer imageFloorPanAdmin = addImagePageAdmin.imageFloorPanAdmin();
 
         addImagePageAdmin.goBackButton();
-
-
         BasePageLC.openURL(URL.CLIENT.toString());
-
-
         BasePageLC.goSleep(2);
 
         mainPageLogicorUI = new MainPageLogicorUI(getDriver());
 
         mainPageLogicorUI.chooseLargeProperties();
         mainPageLogicorUI.selectCountry(editElementCountry);
-
         mainPageLogicorUI.clickSearchButton();
         mainPageLogicorUI.chooseListView();
         BasePageLC.goSleep(2);
@@ -114,11 +102,7 @@ public class ElementTranslationTest extends BaseTest {
         getDriver().findElement(By.xpath("//*[@class=\"warehouse-finder-listing\"]//*[@class=\"info-box-inner__heading\"][.='" + propertyData.getAssetName() + "']")).click();
 
         BasePageLC.scrollToBottom();
-
-
         propertyDetailPageUi = new PropertyDetailPageUi(getDriver());
-
-
         BasePageLC.goSleep(2);
 
         Assert.assertEquals(propertyDetailPageUi.getYear(),propertyData.getYearAvailableFrom().toString());
@@ -143,7 +127,6 @@ public class ElementTranslationTest extends BaseTest {
 
         Assert.assertEquals(imageFloorPanAdmin,propertyDetailPageUi.floorCountUi());
         Reporter.log("Verification media elements success!");
-
         BasePageLC.goSleep(2);
     }
 }
