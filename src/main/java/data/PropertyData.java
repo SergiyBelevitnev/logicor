@@ -19,7 +19,6 @@ public class PropertyData {
     private final String Longitude;
     private final String Latitude;
 
-
     public static class Builder {
 
         private  String AssetName;
@@ -47,7 +46,6 @@ public class PropertyData {
             this.HeightMax = HeightMax;
             this.CarParkingSpacesTotal = CarParkingSpacesTotal;
             this.LoadingDocksTotal = LoadingDocksTotal;
-
             this.VacantSpaceSquareFeet = VacantSpaceSquareFeet;
             this.VacantSpaceSquareMetres = VacantSpaceSquareMetres;
             this.TotalSpaceVacantSqft = TotalSpaceVacantSqft;
@@ -69,7 +67,6 @@ public class PropertyData {
         HeightMax = builder.HeightMax;
         CarParkingSpacesTotal = builder.CarParkingSpacesTotal;
         LoadingDocksTotal = builder.LoadingDocksTotal;
-
         VacantSpaceSquareMetres = builder.VacantSpaceSquareMetres;
         VacantSpaceSquareFeet = builder.VacantSpaceSquareFeet;
         TotalSpaceVacantSqft =builder.TotalSpaceVacantSqft;

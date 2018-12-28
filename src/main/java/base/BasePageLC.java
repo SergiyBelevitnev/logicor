@@ -1,13 +1,13 @@
 package base;
 
 import com.google.common.base.Function;
+import data.Items;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.time.Duration;
@@ -19,19 +19,12 @@ import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOf;
 public class BasePageLC extends BaseTest {
 
     private WebDriver driver = BaseTest.getDriver();
-
-
-
     public BasePageLC() {
         driver = BaseTest.getDriver();
     }
-
     public WebElement findElement(By element) {
         return BaseTest.getDriver().findElement(element);
     }
-
-
-
 
     public List<WebElement> findElements(By element) {
         return BaseTest.getDriver().findElements(element);
@@ -39,7 +32,6 @@ public class BasePageLC extends BaseTest {
 
     public void switchToFrame(int index) {
         BaseTest.getDriver().switchTo().frame(index);
-
     }
 
     public void waitForPresenceOfElement(WebElement element) {
@@ -48,12 +40,12 @@ public class BasePageLC extends BaseTest {
 
 
     public String getElementText(By element) {
-
 //        Reporter.log("Getting element text - " + findElement(element).getText());
         return findElement(element).getText();
     }
 
     public static String getElementTextElement(WebElement element) {
+        WebElement wait = (new WebDriverWait(getDriver(),20)).until(ExpectedConditions.visibilityOf(element));
 
         return element.getText();
     }
@@ -79,7 +71,6 @@ public class BasePageLC extends BaseTest {
     }
 
     public void tapENTER(By element) {
-
         BaseTest.getDriver().findElement(element).sendKeys(Keys.ENTER);
     }
 
@@ -91,7 +82,6 @@ public class BasePageLC extends BaseTest {
         clickOnElement(field);
         Reporter.log(message);
         Robot robot;
-
         try {
             robot = new Robot();
             for (int i = 0; i < keys.length(); i++) {
@@ -107,18 +97,15 @@ public class BasePageLC extends BaseTest {
                 if (upperCase) {
                     robot.keyRelease(KeyEvent.VK_SHIFT);
                 }
-
             }
         } catch (AWTException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-
     }
 
     public void switchToFrame(String frameName) {
         BaseTest.getDriver().switchTo().frame(frameName);
-
     }
 
     public void switchToFrameByElement(WebElement element) {
@@ -127,24 +114,20 @@ public class BasePageLC extends BaseTest {
 
     public void refreshPage() {
         BaseTest.getDriver().navigate().refresh();
-
         scrollToTop();
     }
 
     public void goToPreviousPage() {
         BaseTest.getDriver().navigate().back();
-
     }
 
     public void switchToDefaultContent() {
         BaseTest.getDriver().switchTo().defaultContent();
-
     }
 
     public void switchToPopUp() {
         switchToDefaultContent();
         switchToFrame(0);
-
     }
 
 
@@ -154,8 +137,6 @@ public class BasePageLC extends BaseTest {
     }
 
     public void clickOnElement(By element) {
-
-
         findElement(element).click();
     }
 
@@ -169,7 +150,6 @@ public class BasePageLC extends BaseTest {
     public boolean isCneckboxChecked(By element) {
         if (findElement(element).getAttribute("class").contains("glyphicon glyphicon-check")) {
             return true;
-
         }
         return false;
     }
@@ -183,7 +163,6 @@ public class BasePageLC extends BaseTest {
         findElement(By.xpath("//*[@id=\"w0\"]/table/tbody/tr[" + i + "]/td[5]/a[1]")).click();
 
         String s6 = getElementText(By.xpath("//*[@class='table table-condensed table-hover']//*[19]//*[2]"));
-
 
         Double x = Double.valueOf(s6);
         findElement(By.xpath("//*[@class=\"h2\"]/*[1]")).click();
@@ -203,18 +182,13 @@ public class BasePageLC extends BaseTest {
         List rows = getDriver().findElements(By.xpath("//*[@id='w0']/table/tbody/tr/td[1]"));
         for (int i = 1; i < rows.size() + 1; i++) {
             if (itemsList.size() < 41) {
-
                 itemsList.add(getDataFromItem(i));
                 Reporter.log(getDataFromItem(i).toString());
-
             } else {
-
                 findElement(By.xpath("//*[@id=\"w0\"]/ul/li[3]/a")).click();
                 goSleep(2);
-
                 itemsList.add(getDataFromItem(i));
                 Reporter.log(getDataFromItem(i).toString());
-
             }
             Reporter.log(itemsList.size() + " items added to collection");
         }
@@ -223,10 +197,8 @@ public class BasePageLC extends BaseTest {
 
 
     public void clickOnElementWithWait(String message, By element, int timeWaitSeconds) {
-
         Reporter.log(message);
         BaseTest.getDriver().manage().timeouts().implicitlyWait(timeWaitSeconds, TimeUnit.SECONDS);
-
         try {
             clickOnElement(element);
 
@@ -235,7 +207,6 @@ public class BasePageLC extends BaseTest {
         } finally {
             BaseTest.getDriver().manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
         }
-
     }
 
 
@@ -247,11 +218,9 @@ public class BasePageLC extends BaseTest {
     public void scrollToTop() {
         JavascriptExecutor jse1 = (JavascriptExecutor) BaseTest.getDriver();
         jse1.executeScript("scroll(250, 0)"); // if the element is on top.
-
     }
 
     public void refreshPageUntilElementContainsText(By element, List<String> successList, int tries) {
-
         for (int i = 1; i <= tries; i++) {
             if (successList.contains(getElementText(element).toLowerCase())) {
                 break;
@@ -370,6 +339,7 @@ public class BasePageLC extends BaseTest {
     }
 
 
+
     public static void goSleep(int time) {
         try {
             Thread.sleep(time * 1000);
@@ -385,7 +355,6 @@ public class BasePageLC extends BaseTest {
         action.moveToElement(element);
         action.perform();
         this.goSleep(2);
-
     }
 
 
@@ -420,7 +389,6 @@ public class BasePageLC extends BaseTest {
         waitForElement(element);
         findElement(element).click();
         goSleep(1);
-
         findElement(element).clear();
         findElement(element).sendKeys(text);
         findElement(element).submit();
@@ -429,11 +397,8 @@ public class BasePageLC extends BaseTest {
     public void setTextEl(WebElement element, String text) {
         waitForPresenceOfElement(element);
         element.click();
-//        findElement(element).
-//        getDriver().switchTo().frame("//*[@class='table table-condensed table-hover']/tbody/tr[\" + i + \"]/td[3]");
         element.clear();
-       element.sendKeys(text);
-
+        element.sendKeys(text);
     }
 
 
@@ -447,9 +412,6 @@ public class BasePageLC extends BaseTest {
         } catch (Exception e) {
             return false;
         }
-
     }
-
-
 }
 

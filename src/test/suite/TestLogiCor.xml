@@ -12,19 +12,12 @@
                         name="setDataToCollection">
                 </exclude>
                     <exclude name="deleteAllItemsAdmin"> </exclude>
-
                 </methods>
-
             </class>
             <class name="ElementTranslationTest">
             </class>
             <class name="DeletingItems">
             </class>
-
-
-
-
-
 
         </classes>
     </test>

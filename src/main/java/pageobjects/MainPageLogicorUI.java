@@ -139,7 +139,7 @@ public class MainPageLogicorUI extends BasePageLC {
         radioListView.click();
 
         waitForPresenceOfElement(firstWarehouse);
-        goSleep(2);
+        goSleep(4);
 //        moveToElement("//*[@class='warehouse-finder-listing-country']/*");
     }
 

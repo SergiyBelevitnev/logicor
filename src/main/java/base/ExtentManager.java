@@ -15,7 +15,6 @@ public class ExtentManager {
     public static ExtentReports getInstance(String suiteName) {
         if (extent == null)
             createInstance(suiteName);
-
         return extent;
     }
 
@@ -24,18 +23,14 @@ public class ExtentManager {
         SimpleDateFormat ft = new SimpleDateFormat("MM.dd.yyyy");
 
         ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter( "target/" + suiteName+"-"+ft.format(dNow)+".html");
-
-
         htmlReporter.config().setTestViewChartLocation(ChartLocation.TOP);
         htmlReporter.config().setChartVisibilityOnOpen(true);
         htmlReporter.config().setTheme(Theme.STANDARD);
         htmlReporter.config().setDocumentTitle("Acceptance Tests");
         htmlReporter.config().setEncoding("utf-8");
-        htmlReporter.config().setReportName("erer");
-
+        htmlReporter.config().setReportName("logicor");
         extent = new ExtentReports();
         extent.attachReporter(htmlReporter);
-
         return extent;
     }
 }

@@ -9,13 +9,14 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import java.util.List;
+
 
 public class AddImagePageAdmin extends BasePageLC {
 
     public WebDriver driver;
-    public AddImagePageAdmin(WebDriver driver){
+
+    public AddImagePageAdmin(WebDriver driver) {
         PageFactory.initElements(driver, this);
         this.driver = driver;
     }
@@ -36,31 +37,29 @@ public class AddImagePageAdmin extends BasePageLC {
     @FindBy(xpath = "//*[@class=\"btn btn-default btn-sm\"]")
     private WebElement backButton;
 
-    @FindBy (xpath = "//*[@class=\"ui-sortable-handle\"]")
-    private List<WebElement> elementName ;
+    @FindBy(xpath = "//*[@class=\"ui-sortable-handle\"]")
+    private List<WebElement> elementName;
 
-    @FindBy (xpath = "//*[@class=\"ui-sortable-handle\"]")
-    private List<WebElement> floorPans ;
+    @FindBy(xpath = "//*[@class=\"ui-sortable-handle\"]")
+    private List<WebElement> floorPans;
 
-    public  Integer imageFloorPanAdmin(){
-
-
+    public Integer imageFloorPanAdmin() {
         goSleep(2);
         return floorPans.size();
     }
 
 
-    public  Integer imageCountAdmin(){
+    public Integer imageCountAdmin() {
         goSleep(2);
         return elementName.size();
     }
 
 
     public void waitForPresenceOfElement() {
-        WebElement wait = (new WebDriverWait(driver,20)).until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"property-bynder-list\"]/*[1]")));
+        WebElement wait = (new WebDriverWait(driver, 20)).until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"property-bynder-list\"]/*[1]")));
     }
 
-    public void addFirstImage(){
+    public void addFirstImage() {
         Reporter.log("Adding media element");
         waitForPresenceOfElement();
         firstImage.click();
@@ -68,10 +67,9 @@ public class AddImagePageAdmin extends BasePageLC {
     }
 
 
-    public void goBackButton(){
+    public void goBackButton() {
         backButton.click();
     }
-
 
 
 }

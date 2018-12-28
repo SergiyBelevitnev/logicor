@@ -61,6 +61,7 @@ public class PropertyDetailPageUi {
     }
 
     public String getAssetDescrField(){
+
         return BasePageLC.getElementTextElement(assetDescriptionField);
     }
 

@@ -1,6 +1,9 @@
 import base.*;
 
+import data.CREDS;
+import data.Items;
 import data.URL;
+import data.WorkWithCollectionAdminProp;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.Point;
@@ -24,16 +27,16 @@ public class LoginLC extends BasePageLC {
     @Test
     public void loginLC() {
         LaunchBrowser("chrome");
-        openURL(URL.ADMIN_TEST.toString());
+        openURL(URL.ADMIN.toString());
         getDriver().manage().window().setPosition(new Point(0,0));
         getDriver().manage().window().setSize(new Dimension(1924,838));
         loginPageLogicorAdmin = new LoginPageLogicorAdmin(getDriver());
         importPropertiesPageAdmin = new ImportPropertiesPageAdmin(getDriver());
-        loginPageLogicorAdmin.login("qa@logicor.eu", "vcVC9eVvX3Ebk");
+        loginPageLogicorAdmin.login(CREDS.KEY.ADMINNAME(), CREDS.KEY.ADMINPASSWORD());
         loginPageLogicorAdmin.clickImportButton();
         importPropertiesPageAdmin.uploadFile(System.getProperty("user.dir")+"\\src\\main\\resources\\files\\property.csv");
         importPropertiesPageAdmin.startImport();
-        goSleep(2);
+
         importPropertiesPageAdmin.openPropList();
 
     }
@@ -53,38 +56,24 @@ public class LoginLC extends BasePageLC {
         }
         WorkWithCollectionAdminProp workWithCollectionAdminProp1 = new WorkWithCollectionAdminProp(itemsList);
 
-        openURL(URL.CLIENT_TEST.toString());
-
+        openURL(URL.CLIENT.toString());
 
         mainPageLogicorUI = new MainPageLogicorUI(getDriver());
         mainPageLogicorUI.chooseSmallProperties();
         mainPageLogicorUI.selectCountry("France");
-
         mainPageLogicorUI.clickSearchButton();
         mainPageLogicorUI.chooseListView();
-
         Reporter.log("Verification amount of small properties in France is: " + mainPageLogicorUI.countAssetsMain().toString());
         Assert.assertEquals(workWithCollectionAdminProp1.getCountSmallFrance(), mainPageLogicorUI.countAssetsMain());
 
-
-        openURL("http://ec2-35-178-97-148.eu-west-2.compute.amazonaws.com");
+        openURL(URL.CLIENT.toString());
         mainPageLogicorUI.chooseLargeProperties();
         mainPageLogicorUI.selectCountry("Spain");
         mainPageLogicorUI.clickSearchButton();
         mainPageLogicorUI.chooseListView();
         Reporter.log("Verification amount of large properties in Spain is: " + mainPageLogicorUI.countAssetsMain().toString());
-
         Assert.assertEquals(workWithCollectionAdminProp1.getCountSpain(), mainPageLogicorUI.countAssetsMain());
-
-
-
-
-
     }
-
-
-
-
 }
 
 
