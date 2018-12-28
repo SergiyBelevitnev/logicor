@@ -1,4 +1,6 @@
-package base;
+package data;
+
+import base.Reporter;
 
 import java.util.List;
 

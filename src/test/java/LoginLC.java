@@ -1,6 +1,8 @@
 import base.*;
 
+import data.Items;
 import data.URL;
+import data.WorkWithCollectionAdminProp;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.Point;

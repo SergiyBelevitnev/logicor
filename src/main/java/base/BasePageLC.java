@@ -1,6 +1,7 @@
 package base;
 
 import com.google.common.base.Function;
+import data.Items;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;

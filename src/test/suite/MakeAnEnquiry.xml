@@ -1,6 +1,6 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="MakeAnEquiry">
-    <test name="MakeAnEquiry">
+    <test name="User Test">
 
         <parameter name="browser" value="chrome"/>
         <parameter name="environment" value="TEST"/>
