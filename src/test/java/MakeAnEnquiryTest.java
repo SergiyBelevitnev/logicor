@@ -41,10 +41,10 @@ public class MakeAnEnquiryTest extends BaseTest {
         public void makeAnEquiryVoid(EnquiryData enquiryData){
             mainPageLogicorUI = new MainPageLogicorUI(getDriver());
             drupalAdminPage = new DrupalAdminPage(getDriver());
-            openURL(URL.CLIENT_TEST.toString()+"/en/user/login");
+            openURL(URL.CLIENT.toString()+"/en/user/login");
             mainPageLogicorUI.loginDrupal("qa@logicor.eu","vc<V&C@9eVvX3Ebk");
             drupalAdminPage = new DrupalAdminPage(getDriver());
-            openURL(URL.CLIENT_TEST.toString()+"/en/admin/content/webform");
+            openURL(URL.CLIENT.toString()+"/en/admin/content/webform");
 
             drupalAdminPage.openMakeAnEnquiryReportPage();
             goSleep(5);
@@ -58,7 +58,7 @@ public class MakeAnEnquiryTest extends BaseTest {
                 Reporter.log("Number of last enquiry is: " + String.valueOf(x));
             }else {Reporter.log("Enquiries list is empty");}
 
-            openURL(URL.CLIENT_TEST.toString());
+            openURL(URL.CLIENT.toString());
             Reporter.log("Opening main page");
 
             mainPageLogicorUI = new MainPageLogicorUI(getDriver());
@@ -76,7 +76,7 @@ public class MakeAnEnquiryTest extends BaseTest {
             goSleep(5);
 
 
-            openURL(URL.CLIENT_TEST.toString()+"/en/admin/content/webform");
+            openURL(URL.CLIENT.toString()+"/en/admin/content/webform");
 
             drupalAdminPage.openMakeAnEnquiryReportPage();
             if (b==false) {

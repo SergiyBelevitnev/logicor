@@ -77,7 +77,7 @@ public class PropertyTranslationTest extends BaseTest {
 
     public void switchDetailTranslationProperty(String language, String lang, String idItem) {
         BasePageLC.goSleep(2);
-        BasePageLC.openURL(URL.CLIENT_TEST.toString() + lang + "/find-a-warehouse/warehouse-detail?id=" + idItem);
+        BasePageLC.openURL(URL.CLIENT.toString() + lang + "/find-a-warehouse/warehouse-detail?id=" + idItem);
         Assert.assertEquals((language + " asset name").toUpperCase(), propertyDetailPageUi.getTitleField());
         Reporter.log("Verification of " + language + " translation asset name success!");
 

@@ -26,7 +26,7 @@ public class LoginLC extends BasePageLC {
     @Test
     public void loginLC() {
         LaunchBrowser("chrome");
-        openURL(URL.ADMIN_TEST.toString());
+        openURL(URL.ADMIN.toString());
         getDriver().manage().window().setPosition(new Point(0,0));
         getDriver().manage().window().setSize(new Dimension(1924,838));
         loginPageLogicorAdmin = new LoginPageLogicorAdmin(getDriver());
@@ -55,7 +55,7 @@ public class LoginLC extends BasePageLC {
         }
         WorkWithCollectionAdminProp workWithCollectionAdminProp1 = new WorkWithCollectionAdminProp(itemsList);
 
-        openURL(URL.CLIENT_TEST.toString());
+        openURL(URL.CLIENT.toString());
 
 
         mainPageLogicorUI = new MainPageLogicorUI(getDriver());

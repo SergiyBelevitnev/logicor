@@ -97,7 +97,7 @@ public class ElementTranslationTest extends BaseTest {
         addImagePageAdmin.goBackButton();
 
 
-        BasePageLC.openURL(URL.CLIENT_TEST.toString());
+        BasePageLC.openURL(URL.CLIENT.toString());
 
 
         BasePageLC.goSleep(2);

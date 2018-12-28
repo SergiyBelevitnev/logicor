@@ -12,7 +12,7 @@ public class MakingSearch extends BasePageLC {
         LaunchBrowser("chrome");
 
 
-        openURL(URL.CLIENT_TEST.toString());
+        openURL(URL.CLIENT.toString());
 
         mainPageLogicorUI = new MainPageLogicorUI(getDriver());
         mainPageLogicorUI.searchClick();
