@@ -1,25 +1,14 @@
 package base;
 
 import com.aventstack.extentreports.ExtentTest;
-import com.google.common.base.Function;
-import com.google.common.base.Strings;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.ui.FluentWait;
 import org.testng.ITestContext;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
 import java.io.IOException;
 import java.lang.reflect.Method;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.time.Duration;
-import java.util.*;
-import java.util.stream.Collectors;
-
-import static java.util.stream.Collectors.mapping;
-import static java.util.stream.Collectors.toList;
 
 
 @org.testng.annotations.Listeners({base.Listeners.class})
@@ -46,17 +35,12 @@ public class BaseTest {
         ExtentTest child = parentTest.get().createNode(method.getName());
         test.set(child);
         base.Reporter.log("Method -" + method.getName() + " - is started.");
-
-
-        base.Reporter.log("---------------------------------------------------------------------------------------------");
-
+        base.Reporter.log("-------------------------------------------------------------------------");
     }
 
     public static WebDriver getDriver() {
         return DRIVER.get();
     }
-
-
 
 //    @Parameters({"browser"})
 
@@ -72,7 +56,6 @@ public class BaseTest {
             driver = new FirefoxDriver();
             driver.manage().window().maximize();
         }
-
         DRIVER.set(driver);
     }
 
@@ -85,9 +68,7 @@ public class BaseTest {
             DRIVER.remove();
         }
         ExtentManager.getInstance(suiteName).flush();
-
         Reporter.log("Tests PERFORMED");
-
     }
 
     public static ThreadLocal<ExtentTest> getTest() {
@@ -95,13 +76,9 @@ public class BaseTest {
     }
 
 
-
-
-
     @AfterMethod(alwaysRun = true)
 
     public void closeWindow(ITestResult result) {
-
         if (result.getStatus() == ITestResult.FAILURE) {
             test.get().fail(result.getThrowable());
             Reporter.logFail("Test FAILED");
@@ -109,23 +86,16 @@ public class BaseTest {
             test.get().skip(result.getThrowable());
         else
             test.get().pass("Test passed");
-
         ExtentManager.getInstance(suiteName).flush();
-
         Reporter.log("Stopping tests");
     }
-
 
     private static void setEnvironmentForTests(String environmentForTests) {
         ENVIRONMENT = environmentForTests;
     }
-
     public static String getEnvironment() {
         return ENVIRONMENT;
     }
-
-
-
 
 
     public  String idCurentItem(String currentUrl) {
@@ -135,5 +105,4 @@ public class BaseTest {
         String idCurentIt = buff.substring(a+3,b);
         return idCurentIt;
     }
-
 }

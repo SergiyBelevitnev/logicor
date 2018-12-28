@@ -4,14 +4,12 @@ import static base.BaseTest.getEnvironment;
 
 public enum URL {
 
-
-    ADMIN_TEST("3-8-87-222"),
-    CLIENT_TEST("35-178-97-148");
+    ADMIN("3-8-87-222"),
+    CLIENT("35-178-97-148");
 
     private String address;
 
-    URL(final String address) {
-
+    URL(String address) {
         switch (getEnvironment()) {
             case "PROD": {
                 this.address = "http://eb2-" + address+".eu-west-2.compute.amazonaws.com";
