@@ -6,14 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1924dece-69e5-4ca5-83f9-1585e96134be" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/data/WorkWithCollectionAdminProp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/WorkWithCollectionAdminProp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pageobjects/MainPageLogicorUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageobjects/MainPageLogicorUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/PropertyTranslationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PropertyTranslationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/base/BasePageLC$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/base/BasePageLC$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/base/BasePageLC$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/base/BasePageLC$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/base/BasePageLC.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/base/BasePageLC.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/base/BaseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/base/BaseTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/base/ExtentManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/base/ExtentManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ElementTranslationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ElementTranslationTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="C:\Users\belevitnev\Desktop\Logicor\.idea\shelf/" />
@@ -68,15 +61,15 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="94" />
-          <entry key="java" value="11531" />
-          <entry key="txt" value="14" />
+          <entry key="java" value="11543" />
+          <entry key="txt" value="15" />
           <entry key="xml" value="209" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="11531" />
-          <entry key="PLAIN_TEXT" value="108" />
+          <entry key="JAVA" value="11543" />
+          <entry key="PLAIN_TEXT" value="109" />
           <entry key="XML" value="209" />
         </counts>
       </usages-collector>
@@ -132,7 +125,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/suite/TestLogiCor.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="176">
@@ -204,11 +197,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/ElementTranslationTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-696">
-              <caret line="98" column="35" selection-start-line="98" selection-start-column="35" selection-end-line="98" selection-end-column="35" />
+            <state relative-caret-position="143">
+              <caret line="96" column="60" lean-forward="true" selection-start-line="96" selection-start-column="60" selection-end-line="96" selection-end-column="60" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -310,7 +303,6 @@
         <option value="$PROJECT_DIR$/src/test/suite/MakeAnEnquiry.xml" />
         <option value="$PROJECT_DIR$/src/test/suite/Search.xml" />
         <option value="$PROJECT_DIR$/src/main/java/pageobjects/ElementTranslationPageAdmin.java" />
-        <option value="$PROJECT_DIR$/src/test/java/ElementTranslationTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/pageobjects/PropertyDetailPageUi.java" />
         <option value="$PROJECT_DIR$/src/test/java/LoginLC.java" />
         <option value="$PROJECT_DIR$/src/main/java/pageobjects/ImportPropertiesPageAdmin.java" />
@@ -320,6 +312,7 @@
         <option value="$PROJECT_DIR$/src/test/java/PropertyTranslationTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/data/WorkWithCollectionAdminProp.java" />
         <option value="$PROJECT_DIR$/src/main/java/pageobjects/MainPageLogicorUI.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ElementTranslationTest.java" />
       </list>
     </option>
   </component>
@@ -466,7 +459,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546005760665" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546015512622" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -696,16 +689,17 @@
       <option name="project" value="LOCAL" />
       <updated>1546003631844</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="24">
+      <created>1546006067471</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1546006067471</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="C__Users_belevitnev_Desktop_Logicor_src_test_suite_TestLogiCor_xml - 2018.12.28 at 15h 15m 17s.xml">
-      <configuration name="C:/Users/belevitnev/Desktop/Logicor/src/test/suite/TestLogiCor.xml" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="C__Users_belevitnev_Desktop_Logicor_src_test_suite_MakeAnEnquiry_xml - 2018.12.28 at 15h 19m 15s.xml">
-      <configuration name="C:/Users/belevitnev/Desktop/Logicor/src/test/suite/MakeAnEnquiry.xml" configurationId="TestNG" />
-    </history-entry>
     <history-entry file="C__Users_belevitnev_Desktop_Logicor_src_test_suite_MakeAnEnquiry_xml - 2018.12.28 at 15h 22m 48s.xml">
       <configuration name="C:/Users/belevitnev/Desktop/Logicor/src/test/suite/MakeAnEnquiry.xml" configurationId="TestNG" />
     </history-entry>
@@ -730,9 +724,15 @@
     <history-entry file="C__Users_belevitnev_Desktop_Logicor_src_test_suite_TestLogiCor_xml - 2018.12.28 at 16h 05m 51s.xml">
       <configuration name="C:/Users/belevitnev/Desktop/Logicor/src/test/suite/TestLogiCor.xml" configurationId="TestNG" />
     </history-entry>
+    <history-entry file="C__Users_belevitnev_Desktop_Logicor_src_test_suite_TestLogiCor_xml - 2018.12.28 at 16h 30m 11s.xml">
+      <configuration name="C:/Users/belevitnev/Desktop/Logicor/src/test/suite/TestLogiCor.xml" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="C__Users_belevitnev_Desktop_Logicor_src_test_suite_TestLogiCor_xml - 2018.12.28 at 16h 32m 29s.xml">
+      <configuration name="C:/Users/belevitnev/Desktop/Logicor/src/test/suite/TestLogiCor.xml" configurationId="TestNG" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="1912" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19616205" />
@@ -836,7 +836,8 @@
     <MESSAGE value="21" />
     <MESSAGE value="22" />
     <MESSAGE value="23" />
-    <option name="LAST_COMMIT_MESSAGE" value="23" />
+    <MESSAGE value="24" />
+    <option name="LAST_COMMIT_MESSAGE" value="24" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1125,16 +1126,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ElementTranslationTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-696">
-          <caret line="98" column="35" selection-start-line="98" selection-start-column="35" selection-end-line="98" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/base/BasePageLC.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="212">
@@ -1166,6 +1157,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ElementTranslationTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="96" column="60" lean-forward="true" selection-start-line="96" selection-start-column="60" selection-end-line="96" selection-end-column="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

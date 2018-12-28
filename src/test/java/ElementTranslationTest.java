@@ -97,6 +97,7 @@ public class ElementTranslationTest extends BaseTest {
         mainPageLogicorUI.selectCountry(editElementCountry);
         mainPageLogicorUI.clickSearchButton();
         mainPageLogicorUI.chooseListView();
+        BasePageLC.goSleep(3);
 
         elTrPage.waitForPresenceOfElement(getDriver().findElement(By.xpath("//*[@class=\"warehouse-finder-listing\"]//*[@class=\"info-box-inner__heading\"][.='" + propertyData.getAssetName() + "']")));
         getDriver().findElement(By.xpath("//*[@class=\"warehouse-finder-listing\"]//*[@class=\"info-box-inner__heading\"][.='" + propertyData.getAssetName() + "']")).click();
