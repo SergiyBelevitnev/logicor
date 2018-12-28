@@ -46,7 +46,6 @@ public class WorkWithCollectionAdminProp {
     int countGermany=0;
     int countPortugal=0;
     int countCzechRepublic = 0;
-
     int countSmallUK=0;
     int countSmallFrance=0;
     int countSmallGermany=0;

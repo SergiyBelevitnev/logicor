@@ -18,7 +18,7 @@ public class PropertyTranslationTest extends BaseTest {
     public void propertyTranslationTest() {
         elTrPage = new ElementTranslationPageAdmin(getDriver());
 
-        BasePageLC.goSleep(2);
+//        BasePageLC.goSleep(2);
 
         String assetName = elTrPage.getAssetName();
         Reporter.log("Property name is: "+assetName);
