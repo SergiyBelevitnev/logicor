@@ -36,7 +36,7 @@ public class LoginLC extends BasePageLC {
         loginPageLogicorAdmin.clickImportButton();
         importPropertiesPageAdmin.uploadFile(System.getProperty("user.dir")+"\\src\\main\\resources\\files\\property.csv");
         importPropertiesPageAdmin.startImport();
-        goSleep(2);
+
         importPropertiesPageAdmin.openPropList();
 
     }

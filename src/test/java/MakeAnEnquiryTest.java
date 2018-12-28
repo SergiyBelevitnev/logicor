@@ -48,8 +48,8 @@ public class MakeAnEnquiryTest extends BaseTest {
             openURL(URL.CLIENT.toString()+"/en/admin/content/webform");
             drupalAdminPage.openMakeAnEnquiryReportPage();
             goSleep(5);
+
             boolean b = drupalAdminPage.noEnquiries();
-            Reporter.log(String.valueOf(b));
             int x=0;
 
             if (b==false) {
@@ -70,7 +70,7 @@ public class MakeAnEnquiryTest extends BaseTest {
             makeAnEquiryPage = new MakeAnEquiryPage(getDriver());
             makeAnEquiryPage.makeAnEnquiry(enquiryData.getFirstName(),enquiryData.getLastName(),
                     enquiryData.getEmail(),enquiryData.getPhoneNumber(),enquiryData.getMessage());
-            goSleep(2);
+
 
             openURL(URL.CLIENT.toString()+"/en/admin/content/webform");
 
@@ -80,8 +80,6 @@ public class MakeAnEnquiryTest extends BaseTest {
                 Reporter.log("Number of last enquiry is: " + String.valueOf(drupalAdminPage.lastEnquiryIndex()));
             } else {Reporter.log("Searching new enquiry");}
             drupalAdminPage.openLastEnquiry();
-            goSleep(2);
-
 
             Assert.assertEquals(drupalAdminPage.getFirstName(),"First name "+enquiryData.getFirstName() );
             Reporter.log("Verification of First Name success!");
@@ -94,8 +92,6 @@ public class MakeAnEnquiryTest extends BaseTest {
             Assert.assertEquals(drupalAdminPage.getPhoneNumber(),"Phone number"+"\n"+enquiryData.getPhoneNumber());
             Reporter.log("Verification of PhoneNumber success!");
 
-            goSleep(5);
             drupalAdminPage.deleteEnquiry();
-            goSleep(5);
         }
 }

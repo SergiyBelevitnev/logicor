@@ -45,6 +45,8 @@ public class BasePageLC extends BaseTest {
     }
 
     public static String getElementTextElement(WebElement element) {
+        WebElement wait = (new WebDriverWait(getDriver(),20)).until(ExpectedConditions.visibilityOf(element));
+
         return element.getText();
     }
 
@@ -335,6 +337,7 @@ public class BasePageLC extends BaseTest {
         };
         wait2.until(function);
     }
+
 
 
     public static void goSleep(int time) {

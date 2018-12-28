@@ -162,7 +162,7 @@ public class ElementTranslationPageAdmin extends BasePageLC {
         Reporter.log("Openning 'translation property' page");
 
 
-        goSleep(3);
+        waitForPresenceOfElement(publishButton);
         publishButton.click();
     }
 
@@ -257,13 +257,11 @@ public class ElementTranslationPageAdmin extends BasePageLC {
 
     public void setCountryCell(String assetName){
         Reporter.log("Setting country");
-
         setTextCell(countryCell,assetName);
     }
 
 
     public void setLongitudeCell(String assetName){
-
         Reporter.log("Setting longitude");
         setTextCell(longtitudeCell,assetName);
     }
@@ -283,8 +281,6 @@ public class ElementTranslationPageAdmin extends BasePageLC {
     private String getCountryName2(){
         waitForPresenceOfElement(findElement(By.xpath("//*[@id='w0']/table/tbody/tr[2]/td[4]")));
         return getElementText(By.xpath("//*[@id='w0']/table/tbody/tr[2]/td[4]"));
-
-
     }
 
     public String getAssetName() {
@@ -298,24 +294,15 @@ public class ElementTranslationPageAdmin extends BasePageLC {
         else return getCountryName2();
     }
 
-
     public void handleTableElements() {
         goSleep(1);
         List rows = getDriver().findElements(By.xpath("//*[@class='table table-condensed table-hover']/tbody/tr"));
         System.out.println(rows.size());
         for (int i = 1; i < rows.size()+1; i++) {
-
             String s1 = getElementText(By.xpath("//*[@class='table table-condensed table-hover']/tbody/tr[" + i + "]/th[1]"));
             setText(By.xpath("//*[@class='table table-condensed table-hover']/tbody/tr[" + i + "]/td[3]"+"/*[1]"), "11111111111111");
-
             String s3 = getElementText(By.xpath("//*[@class='table table-condensed table-hover']/tbody/tr[" + i + "]/td[3]"));
             System.out.println(s1+"-----------------"+s3);
-
         }
     }
-
-
-
-
-
-    }
+}

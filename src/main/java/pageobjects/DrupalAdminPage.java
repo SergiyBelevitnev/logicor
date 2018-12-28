@@ -17,8 +17,6 @@ public class DrupalAdminPage extends BasePageLC {
     public DrupalAdminPage(WebDriver driver) {
         PageFactory.initElements(driver, this);
         this.driver = driver;
-
-
     }
 
     @FindBy(xpath = "//*[@id=\"block-system-main\"]//*[contains(text(),'Make an enquiry')]/../following-sibling::*[3]//*[contains(text(),'Submissions')]")
@@ -94,7 +92,7 @@ public class DrupalAdminPage extends BasePageLC {
 
     public int lastEnquiryIndex(){
 //        Reporter.log("Getting last enquiry index");
-
+        waitForPresenceOfElement(lastEnquiry);
     return parseInt(getElementTextElement(lastEnquiry));}
 
     public void openMakeAnEnquiryReportPage(){
@@ -106,5 +104,6 @@ public class DrupalAdminPage extends BasePageLC {
     public void openLastEnquiry(){
         Reporter.log("Opening last enquiry");
         lastEnquiry.click();
+        goSleep(2);
     }
 }

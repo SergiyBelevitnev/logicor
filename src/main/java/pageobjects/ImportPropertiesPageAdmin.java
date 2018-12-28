@@ -49,7 +49,7 @@ public class ImportPropertiesPageAdmin extends BasePageLC {
 
     public void startImport(){
         importButton.click();
-
+        goSleep(2);
     }
 
 }
