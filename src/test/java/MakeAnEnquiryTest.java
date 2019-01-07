@@ -13,6 +13,7 @@ import pageobjects.MakeAnEquiryPage;
 
 import static base.BasePageLC.goSleep;
 import static base.BasePageLC.openURL;
+import static base.BasePageLC.scrollToBottom;
 
 public class MakeAnEnquiryTest extends BaseTest {
     private static EnquiryData enquiryData;
@@ -66,6 +67,8 @@ public class MakeAnEnquiryTest extends BaseTest {
             mainPageLogicorUI.clickSearchButton();
             mainPageLogicorUI.chooseListView();
             mainPageLogicorUI.chooseFirstWarehouse();
+            goSleep(3);
+            scrollToBottom();
 
 
             makeAnEquiryPage.makeAnEnquiry(enquiryData.getFirstName(),enquiryData.getLastName(),
