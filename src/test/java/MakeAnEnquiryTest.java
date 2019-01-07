@@ -59,7 +59,7 @@ public class MakeAnEnquiryTest extends BaseTest {
 
             openURL(URL.CLIENT.toString());
             Reporter.log("Opening main page");
-
+            makeAnEquiryPage = new MakeAnEquiryPage(getDriver());
             mainPageLogicorUI = new MainPageLogicorUI(getDriver());
             mainPageLogicorUI.chooseSmallProperties();
             mainPageLogicorUI.selectCountry("France");
@@ -67,7 +67,7 @@ public class MakeAnEnquiryTest extends BaseTest {
             mainPageLogicorUI.chooseListView();
             mainPageLogicorUI.chooseFirstWarehouse();
 
-            makeAnEquiryPage = new MakeAnEquiryPage(getDriver());
+
             makeAnEquiryPage.makeAnEnquiry(enquiryData.getFirstName(),enquiryData.getLastName(),
                     enquiryData.getEmail(),enquiryData.getPhoneNumber(),enquiryData.getMessage());
 

@@ -17,7 +17,7 @@ public class MakeAnEquiryPage extends BasePageLC {
 
     public WebDriver driver;
 
-    @FindBy(xpath = "//*[@id=\"edit-submitted-first-name\"]")
+    @FindBy(xpath = "//*[@id='edit-submitted-first-name']")
     private WebElement firstNameTextField;
 
     @FindBy(xpath = "//*[@id=\"edit-submitted-last-name\"]")
