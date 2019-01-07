@@ -40,6 +40,7 @@ public class MakeAnEquiryPage extends BasePageLC {
 
     private void setFirstNameTextField(String firstName) {
         goSleep(12);
+        firstNameTextField.click();
                 firstNameTextField.sendKeys(firstName);
     }
 
