@@ -39,7 +39,8 @@ public class MakeAnEquiryPage extends BasePageLC {
     private WebElement checkBox;
 
     private void setFirstNameTextField(String firstName) {
-                setTextEl(firstNameTextField, firstName);
+        goSleep(2);
+                firstNameTextField.sendKeys(firstName);
     }
 
     private void setLastNameTextField(String lastName) {
