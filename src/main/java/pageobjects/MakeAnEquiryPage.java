@@ -3,6 +3,7 @@ package pageobjects;
 import base.BasePageLC;
 import base.Reporter;
 import com.sun.org.apache.regexp.internal.RE;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -39,7 +40,7 @@ public class MakeAnEquiryPage extends BasePageLC {
     private WebElement checkBox;
 
     private void setFirstNameTextField(String firstName) {
-       setTextEl(firstNameTextField,firstName);
+       setText(By.xpath("//*[@id='edit-submitted-first-name']"),firstName);
     }
 
     private void setLastNameTextField(String lastName) {
