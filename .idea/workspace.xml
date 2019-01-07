@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1924dece-69e5-4ca5-83f9-1585e96134be" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/suite/TestSuiteLogicor.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pageobjects/ImportPropertiesPageAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageobjects/ImportPropertiesPageAdmin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/MakeAnEnquiryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MakeAnEnquiryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/PropertyTranslationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PropertyTranslationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="C:\Users\belevitnev\Desktop\Logicor\.idea\shelf/" />
@@ -65,15 +62,15 @@
         <counts>
           <entry key="dummy" value="94" />
           <entry key="java" value="11598" />
-          <entry key="txt" value="16" />
-          <entry key="xml" value="222" />
+          <entry key="txt" value="17" />
+          <entry key="xml" value="224" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="11598" />
-          <entry key="PLAIN_TEXT" value="110" />
-          <entry key="XML" value="222" />
+          <entry key="PLAIN_TEXT" value="111" />
+          <entry key="XML" value="224" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -83,7 +80,7 @@
           <entry key="html" value="6" />
           <entry key="java" value="393" />
           <entry key="properties" value="2" />
-          <entry key="xml" value="61" />
+          <entry key="xml" value="62" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -93,7 +90,7 @@
           <entry key="JAVA" value="393" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="Properties" value="2" />
-          <entry key="XML" value="61" />
+          <entry key="XML" value="62" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
@@ -148,15 +145,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/suite/Search.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="8" column="20" selection-start-line="7" selection-start-column="12" selection-end-line="8" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/PropertyTranslationTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="311">
@@ -168,7 +156,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/MakeAnEnquiryTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="245">
@@ -176,6 +164,15 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="429">
+              <caret line="47" column="46" selection-start-line="47" selection-start-column="46" selection-end-line="47" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -278,7 +275,6 @@
         <option value="$PROJECT_DIR$/src/main/java/base/EnquiryData.java" />
         <option value="$PROJECT_DIR$/src/test/java/MakeAnEnguiryTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/TestJava.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/suite/MakeAnEquiry.xml" />
         <option value="$PROJECT_DIR$/src/main/java/pageobjects/MakeAnEquiryPage.java" />
         <option value="$PROJECT_DIR$/src/main/java/base/URL.java" />
@@ -311,6 +307,7 @@
         <option value="$PROJECT_DIR$/src/main/java/pageobjects/ImportPropertiesPageAdmin.java" />
         <option value="$PROJECT_DIR$/src/test/java/PropertyTranslationTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/MakeAnEnquiryTest.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -457,7 +454,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546859714499" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546861355721" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -699,7 +696,14 @@
       <option name="project" value="LOCAL" />
       <updated>1546015768525</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="26">
+      <created>1546860054040</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1546860054040</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -738,7 +742,7 @@
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19829424" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19829424" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -748,7 +752,7 @@
       <window_info id="DB Browser" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2559653" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2559653" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -841,7 +845,8 @@
     <MESSAGE value="23" />
     <MESSAGE value="24" />
     <MESSAGE value="25" />
-    <option name="LAST_COMMIT_MESSAGE" value="25" />
+    <MESSAGE value="26" />
+    <option name="LAST_COMMIT_MESSAGE" value="26" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1063,13 +1068,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="150" column="13" selection-start-line="150" selection-start-column="13" selection-end-line="150" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/base/BasePageLC.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
@@ -1181,6 +1179,13 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="429">
+          <caret line="47" column="46" selection-start-line="47" selection-start-column="46" selection-end-line="47" selection-end-column="46" />
         </state>
       </provider>
     </entry>
