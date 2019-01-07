@@ -28,8 +28,8 @@
             <class name="PropertyTranslationTest">
             </class>
 
-            <class name="MakeAnEnquiryTest">
-            </class>
+            <!--<class name="MakeAnEnquiryTest">-->
+            <!--</class>-->
 
             <class name="MakingSearch">
             </class>
