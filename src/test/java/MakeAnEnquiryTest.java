@@ -76,7 +76,7 @@ public class MakeAnEnquiryTest extends BaseTest {
 
             drupalAdminPage.openMakeAnEnquiryReportPage();
             if (b==false) {
-                Assert.assertEquals(drupalAdminPage.lastEnquiryIndex(), x + 1);
+                Assert.assertNotEquals(drupalAdminPage.lastEnquiryIndex(), x);
                 Reporter.log("Number of last enquiry is: " + String.valueOf(drupalAdminPage.lastEnquiryIndex()));
             } else {Reporter.log("Searching new enquiry");}
             drupalAdminPage.openLastEnquiry();
