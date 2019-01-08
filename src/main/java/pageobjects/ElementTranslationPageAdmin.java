@@ -171,7 +171,9 @@ public class ElementTranslationPageAdmin extends BasePageLC {
     }
 
     public void countrySort(){
+
         waitForPresenceOfElement(countrySort);
+        goSleep(3);
         countrySort.click();
 
         waitForPresenceOfElement(countrySort);
