@@ -40,7 +40,7 @@ public class MakeAnEquiryPage extends BasePageLC {
     private WebElement checkBox;
 
     private void setFirstNameTextField(String firstName) {
-       setText(By.xpath("//*[@id='edit-submitted-first-name']"),firstName);
+       setTextEl(firstNameTextField,firstName);
     }
 
     private void setLastNameTextField(String lastName) {

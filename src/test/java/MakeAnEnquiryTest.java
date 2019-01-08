@@ -78,6 +78,7 @@ public class MakeAnEnquiryTest extends BaseTest {
             openURL(URL.CLIENT.toString()+"/en/admin/content/webform");
 
             drupalAdminPage.openMakeAnEnquiryReportPage();
+
             if (b==false) {
                 Assert.assertNotEquals(drupalAdminPage.lastEnquiryIndex(), x);
                 Reporter.log("Number of last enquiry is: " + String.valueOf(drupalAdminPage.lastEnquiryIndex()));
