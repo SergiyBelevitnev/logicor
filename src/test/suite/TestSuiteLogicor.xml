@@ -2,7 +2,7 @@
 <suite name="TestSuiteLogiCor">
     <test name="User Test">
 
-        <parameter name="browser" value="chrome"/>
+        <parameter name="browser" value="chrome-headless"/>
         <parameter name="environment" value="TEST"/>
 
         <classes>

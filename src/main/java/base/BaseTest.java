@@ -35,17 +35,17 @@ public class BaseTest {
             WebDriverManager.chromedriver().setup();
             SingletonBrowserClass sbc1 = SingletonBrowserClass.getInstanceOfSingletonBrowserClass();
             driver = sbc1.getDriver2();
+        }
 
-//
-//            if ("chrome".equalsIgnoreCase(browser)) {
-//                WebDriverManager.chromedriver().setup();
-//                ChromeOptions chromeOptions = new ChromeOptions();
-//                chromeOptions.addArguments("--headless");
-//
-//                chromeOptions.addArguments("--disable-gpu");
-//
-//                chromeOptions.addArguments("window-size=1200,1100");
-//                driver = new ChromeDriver(chromeOptions);
+        else if ("chrome-headless".equalsIgnoreCase(browser)) {
+                WebDriverManager.chromedriver().setup();
+                ChromeOptions chromeOptions = new ChromeOptions();
+                chromeOptions.addArguments("--headless");
+
+                chromeOptions.addArguments("--disable-gpu");
+
+                chromeOptions.addArguments("window-size=1200,1100");
+                driver = new ChromeDriver(chromeOptions);
         } else if ("firefox".equalsIgnoreCase(browser)) {
             WebDriverManager.firefoxdriver().setup();
             driver = new FirefoxDriver();

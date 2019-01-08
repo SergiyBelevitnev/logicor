@@ -6,12 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="1924dece-69e5-4ca5-83f9-1585e96134be" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/base/BasePageLC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/base/BasePageLC.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/base/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/base/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pageobjects/MakeAnEquiryPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageobjects/MakeAnEquiryPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/MakeAnEnquiryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MakeAnEnquiryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/suite/TestSuiteLogicor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/suite/TestSuiteLogicor.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/base/BaseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/base/BaseTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/base/BasePageLC.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/base/BasePageLC.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="C:\Users\belevitnev\Desktop\Logicor\.idea\shelf/" />
@@ -66,15 +62,15 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="94" />
-          <entry key="java" value="11859" />
-          <entry key="txt" value="27" />
+          <entry key="java" value="11876" />
+          <entry key="txt" value="28" />
           <entry key="xml" value="237" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="11859" />
-          <entry key="PLAIN_TEXT" value="121" />
+          <entry key="JAVA" value="11876" />
+          <entry key="PLAIN_TEXT" value="122" />
           <entry key="XML" value="237" />
         </counts>
       </usages-collector>
@@ -171,7 +167,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/pageobjects/MakeAnEquiryPage.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="376">
-              <caret line="80" column="5" lean-forward="true" selection-start-line="80" selection-start-column="5" selection-end-line="80" selection-end-column="5" />
+              <caret line="80" column="5" selection-start-line="80" selection-start-column="5" selection-end-line="80" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1321#1322#0" expanded="true" />
@@ -187,7 +183,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/base/BasePageLC.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="443">
-              <caret line="403" column="26" lean-forward="true" selection-start-line="401" selection-start-column="8" selection-end-line="403" selection-end-column="26" />
+              <caret line="403" column="26" selection-start-line="401" selection-start-column="8" selection-end-line="403" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#793#794#0" expanded="true" />
@@ -197,21 +193,21 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/base/BaseTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="341">
-              <caret line="44" column="62" lean-forward="true" selection-start-line="44" selection-start-column="62" selection-end-line="44" selection-end-column="62" />
+            <state relative-caret-position="77">
+              <caret line="39" column="8" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2601#2602#0" expanded="true" />
-                <element signature="e#2636#2637#0" expanded="true" />
-                <element signature="e#3087#3088#0" expanded="true" />
-                <element signature="e#3114#3115#0" expanded="true" />
-                <element signature="e#3701#3702#0" expanded="true" />
-                <element signature="e#3750#3751#0" expanded="true" />
-                <element signature="e#3794#3795#0" expanded="true" />
-                <element signature="e#3828#3829#0" expanded="true" />
+                <element signature="e#2613#2614#0" expanded="true" />
+                <element signature="e#2648#2649#0" expanded="true" />
+                <element signature="e#3099#3100#0" expanded="true" />
+                <element signature="e#3126#3127#0" expanded="true" />
+                <element signature="e#3713#3714#0" expanded="true" />
+                <element signature="e#3762#3763#0" expanded="true" />
+                <element signature="e#3806#3807#0" expanded="true" />
+                <element signature="e#3840#3841#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -229,11 +225,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/suite/TestSuiteLogicor.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="5" column="52" lean-forward="true" selection-start-line="5" selection-start-column="52" selection-end-line="5" selection-end-column="52" />
+            <state relative-caret-position="429">
+              <caret line="13" column="65" selection-start-line="13" selection-start-column="65" selection-end-line="13" selection-end-column="65" />
               <folding>
                 <marker date="1546949629867" expanded="true" signature="1042:1096" ph="..." />
                 <marker date="1546949629867" expanded="true" signature="1043:1096" ph="..." />
@@ -472,7 +468,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value=" //*[@id=&quot;edit-submitted-first-name&quot;]&#9;null&#9;null" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546953348300" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546954898412" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -495,7 +491,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.C:/Users/belevitnev/Desktop/Logicor/src/test/suite/MakeAnEnquiry.xml">
+  <component name="RunManager" selected="TestNG.C:/Users/belevitnev/Desktop/Logicor/src/test/suite/TestSuiteLogicor.xml">
     <configuration name="C:/Users/belevitnev/Desktop/Logicor/src/test/suite/ChangeAssetName.xml" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Logicor" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/suite/ChangeAssetName.xml" />
@@ -555,8 +551,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.C:/Users/belevitnev/Desktop/Logicor/src/test/suite/MakeAnEnquiry.xml" />
         <item itemvalue="TestNG.C:/Users/belevitnev/Desktop/Logicor/src/test/suite/TestSuiteLogicor.xml" />
+        <item itemvalue="TestNG.C:/Users/belevitnev/Desktop/Logicor/src/test/suite/MakeAnEnquiry.xml" />
         <item itemvalue="TestNG.C:/Users/belevitnev/Desktop/Logicor/src/test/suite/WorkWithProp.xml" />
         <item itemvalue="TestNG.C:/Users/belevitnev/Desktop/Logicor/src/test/suite/ChangeAssetName.xml" />
         <item itemvalue="TestNG.C:/Users/belevitnev/Desktop/Logicor/src/test/suite/TestLogiCor.xml" />
@@ -784,16 +780,17 @@
       <option name="project" value="LOCAL" />
       <updated>1546878646581</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="35">
+      <created>1546953384624</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1546953384624</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="C__Users_belevitnev_Desktop_Logicor_src_test_suite_TestSuiteLogicor_xml - 2019.01.08 at 14h 24m 07s.xml">
-      <configuration name="C:/Users/belevitnev/Desktop/Logicor/src/test/suite/TestSuiteLogicor.xml" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="C__Users_belevitnev_Desktop_Logicor_src_test_suite_TestSuiteLogicor_xml - 2019.01.08 at 14h 44m 46s.xml">
-      <configuration name="C:/Users/belevitnev/Desktop/Logicor/src/test/suite/TestSuiteLogicor.xml" configurationId="TestNG" />
-    </history-entry>
     <history-entry file="C__Users_belevitnev_Desktop_Logicor_src_test_suite_MakeAnEnquiry_xml - 2019.01.08 at 14h 46m 06s.xml">
       <configuration name="C:/Users/belevitnev/Desktop/Logicor/src/test/suite/MakeAnEnquiry.xml" configurationId="TestNG" />
     </history-entry>
@@ -818,12 +815,18 @@
     <history-entry file="C__Users_belevitnev_Desktop_Logicor_src_test_suite_MakeAnEnquiry_xml - 2019.01.08 at 15h 15m 19s.xml">
       <configuration name="C:/Users/belevitnev/Desktop/Logicor/src/test/suite/MakeAnEnquiry.xml" configurationId="TestNG" />
     </history-entry>
+    <history-entry file="C__Users_belevitnev_Desktop_Logicor_src_test_suite_TestSuiteLogicor_xml - 2019.01.08 at 15h 32m 46s.xml">
+      <configuration name="C:/Users/belevitnev/Desktop/Logicor/src/test/suite/TestSuiteLogicor.xml" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="C__Users_belevitnev_Desktop_Logicor_src_test_suite_TestSuiteLogicor_xml - 2019.01.08 at 15h 39m 07s.xml">
+      <configuration name="C:/Users/belevitnev/Desktop/Logicor/src/test/suite/TestSuiteLogicor.xml" configurationId="TestNG" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20042644" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20042644" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -833,7 +836,7 @@
       <window_info id="DB Browser" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2559653" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2559653" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -935,7 +938,8 @@
     <MESSAGE value="32" />
     <MESSAGE value="33" />
     <MESSAGE value="34" />
-    <option name="LAST_COMMIT_MESSAGE" value="34" />
+    <MESSAGE value="35" />
+    <option name="LAST_COMMIT_MESSAGE" value="35" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1217,7 +1221,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/base/BasePageLC.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="443">
-          <caret line="403" column="26" lean-forward="true" selection-start-line="401" selection-start-column="8" selection-end-line="403" selection-end-column="26" />
+          <caret line="403" column="26" selection-start-line="401" selection-start-column="8" selection-end-line="403" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#793#794#0" expanded="true" />
@@ -1239,7 +1243,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/pageobjects/MakeAnEquiryPage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="376">
-          <caret line="80" column="5" lean-forward="true" selection-start-line="80" selection-start-column="5" selection-end-line="80" selection-end-column="5" />
+          <caret line="80" column="5" selection-start-line="80" selection-start-column="5" selection-end-line="80" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1321#1322#0" expanded="true" />
@@ -1250,32 +1254,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/base/BaseTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="44" column="62" lean-forward="true" selection-start-line="44" selection-start-column="62" selection-end-line="44" selection-end-column="62" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2601#2602#0" expanded="true" />
-            <element signature="e#2636#2637#0" expanded="true" />
-            <element signature="e#3087#3088#0" expanded="true" />
-            <element signature="e#3114#3115#0" expanded="true" />
-            <element signature="e#3701#3702#0" expanded="true" />
-            <element signature="e#3750#3751#0" expanded="true" />
-            <element signature="e#3794#3795#0" expanded="true" />
-            <element signature="e#3828#3829#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/suite/TestSuiteLogicor.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="5" column="52" lean-forward="true" selection-start-line="5" selection-start-column="52" selection-end-line="5" selection-end-column="52" />
+        <state relative-caret-position="429">
+          <caret line="13" column="65" selection-start-line="13" selection-start-column="65" selection-end-line="13" selection-end-column="65" />
           <folding>
             <marker date="1546949629867" expanded="true" signature="1042:1096" ph="..." />
             <marker date="1546949629867" expanded="true" signature="1043:1096" ph="..." />
             <marker date="1546949629867" expanded="true" signature="1172:1221" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/base/BaseTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="77">
+          <caret line="39" column="8" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2613#2614#0" expanded="true" />
+            <element signature="e#2648#2649#0" expanded="true" />
+            <element signature="e#3099#3100#0" expanded="true" />
+            <element signature="e#3126#3127#0" expanded="true" />
+            <element signature="e#3713#3714#0" expanded="true" />
+            <element signature="e#3762#3763#0" expanded="true" />
+            <element signature="e#3806#3807#0" expanded="true" />
+            <element signature="e#3840#3841#0" expanded="true" />
           </folding>
         </state>
       </provider>
