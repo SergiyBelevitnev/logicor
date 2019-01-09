@@ -48,7 +48,7 @@ public class ElementTranslationTest extends BaseTest {
     @Test(dataProvider = "propertyData")
     public void elementTranslationPageTest(PropertyData propertyData){
         elTrPage = new ElementTranslationPageAdmin(getDriver());
-//        BasePageLC.goSleep(2);
+        BasePageLC.goSleep(2);
         elTrPage.countrySort();
         String editElementCountry= elTrPage.getCountryName();
 
@@ -97,7 +97,7 @@ public class ElementTranslationTest extends BaseTest {
         mainPageLogicorUI.selectCountry(editElementCountry);
         mainPageLogicorUI.clickSearchButton();
         mainPageLogicorUI.chooseListView();
-        BasePageLC.goSleep(3);
+        BasePageLC.goSleep(5);
 
         elTrPage.waitForPresenceOfElement(getDriver().findElement(By.xpath("//*[@class=\"warehouse-finder-listing\"]//*[@class=\"info-box-inner__heading\"][.='" + propertyData.getAssetName() + "']")));
         getDriver().findElement(By.xpath("//*[@class=\"warehouse-finder-listing\"]//*[@class=\"info-box-inner__heading\"][.='" + propertyData.getAssetName() + "']")).click();

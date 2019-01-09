@@ -2,10 +2,9 @@ import base.*;
 import data.URL;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pageobjects.AddImagePageAdmin;
-import pageobjects.ElementTranslationPageAdmin;
-import pageobjects.MainPageLogicorUI;
-import pageobjects.PropertyDetailPageUi;
+import pageobjects.*;
+
+import static base.BasePageLC.openURL;
 
 public class PropertyTranslationTest extends BaseTest {
 
@@ -13,9 +12,13 @@ public class PropertyTranslationTest extends BaseTest {
     public static PropertyDetailPageUi propertyDetailPageUi;
     public static AddImagePageAdmin addImagePageAdmin;
     public static MainPageLogicorUI mainPageLogicorUI;
+    public static ImportPropertiesPageAdmin importPropertiesPageAdmin;
 
     @Test
     public void propertyTranslationTest() {
+        openURL(URL.ADMIN.toString());
+        importPropertiesPageAdmin = new ImportPropertiesPageAdmin(getDriver());
+        importPropertiesPageAdmin.clickManageProperties();
         elTrPage = new ElementTranslationPageAdmin(getDriver());
 
 //        BasePageLC.goSleep(2);
@@ -50,7 +53,7 @@ public class PropertyTranslationTest extends BaseTest {
 
     public void switchDetailTranslationProperty(String language, String lang, String idItem) {
         BasePageLC.goSleep(2);
-        BasePageLC.openURL(URL.CLIENT.toString() + lang + "/find-a-warehouse/warehouse-detail?id=" + idItem);
+        openURL(URL.CLIENT.toString() + lang + "/find-a-warehouse/warehouse-detail?id=" + idItem);
         Assert.assertEquals((language + " asset name").toUpperCase(), propertyDetailPageUi.getTitleField());
         Reporter.log("Verification of " + language + " translation asset name success!");
     }

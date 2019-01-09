@@ -396,8 +396,12 @@ public class BasePageLC extends BaseTest {
 
     public void setTextEl(WebElement element, String text) {
         waitForPresenceOfElement(element);
-        element.click();
-        element.clear();
+        Actions actions = new Actions(driver);
+        actions.moveToElement(element).click().build().perform();
+
+//        element.sendKeys(Keys.TAB);
+//        element.click();
+//        element.clear();
         element.sendKeys(text);
     }
 

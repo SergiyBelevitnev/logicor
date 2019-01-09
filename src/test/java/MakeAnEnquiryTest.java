@@ -13,6 +13,7 @@ import pageobjects.MakeAnEquiryPage;
 
 import static base.BasePageLC.goSleep;
 import static base.BasePageLC.openURL;
+import static base.BasePageLC.scrollToBottom;
 
 public class MakeAnEnquiryTest extends BaseTest {
     private static EnquiryData enquiryData;
@@ -59,15 +60,17 @@ public class MakeAnEnquiryTest extends BaseTest {
 
             openURL(URL.CLIENT.toString());
             Reporter.log("Opening main page");
-
+            makeAnEquiryPage = new MakeAnEquiryPage(getDriver());
             mainPageLogicorUI = new MainPageLogicorUI(getDriver());
             mainPageLogicorUI.chooseSmallProperties();
             mainPageLogicorUI.selectCountry("France");
             mainPageLogicorUI.clickSearchButton();
             mainPageLogicorUI.chooseListView();
             mainPageLogicorUI.chooseFirstWarehouse();
+            goSleep(3);
+            scrollToBottom();
 
-            makeAnEquiryPage = new MakeAnEquiryPage(getDriver());
+
             makeAnEquiryPage.makeAnEnquiry(enquiryData.getFirstName(),enquiryData.getLastName(),
                     enquiryData.getEmail(),enquiryData.getPhoneNumber(),enquiryData.getMessage());
 
@@ -75,8 +78,9 @@ public class MakeAnEnquiryTest extends BaseTest {
             openURL(URL.CLIENT.toString()+"/en/admin/content/webform");
 
             drupalAdminPage.openMakeAnEnquiryReportPage();
+
             if (b==false) {
-                Assert.assertEquals(drupalAdminPage.lastEnquiryIndex(), x + 1);
+                Assert.assertNotEquals(drupalAdminPage.lastEnquiryIndex(), x);
                 Reporter.log("Number of last enquiry is: " + String.valueOf(drupalAdminPage.lastEnquiryIndex()));
             } else {Reporter.log("Searching new enquiry");}
             drupalAdminPage.openLastEnquiry();

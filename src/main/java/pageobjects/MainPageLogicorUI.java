@@ -114,6 +114,7 @@ public class MainPageLogicorUI extends BasePageLC {
     public void chooseFirstWarehouse(){
         waitForPresenceOfElement(firstWarehouse);
         firstWarehouse.click();
+        Reporter.log("Choosing first warehouse");
     }
 
     public void chooseSmallProperties() {

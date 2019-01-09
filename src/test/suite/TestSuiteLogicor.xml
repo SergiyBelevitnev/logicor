@@ -1,0 +1,42 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="TestSuiteLogiCor">
+    <test name="User Test">
+
+        <parameter name="browser" value="chrome-headless"/>
+        <parameter name="environment" value="TEST"/>
+
+        <classes>
+            <class name="LoginLC">
+                <methods>
+                    <exclude
+                            name="setDataToCollection">
+                    </exclude>
+                    <exclude name="deleteAllItemsAdmin"> </exclude>
+                </methods>
+            </class>
+            <class name="ElementTranslationTest">
+            </class>
+            <!--<class name="LoginLC">-->
+                <!--<methods>-->
+                    <!--<exclude-->
+                            <!--name="setDataToCollection">-->
+                    <!--</exclude>-->
+                    <!--<exclude name="deleteAllItemsAdmin"> </exclude>-->
+                <!--</methods>-->
+            <!--</class>-->
+
+            <class name="PropertyTranslationTest">
+            </class>
+
+            <class name="MakeAnEnquiryTest">
+            </class>
+
+            <class name="MakingSearch">
+            </class>
+
+            <class name="DeletingItems">
+            </class>
+
+        </classes>
+    </test>
+</suite>

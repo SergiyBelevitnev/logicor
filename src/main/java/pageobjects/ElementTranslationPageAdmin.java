@@ -171,13 +171,15 @@ public class ElementTranslationPageAdmin extends BasePageLC {
     }
 
     public void countrySort(){
+
         waitForPresenceOfElement(countrySort);
+        goSleep(3);
         countrySort.click();
 
         waitForPresenceOfElement(countrySort);
-        goSleep(2);
-        countrySort.click();
         goSleep(3);
+        countrySort.click();
+        goSleep(4);
 
     }
    public void setAssetNameCell(String assetName){

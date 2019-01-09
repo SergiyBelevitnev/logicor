@@ -3,6 +3,8 @@ package base;
 import com.aventstack.extentreports.ExtentTest;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.ITestContext;
 import org.testng.ITestResult;
@@ -21,13 +23,35 @@ public class BaseTest {
     private static ThreadLocal<ExtentTest> parentTest = new ThreadLocal();
     protected static String ENVIRONMENT;
 
-    @Parameters({"environment"})
+    @Parameters({"environment","browser"})
     @BeforeTest
-    public synchronized void beforeClass(ITestContext ctx,String environment) {
+    public synchronized void beforeClass(ITestContext ctx,String environment,String browser) {
         suiteName = ctx.getCurrentXmlTest().getSuite().getName();
         ExtentTest parent = ExtentManager.getInstance(suiteName).createTest(getClass().getName());
         parentTest.set(parent);
         setEnvironmentForTests(environment);
+
+        if ("chrome".equalsIgnoreCase(browser)) {
+            WebDriverManager.chromedriver().setup();
+            SingletonBrowserClass sbc1 = SingletonBrowserClass.getInstanceOfSingletonBrowserClass();
+            driver = sbc1.getDriver2();
+        }
+
+        else if ("chrome-headless".equalsIgnoreCase(browser)) {
+                WebDriverManager.chromedriver().setup();
+                ChromeOptions chromeOptions = new ChromeOptions();
+                chromeOptions.addArguments("--headless");
+
+                chromeOptions.addArguments("--disable-gpu");
+
+                chromeOptions.addArguments("window-size=1200,1100");
+                driver = new ChromeDriver(chromeOptions);
+        } else if ("firefox".equalsIgnoreCase(browser)) {
+            WebDriverManager.firefoxdriver().setup();
+            driver = new FirefoxDriver();
+            driver.manage().window().maximize();
+        }
+        DRIVER.set(driver);
     }
 
     @BeforeMethod
@@ -46,17 +70,12 @@ public class BaseTest {
 
     public static void LaunchBrowser(String browser) {
 
-        if ("chrome".equalsIgnoreCase(browser)) {
-            WebDriverManager.chromedriver().setup();
-            SingletonBrowserClass sbc1 = SingletonBrowserClass.getInstanceOfSingletonBrowserClass();
-            driver = sbc1.getDriver2();
 
-        } else if ("firefox".equalsIgnoreCase(browser)) {
-            WebDriverManager.firefoxdriver().setup();
-            driver = new FirefoxDriver();
-            driver.manage().window().maximize();
-        }
-        DRIVER.set(driver);
+//
+//
+
+
+
     }
 
 

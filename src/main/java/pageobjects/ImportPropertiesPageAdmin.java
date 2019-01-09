@@ -26,6 +26,12 @@ public class ImportPropertiesPageAdmin extends BasePageLC {
     @FindBy(xpath = "//*[@id='propertyimportform-file_import']")
     private WebElement chooseFileButton;
 
+    @FindBy(xpath = "//*[@id=\"w1\"]/li[4]/a")
+    private WebElement manageProperties;
+
+    public void clickManageProperties(){
+        manageProperties.click();
+    }
 
     public void uploadFile(String filePath) {
 
